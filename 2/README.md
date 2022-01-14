@@ -493,9 +493,15 @@ There are two possibilities for the visualization of the file:
 <br>
 After running, an interactive pie chart would be created in which a user could find various information regarding each part of the plot (total number of genes, percentage, etc.) by moving mouse cursor on the section: 
 
+</br>
+<kbd> <img src="Images/pie_chart_interactive_1_1.JPG"/> </kbd>
+<br></br>
 
 In addition, by clicking on every items of the legend, it is possible to show/hide that part on the pie chart:
 
+</br>
+<kbd> <img src="Images/pie_chart_interactive_2_1.JPG"/> </kbd>
+<br></br>
 
 2.	Running “code_analysis_B_annotation_file_coding.R” script using R command line (in UNIX or other Operating Systems (OS))
 <br>
@@ -505,6 +511,9 @@ A pie chart including an overview of genes distribution (here just coding-genes)
 <br>
 An example of a pie chart created from the protein-coding genes annotation file (“annot_gencode_v38lift37_modified_gene_class_coding.txt”) is shown:
 
+</br>
+<kbd> <img src="Images/pie_chart_protein_coding_genes_chromosome.JPG"/> </kbd>
+<br></br>
 
 ### Section C
 **Script:** code_analysis_C_PLACO_results_one_pair.R 
@@ -521,6 +530,10 @@ A user could run the “code_analysis_C_PLACO_results_one_pair.R” script which
 2.	Finding significant SNPs from the PLACO result (p < 5×10-8) and save the results in “output_PLACO_BCAC_2020_ALL_OCAC_Sig.txt” file.
 3.	Creation of a Manhattan Plot for all chromosomes and drawing a horizontal dashed line in black (indicating p-value threshold 5×10-8). In addition, SNPs with positive effect are colored in red while SNPs with negative effect are in blue. The plot would be saved as a “.png” file format. An example of the Manhattan Plot for PLACO output for BCAC and OCAC GWAS data (used in our study) is shown:
 
+</br>
+<kbd> <img src="Images/output_PLACO_BCAC_2020_ALL_OCAC_Manhattan_Plot.png"/> </kbd>
+<br></br>
+
 ### Section D
 **Script:** code_analysis_D_gcpbayes_input_ggplot.R
 <br>
@@ -535,9 +548,15 @@ A user could run the “code_analysis_C_PLACO_results_one_pair.R” script which
 A user could run the “code_analysis_D_gcpbayes_input_ggplot.R” script and obtain an overview about distribution of genes with different number of SNPs. We designed two different overviews for a user as follow:
 a.	A histogram (based on number of SNPs available for each gene) for all genes. For example, the histogram for GCPBayes input file for BCAC and OCAC GWAS data (used in our study) while the pipeline run without LD clumping step is shown:
 
-
+</br>
+<kbd> <img src="Images/gcpbayes_input_1.JPG"/> </kbd>
+<br></br>
 
 b.	Based on our experience, in a GWAS data, most of the genes contain a number of SNPs less than 50 (due to our practical experience with various GWAS datasets, especially when working with only protein-coding genes). Therefore, in order to have a deeper overview, a user could define a threshold value (Default = 50) to have a plot with a more detailed view (bar plot) to see the number of genes with SNPs less than the threshold value, as well as a histogram for genes in which the number of SNPs are more than the threshold value. For instance, two plots for GCPBayes input file for BCAC and OCAC GWAS data (used in our study) while the pipeline run without LD clumping step are shown:
+
+</br>
+<kbd> <img src="Images/gcpbayes_input_2.JPG"/> </kbd>
+<br></br>
 
 ### Section E
 **Script:** code_analysis_E_gcpbayes_output_karyotype.R
@@ -550,7 +569,9 @@ b.	Based on our experience, in a GWAS data, most of the genes contain a number o
 
 A user could run the “code_analysis_E_gcpbayes_output_karyotype.R” script which reads the GCPBayes output contains pleiotropic genes information, then show them based on their positions on a chromosome overview (called Karyotype plot). A Karyotype plot for GCPBayes output of BCAC and OCAC GWAS data (used in our study) while the pipeline run without LD clumping step would be as follow:
 
-
+</br>
+<kbd> <img src="Images/gcpbayes_output_karyotype_both.jpg"/> </kbd>
+<br></br>
 
 **NOTE:** Since for drawing a Karyotype plot, the script uses the HUGO Gene Nomenclature Committee (HGNC) symbol (for each input gene symbol) extracted from Ensembl database, it would **NOT** be able to show the genes that their HGNC symbol did not find.  
 <br>
