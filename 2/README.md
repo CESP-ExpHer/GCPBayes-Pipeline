@@ -26,9 +26,9 @@ Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level
 
 
 ## Tutorial
-An overall summary of running the GCPBayes pipeline for BCAC and OCAC GWAS summary statistics data used in the manuscript is provided in the following **TWO Tables**:
+An overall summary of running the GCPBayes pipeline for BCAC and OCAC GWAS summary statistics data is provided in the following **TWO Tables**:
 <br>
-### Summary: Running the GCPBayes pipeline without LD Clumping
+### Running the GCPBayes pipeline without LD Clumping
 | No	| Running the Scripts (in order)	| Section Name	| Program |
 | -- | -- | -- | -- | 
 | 1	| A1_code_reformatting_file_bcac_2020_all.py	| Standardization (A)	| Python |
@@ -45,7 +45,7 @@ An overall summary of running the GCPBayes pipeline for BCAC and OCAC GWAS summa
 | 12	| code_analysis_E_gcpbayes_output_karyotype.R	| Visualization (E)	| R |
 | 13	| code_analysis_E_gcpbayes_output_table_overview.R	| Visualization (E)	| R |
 
-### Summary: Running the GCPBayes pipeline with LD Clumping
+### Running the GCPBayes pipeline with LD Clumping
 | No	| Running the Scripts (in order)	| Section Name	| Program |
 | -- | -- | -- | -- | 
 | 1	| A1_code_reformatting_file_bcac_2020_all.py	| Standardization (A)	| Python |
@@ -66,9 +66,11 @@ An overall summary of running the GCPBayes pipeline for BCAC and OCAC GWAS summa
 | 16	| code_analysis_E_gcpbayes_output_karyotype.R	| Visualization (E)	| R |
 | 17	| code_analysis_E_gcpbayes_output_table_overview.R	| Visualization (E)	| R |
 
-Here are the steps a user should RESPECTIVELY run in order to get the results shown in the manuscript: 
-## Standardization (Section A) (Python)
-### First Step (First GWAS Summary Statistics Data called as a Reference file):
+Here are detailed information for running each step which a user should RESPECTIVELY run in order to get the results provided in the manuscript: 
+## Standardization 
+***(Section A) (Python)***
+### First Step 
+***(First GWAS Summary Statistics Data called as a Reference file):***
 **Script:** A1_code_reformatting_file_bcac_2020_all.py
 <br>
 **Input**
