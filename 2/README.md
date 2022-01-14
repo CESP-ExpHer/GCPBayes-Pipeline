@@ -82,9 +82,8 @@ Consider that BCAC GWAS summary statistics data (v. 2020) (Zhang et al., 2020) d
 - Path for the input file: (in our example “~/BCAC_OCAC/”)
 - Input file name: (in our example “icogs_onco_gwas_meta_overall_breast_cancer_summary_level_statistics.txt”)
 - Path for the output file: (in our example “~/BCAC_OCAC/”)
-<br>
+
 **Output**
-<br>
 - Output files created after running this step:
   - BCAC_2020_onco_ALL_reformatted.txt
   - BCAC_2020_onco_ALL_SNP_ambiguous.txt
