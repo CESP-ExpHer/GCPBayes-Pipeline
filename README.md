@@ -20,7 +20,6 @@ This file includes **THREE** major sections:
 <br>
 **IMPORTANT NOTE:** The Bash file was tested on a Unix-based server with CentOS 7.
 - A step-by-step tutorial for how to use the GCPBayes pipeline to explore genes with potential pleiotropic effects on Breast and Ovarian cancers using GWAS summary statistics data of Breast (BCAC) and Ovarian (OCAC) cancers (which their results were presented in the manuscript).
-<br>
 **IMPORTANT NOTE:** This tutorial could be run on all Operating Systems (OS) including Windows, Linux, and Mac.
 - Detailed information for all scripts in the pipeline
 <br>
