@@ -9,48 +9,53 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x):x, doi: xxx[Paper_link](https://..../)
 <br>
 <br>
+
 ## Some NOTES
+**IMPORTANT NOTE:** In order to follow all procedure easier, we considered all paths in the same directory (for inputs and outputs) throughout the pipeline (in our example: “~/BCAC_OCAC/”)
 
 ## Contents
-An overall summary of running the GCPBayes pipeline for BCAC and OCAC GWAS summary statistics data used in the manuscript is provided in the following Table:
-Running the GCPBayes pipeline without LD Clumping
-No	Running the Scripts (in order)	Section Name	Program
-1	A1_code_reformatting_file_bcac_2020_all.py	Standardization (A)	Python
-2	A2_code_reformatting_file_ocac_bcac_2020_all.py	Standardization (A)	Python
-3	Annotation Step based on the explanations in the GitHub page	Annotation (B1)	R
-4	Annotation Step based on the section 3.2.1	Annotation (B2)	R, PLINK
-5	D1_code_pipeline_annot_coding_withoutldclumping_extra_info.R	Core (D)	R
-6	E1_code_gcpbayes_less_extra_info.R	Running GCPBayes (E)	R
-7	E2_code_gcpbayes_greater_extra_info.R	Running GCPBayes (E)	R
-8	code_analysis_A_checksumstats_BCAC.R	Visualization (A)	R
-9	code_analysis_A_checksumstats_OCAC.R	Visualization (A)	R
-10	code_analysis_B_annotation_file_coding.R	Visualization (B)	R
-11	code_analysis_D_gcpbayes_input_ggplot.R	Visualization (D)	R
-12	code_analysis_E_gcpbayes_output_karyotype.R	Visualization (E)	R
-13	code_analysis_E_gcpbayes_output_table_overview.R	Visualization (E)	R
+An overall summary of running the GCPBayes pipeline for BCAC and OCAC GWAS summary statistics data used in the manuscript is provided in the following **TWO Tables**:
+<br>
+### Running the GCPBayes pipeline without LD Clumping
+| No	| Running the Scripts (in order)	| Section Name	| Program |
+| -- | -- | -- | -- | 
+| 1	| A1_code_reformatting_file_bcac_2020_all.py	| Standardization (A)	| Python |
+| 2	| A2_code_reformatting_file_ocac_bcac_2020_all.py	| Standardization (A)	| Python |
+| 3	| Annotation Step based on the explanations in the GitHub page	| Annotation (B1)	| R |
+| 4	| Annotation Step based on the section 3.2.1	| Annotation (B2)	| R, PLINK |
+| 5	| D1_code_pipeline_annot_coding_withoutldclumping_extra_info.R	| Core (D)	| R |
+| 6	| E1_code_gcpbayes_less_extra_info.R	| Running GCPBayes (E)	| R |
+| 7	| E2_code_gcpbayes_greater_extra_info.R	| Running GCPBayes (E)	| R |
+| 8	| code_analysis_A_checksumstats_BCAC.R	| Visualization (A)	| R |
+| 9	| code_analysis_A_checksumstats_OCAC.R	| Visualization (A)	| R |
+| 10	| code_analysis_B_annotation_file_coding.R	| Visualization (B)	| R |
+| 11	| code_analysis_D_gcpbayes_input_ggplot.R	| Visualization (D)	| R |
+| 12	| code_analysis_E_gcpbayes_output_karyotype.R	| Visualization (E)	| R |
+| 13	| code_analysis_E_gcpbayes_output_table_overview.R	| Visualization (E)	| R |
 
-Running the GCPBayes pipeline with LD Clumping
-No	Running the Scripts (in order)	Section Name	Program
-1	A1_code_reformatting_file_bcac_2020_all.py	Standardization (A)	Python
-2	A2_code_reformatting_file_ocac_bcac_2020_all.py	Standardization (A)	Python
-3	Annotation Step based on the explanations in the GitHub page	Annotation (B1)	R
-4	Annotation Step based on the section 3.2.1	Annotation (B2)	R, PLINK
-5	C1_code_find_shared_snps_one_pair.R	LD Clumping (C)	R
-6	C2_code_run_PLACO_decor_one_pair.R	LD Clumping (C)	R
-7	C3_code_ldclumping_local.R	LD Clumping (C)	R
-8	D2_code_pipeline_annot_coding_ldclumping_extra_info.R	Core (D)	R
-9	E1_code_gcpbayes_less_extra_info.R	Running GCPBayes (E)	R
-10	E2_code_gcpbayes_greater_extra_info.R	Running GCPBayes (E)	R
-11	code_analysis_A_checksumstats_BCAC.R	Visualization (A)	R
-12	code_analysis_A_checksumstats_OCAC.R	Visualization (A)	R
-13	code_analysis_B_annotation_file_coding.R	Visualization (B)	R
-14	code_analysis_C_PLACO_results_one_pair.R	Visualization (C)	R
-15	code_analysis_D_gcpbayes_input_ggplot.R	Visualization (D)	R
-16	code_analysis_E_gcpbayes_output_karyotype.R	Visualization (E)	R
-17	code_analysis_E_gcpbayes_output_table_overview.R	Visualization (E)	R
+### Running the GCPBayes pipeline with LD Clumping
+| No	| Running the Scripts (in order)	| Section Name	| Program |
+| -- | -- | -- | -- | 
+| 1	| A1_code_reformatting_file_bcac_2020_all.py	| Standardization (A)	| Python |
+| 2	| A2_code_reformatting_file_ocac_bcac_2020_all.py	| Standardization (A)	| Python |
+| 3	| Annotation Step based on the explanations in the GitHub page	| Annotation (B1)	| R |
+| 4	| Annotation Step based on the section 3.2.1	| Annotation (B2)	| R, PLINK |
+| 5	| C1_code_find_shared_snps_one_pair.R	| LD Clumping (C)	| R |
+| 6	| C2_code_run_PLACO_decor_one_pair.R	| LD Clumping (C)	| R |
+| 7	| C3_code_ldclumping_local.R	| LD Clumping (C)	| R |
+| 8	| D2_code_pipeline_annot_coding_ldclumping_extra_info.R	| Core (D)	| R |
+| 9	| E1_code_gcpbayes_less_extra_info.R	| Running GCPBayes (E)	| R |
+| 10	| E2_code_gcpbayes_greater_extra_info.R	| Running GCPBayes (E)	| R |
+| 11	| code_analysis_A_checksumstats_BCAC.R	| Visualization (A)	| R |
+| 12	| code_analysis_A_checksumstats_OCAC.R	| Visualization (A)	| R |
+| 13	| code_analysis_B_annotation_file_coding.R	| Visualization (B)	| R |
+| 14	| code_analysis_C_PLACO_results_one_pair.R	| Visualization (C)	| R |
+| 15	| code_analysis_D_gcpbayes_input_ggplot.R	| Visualization (D)	| R |
+| 16	| code_analysis_E_gcpbayes_output_karyotype.R	| Visualization (E)	| R |
+| 17	| code_analysis_E_gcpbayes_output_table_overview.R	| Visualization (E)	| R |
 
 
-IMPORTANT NOTE: In order to follow all procedure easier, we considered all paths in the same directory (for inputs and outputs) throughout the pipeline (in our example: “~/BCAC_OCAC/”)
+
 Here are the steps a user should RESPECTIVELY run in order to get the results shown in the manuscript: 
 2.1.	Standardization (Section A) (Python)
 First Step (First GWAS Summary Statistics Data called as a Reference file):
