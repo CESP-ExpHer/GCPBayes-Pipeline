@@ -447,6 +447,7 @@ The script uses a R package recently introduced (called “CheckSumStats”) (Ha
 The output derived after running the script on BCAC GWAS data (created from Section A) is: 
 
 Also, we performed similar checking on OCAC data as well: 
+<br>
 **Script:** code_analysis_A_checksumstats_OCAC.R
 <br>
 **Input**
