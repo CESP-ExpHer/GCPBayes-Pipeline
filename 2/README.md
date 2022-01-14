@@ -145,6 +145,7 @@ We used the annotation file downloaded from GENCODE webpage (Frankish et al., 20
 **Input**
 - Input files needed for this step:
  - REMAP_gencode.v28lift37.annotation.gtf
+
 **Output**
 - Output file created after running this step:
   - annot_gencode_v38lift37_modified_gene_class.txt
@@ -155,6 +156,8 @@ To create an annotation file that would be used in the Section D2, a user should
 - Input files needed for this step:
   - BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
   - annot_gencode_v38lift37_modified_gene_class.txt (created from First Step)
+
+**Output**
 - Output files created after running this step:
   - annot_gencode_v38lift37_modified_gene_class_coding.txt
   - annot_gencode_v38lift37_modified_gene_class_coding_chr_num_plink_input.txt
