@@ -31,7 +31,7 @@ This file includes **THREE** major sections:
 ## An Overview of the Pipeline
 A general overview of the main sections of the GCPBayes pipeline are as follow:
 <br></br>
-<kbd> <img src="Images/output_PLACO_Manhattan_Plot.png"/> </kbd>
+<kbd> <img src="0_Images/Fig1_v3.tif"/> </kbd>
 <br></br>
 
 ## Acknowledgements 
