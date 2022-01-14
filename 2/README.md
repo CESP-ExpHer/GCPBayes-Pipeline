@@ -19,35 +19,7 @@ Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level
 <br>
 
 ## Table of Contents
-- [Tutorial](#tutorial)
-  * # summary:-running-the-gcpbayes-pipeline-without-ld-clumping
-  * [Summary: Running the GCPBayes pipeline with LD Clumping](#summary:-running-the-gcpbayes-pipeline-with-ld-clumping)
-- [Standardization (Section A) (Python)](#standardization--section-a---python-)
-  * [First Step (First GWAS Summary Statistics Data called as a Reference file):](#first-step--first-gwas-summary-statistics-data-called-as-a-reference-file--)
-  * [Second Step (Second GWAS Summary Statistics Data):](#second-step--second-gwas-summary-statistics-data--)
-- [Annotation (Section B) (R, PLINK)](#annotation--section-b---r--plink-)
-  * [First Step](#first-step)
-  * [Second Step](#second-step)
-- [LD Clumping (Section C) (R)](#ld-clumping--section-c---r-)
-  * [First Step (finding shared SNPs between two traits)](#first-step--finding-shared-snps-between-two-traits-)
-  * [Second Step (running PLACO)](#second-step--running-placo-)
-  * [Third Step (running LD Clumping)](#third-step--running-ld-clumping-)
-- [Core and Running GCPBayes (Section D without LD Clumping + Section E) (R)](#core-and-running-gcpbayes--section-d-without-ld-clumping---section-e---r-)
-  * [Section D](#section-d)
-  * [Section E (for genes with number of SNPs less than a threshold)](#section-e--for-genes-with-number-of-snps-less-than-a-threshold-)
-  * [Section E (for genes with number of SNPs greater than a threshold)](#section-e--for-genes-with-number-of-snps-greater-than-a-threshold-)
-- [Core and Running GCPBayes (Section D with LD Clumping + Section E) (R)](#core-and-running-gcpbayes--section-d-with-ld-clumping---section-e---r-)
-  * [Section D](#section-d-1)
-  * [Section E (for genes with number of SNPs less than a threshold)](#section-e--for-genes-with-number-of-snps-less-than-a-threshold--1)
-  * [Section E (for genes with number of SNPs greater than a threshold)](#section-e--for-genes-with-number-of-snps-greater-than-a-threshold--1)
-- [Visualization (R)](#visualization--r-)
-  * [Section A](#section-a)
-  * [Section B](#section-b)
-  * [Section C](#section-c)
-  * [Section D](#section-d-2)
-  * [Section E](#section-e)
-  * [References](#references)
-- [Acknowledgements](#acknowledgements)
+
 
 
 ## Tutorial
