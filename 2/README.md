@@ -18,7 +18,39 @@ Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level
 **IMPORTANT NOTE 3:** The Section names that are mentioned in this page are correspondence to Figure provided in the [An Overview of the Pipeline](../#An-Overview-of-the-Pipeline).
 <br>
 
-## Contents
+## Table of Contents
+- [Tutorial](#tutorial)
+  * [Running the GCPBayes pipeline without LD Clumping](#running-the-gcpbayes-pipeline-without-ld-clumping)
+  * [Running the GCPBayes pipeline with LD Clumping](#running-the-gcpbayes-pipeline-with-ld-clumping)
+- [Standardization (Section A) (Python)](#standardization--section-a---python-)
+  * [First Step (First GWAS Summary Statistics Data called as a Reference file):](#first-step--first-gwas-summary-statistics-data-called-as-a-reference-file--)
+  * [Second Step (Second GWAS Summary Statistics Data):](#second-step--second-gwas-summary-statistics-data--)
+- [Annotation (Section B) (R, PLINK)](#annotation--section-b---r--plink-)
+  * [First Step](#first-step)
+  * [Second Step](#second-step)
+- [LD Clumping (Section C) (R)](#ld-clumping--section-c---r-)
+  * [First Step (finding shared SNPs between two traits)](#first-step--finding-shared-snps-between-two-traits-)
+  * [Second Step (running PLACO)](#second-step--running-placo-)
+  * [Third Step (running LD Clumping)](#third-step--running-ld-clumping-)
+- [Core and Running GCPBayes (Section D without LD Clumping + Section E) (R)](#core-and-running-gcpbayes--section-d-without-ld-clumping---section-e---r-)
+  * [Section D](#section-d)
+  * [Section E (for genes with number of SNPs less than a threshold)](#section-e--for-genes-with-number-of-snps-less-than-a-threshold-)
+  * [Section E (for genes with number of SNPs greater than a threshold)](#section-e--for-genes-with-number-of-snps-greater-than-a-threshold-)
+- [Core and Running GCPBayes (Section D with LD Clumping + Section E) (R)](#core-and-running-gcpbayes--section-d-with-ld-clumping---section-e---r-)
+  * [Section D](#section-d-1)
+  * [Section E (for genes with number of SNPs less than a threshold)](#section-e--for-genes-with-number-of-snps-less-than-a-threshold--1)
+  * [Section E (for genes with number of SNPs greater than a threshold)](#section-e--for-genes-with-number-of-snps-greater-than-a-threshold--1)
+- [Visualization (R)](#visualization--r-)
+  * [Section A](#section-a)
+  * [Section B](#section-b)
+  * [Section C](#section-c)
+  * [Section D](#section-d-2)
+  * [Section E](#section-e)
+  * [References](#references)
+- [Acknowledgements](#acknowledgements)
+
+
+## Tutorial
 An overall summary of running the GCPBayes pipeline for BCAC and OCAC GWAS summary statistics data used in the manuscript is provided in the following **TWO Tables**:
 <br>
 ### Running the GCPBayes pipeline without LD Clumping
@@ -610,7 +642,7 @@ There is also a script called “code_analysis_E_gcpbayes_output_table_overview.
 - Phelan,C.M. et al. (2017) Identification of 12 new susceptibility loci for different histotypes of epithelial ovarian cancer. Nat. Genet., 49, 680–691.
 - Zhang,H. et al. (2020) Genome-wide association study identifies 32 novel breast cancer susceptibility loci from overall and subtype-specific analyses. Nat. Genet. 2020 526, 52, 572–581.
 
-### Acknowledgements 
+## Acknowledgements 
 We gratefully acknowledge the following packages which we used throughout our pipeline:
 ```
 ggplot2
