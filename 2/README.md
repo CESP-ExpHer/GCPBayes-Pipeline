@@ -580,14 +580,33 @@ A user could run the “code_analysis_E_gcpbayes_output_karyotype.R” script wh
 
 There is also a script called “code_analysis_E_gcpbayes_output_table_overview.R” which a user could perform on the GCPBayes pleiotropic genes output and has an overall information about potential pleiotropic genes. Here is an example:
 
-
+| chr	| #genes	| Min gene length (bp)	| Max gene length (bp)	| Min SNP numbers	| Max SNP numbers |
+| -- | -- | -- | -- | -- | -- |
+| 1	| 5	| 4,959	| 57,942	| 3	| 98 |
+| 2	| 3	| 54,268	| 160,447	| 82	| 214 |
+| 3	| 11	| 33,195	| 363,895	| 18	| 524 |
+| 4	| 9	| 19,285	| 148,512	| 32	| 549 |
+| 5	| 6	| 16,272	| 96,657	| 37	| 472 |
+| 6	| 8	| 40,931	| 353,488	| 55	| 696 |
+| 7	| 3	| 37,608	| 261,613	| 71	| 278 |
+| 8	| 3	| 97,883	| 158,920	| 178	| 447 |
+| 9	| 5	| 10,883	| 226,958	| 18	| 320 |
+| 10	| 10	| 12,893	| 354,629	| 3	| 446 |
+| 11	| 7	| 11,010	| 255,035	| 11	| 530 |
+| 12	| 14	| 5,150	| 328,502	| 2	| 392 |
+| 15	| 9	| 8,255	| 225,330	| 18	| 364 |
+| 16	| 8	| 11,508	| 88,046	| 12	| 197 |
+| 17	| 21	| 444	| 371,278	| 1	| 609 |
+| 19	| 14	| 3,130	| 123,106	| 1	| 143 |
+| 20	| 7	| 6,807	| 178,396	| 10	| 162 |
+| 21	| 2	| 49,232	| 104,701	| 82	| 151 |
+| 22	| 3	| 15,476	| 701,851	| 30	| 652 |
 
 ### References
 - Frankish,A. et al. (2019) GENCODE reference annotation for the human and mouse genomes. Nucleic Acids Res., 47, D766–D773.
 - Haycock,P.C. et al. (2021) Design and quality control of large-scale two-sample Mendelian randomisation studies. medRxiv, 2021.07.30.21260578.
 - Phelan,C.M. et al. (2017) Identification of 12 new susceptibility loci for different histotypes of epithelial ovarian cancer. Nat. Genet., 49, 680–691.
 - Zhang,H. et al. (2020) Genome-wide association study identifies 32 novel breast cancer susceptibility loci from overall and subtype-specific analyses. Nat. Genet. 2020 526, 52, 572–581.
-
 
 ### Acknowledgements 
 We gratefully acknowledge the following packages which we used throughout our pipeline:
