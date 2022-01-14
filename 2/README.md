@@ -64,17 +64,18 @@ Here are the steps a user should RESPECTIVELY run in order to get the results sh
 
 Consider that BCAC GWAS summary statistics data (v. 2020) (Zhang et al., 2020) downloaded from the consortium webpage (https://bcac.ccge.medschl.cam.ac.uk/bcacdata/oncoarray/). We used the python script to extract the following columns and rename them as follows:
 <br>
-File name: icogs_onco_gwas_meta_overall_breast_cancer_summary_level_statistics.txt
-- column 24: snp (RS ID)
-- column 25: chr (chromosome)
-- column 26: bp_hg19 (base pair position)
-- column 27: Effect_A (Effect Allele)
-- column 28: nonEffect_A (non-Effect Allele)
-- column 29: EAF (Effect Allele Frequency)
-- column 31: info (r2 value)
-- column 33: beta (beta value)
-- column 34: se (standard error)
-- column 38: pval (P-value)
+- File name: icogs_onco_gwas_meta_overall_breast_cancer_summary_level_statistics.txt
+  - column 24: snp (RS ID)
+  - column 25: chr (chromosome)
+  - column 26: bp_hg19 (base pair position)
+  - column 27: Effect_A (Effect Allele)
+  - column 28: nonEffect_A (non-Effect Allele)
+  - column 29: EAF (Effect Allele Frequency)
+  - column 31: info (r2 value)
+  - column 33: beta (beta value)
+  - column 34: se (standard error)
+  - column 38: pval (P-value)
+
 **NOTE:** A user MUST modify the **“DEFINITION SECTION”** which includes the following options:
 - Path for the input file: (in our example “~/BCAC_OCAC/”)
 - Input file name: (in our example “icogs_onco_gwas_meta_overall_breast_cancer_summary_level_statistics.txt”)
