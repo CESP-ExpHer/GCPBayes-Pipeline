@@ -478,72 +478,95 @@ The output derived after running the script on OCAC GWAS data (created from Sect
 - Output files created from this step:
   - Pie Chart
 
-A user could have an overview from the annotation file created in the Section B. There are two possibilities for the visualization of the file:
+A user could have an overview from the annotation file created in the Section B. 
+<br>
+There are two possibilities for the visualization of the file:
 1.	Running “code_analysis_B_annotation_file_coding.R” script using RStudio
-After running, an interactive pie chart would be created in which a user could find various information regarding each part of the plot (total number of genes, percentage, etc.) by moving mouse cursor on the section (Fig. S3-A). In addition, by clicking on every items of the legend, it is possible to show/hide that part on the pie chart (Fig. S3-B).
-2.	Running “code_analysis_B_annotation_file_coding.R” script using R command line (in UNIX or other Operating Systems (OS))
-A pie chart including an overview of genes distribution (here just coding-genes) among all chromosomes would be created in “.jpeg” and “.pdf” format.
-NOTE: since “plotly” package creates an interactive plot, for saving such plots in static file formats (like “.jpeg” or “.pdf”), a user needs to install “orca” on the OS (see https://github.com/plotly/orca#installation for more details).
-An example of a pie chart created from the protein-coding genes annotation file (“annot_gencode_v38lift37_modified_gene_class_coding.txt”) is shown in Fig. S4.
+<br>
+After running, an interactive pie chart would be created in which a user could find various information regarding each part of the plot (total number of genes, percentage, etc.) by moving mouse cursor on the section: 
 
-2.6.3.	Section C
-Script: code_analysis_C_PLACO_results_one_pair.R 
+
+In addition, by clicking on every items of the legend, it is possible to show/hide that part on the pie chart:
+
+
+2.	Running “code_analysis_B_annotation_file_coding.R” script using R command line (in UNIX or other Operating Systems (OS))
+<br>
+A pie chart including an overview of genes distribution (here just coding-genes) among all chromosomes would be created in “.jpeg” and “.pdf” format.
+<br>
+**NOTE:** since “plotly” package creates an interactive plot, for saving such plots in static file formats (like “.jpeg” or “.pdf”), a user needs to install “orca” on the OS (see https://github.com/plotly/orca#installation for more details).
+<br>
+An example of a pie chart created from the protein-coding genes annotation file (“annot_gencode_v38lift37_modified_gene_class_coding.txt”) is shown:
+
+
+### Section C
+**Script:** code_analysis_C_PLACO_results_one_pair.R 
 <br>
 **Input**
 - Input files needed for this step:
-  - output_PLACO_BCAC_2020_ALL_OCAC.txt (created from Section C 1.3.2)
+  - output_PLACO_BCAC_2020_ALL_OCAC.txt (created from Section C)
 - Output files created from this step:
   - Manhattan Plot 
   - Significant SNPs from the PLACO result (p < 5×10-8)
+
 A user could run the “code_analysis_C_PLACO_results_one_pair.R” script which perform three analyses as follow:
-1.	Performing a global correlation analysis between two traits (using Z columns) based on two methods (spearman and pearson) and save the results in “…_cor_test.txt” file.
+1.	Performing a global correlation analysis between two traits (using Z columns) based on two methods (spearman and pearson) and save the results in “…cor_test.txt” file.
 2.	Finding significant SNPs from the PLACO result (p < 5×10-8) and save the results in “output_PLACO_BCAC_2020_ALL_OCAC_Sig.txt” file.
-3.	Creation of a Manhattan Plot for all chromosomes and drawing a horizontal dashed line in black (indicating p-value threshold 5×10-8). In addition, SNPs with positive effect are colored in red while SNPs with negative effect are in blue. The plot would be saved as a “.png” file format. An example of the Manhattan Plot for PLACO output for BCAC and OCAC GWAS data (used in our study) is shown in Fig. S5.
+3.	Creation of a Manhattan Plot for all chromosomes and drawing a horizontal dashed line in black (indicating p-value threshold 5×10-8). In addition, SNPs with positive effect are colored in red while SNPs with negative effect are in blue. The plot would be saved as a “.png” file format. An example of the Manhattan Plot for PLACO output for BCAC and OCAC GWAS data (used in our study) is shown:
 
 ### Section D
-Script: code_analysis_D_gcpbayes_input_ggplot.R
+**Script:** code_analysis_D_gcpbayes_input_ggplot.R
 <br>
 **Input**
 - Input files needed for this step:
-  - Matrices_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata (created from Section D 1.4.1)
-OR
-  - Matrices_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata (created from Section D 1.5.1)
+  - Matrices_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata (created from Section D without LD clumping)
+  - OR
+  - Matrices_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata (created from Section D with LD clumping)
 - Output files created from this step:
   - Histogram and Bar Plots
-A user could run the “code_analysis_D_gcpbayes_input_ggplot.R” script and obtain an overview about distribution of genes with different number of SNPs. We designed two different overviews for a user as follow:
-1.	A histogram (based on number of SNPs available for each gene) for all genes. For example, the histogram for GCPBayes input file for BCAC and OCAC GWAS data (used in our study) while the pipeline run without LD clumping step is shown in Fig. S6.
 
-a.	Based on our experience, in a GWAS data, most of the genes contain a number of SNPs less than 50 (due to our practical experience with various GWAS datasets, especially when working with only protein-coding genes). Therefore, in order to have a deeper overview, a user could define a threshold value (Default = 50) to have a plot with a more detailed view (bar plot) to see the number of genes with SNPs less than the threshold value, as well as a histogram for genes in which the number of SNPs are more than the threshold value. For instance, two plots for GCPBayes input file for BCAC and OCAC GWAS data (used in our study) while the pipeline run without LD clumping step are shown in Fig. S7.
+A user could run the “code_analysis_D_gcpbayes_input_ggplot.R” script and obtain an overview about distribution of genes with different number of SNPs. We designed two different overviews for a user as follow:
+a.	A histogram (based on number of SNPs available for each gene) for all genes. For example, the histogram for GCPBayes input file for BCAC and OCAC GWAS data (used in our study) while the pipeline run without LD clumping step is shown:
+
+
+
+b.	Based on our experience, in a GWAS data, most of the genes contain a number of SNPs less than 50 (due to our practical experience with various GWAS datasets, especially when working with only protein-coding genes). Therefore, in order to have a deeper overview, a user could define a threshold value (Default = 50) to have a plot with a more detailed view (bar plot) to see the number of genes with SNPs less than the threshold value, as well as a histogram for genes in which the number of SNPs are more than the threshold value. For instance, two plots for GCPBayes input file for BCAC and OCAC GWAS data (used in our study) while the pipeline run without LD clumping step are shown:
 
 ### Section E
-Script: code_analysis_E_gcpbayes_output_karyotype.R
+**Script:** code_analysis_E_gcpbayes_output_karyotype.R
 <br>
 **Input**
 - Input files needed for this step:
-  - gene_list.txt (list of pleiotropic genes symbols in one column extracted from the output of the Section E 1.4.2, 1.4.3, 1.5.2, or 1.5.3) 
+  - gene_list.txt (list of pleiotropic genes symbols in one column extracted from the output of the Section E) 
 - Output files created from this step:
   - Pleiotropic Genes Karyotype Plot
-A user could run the “code_analysis_E_gcpbayes_output_karyotype.R” script which reads the GCPBayes output contains pleiotropic genes information, then show them based on their positions on a chromosome overview (called Karyotype plot).  Fig. S8 demonstrates a Karyotype plot for GCPBayes output of BCAC and OCAC GWAS data (used in our study) while the pipeline run without LD clumping step.
-NOTE: Since for drawing a Karyotype plot, the script uses the HUGO Gene Nomenclature Committee (HGNC) symbol (for each input gene symbol) extracted from Ensembl database, it would NOT be able to show the genes that their HGNC symbol did not find.  
 
-Script: code_analysis_E_gcpbayes_output_table_overview.R
+A user could run the “code_analysis_E_gcpbayes_output_karyotype.R” script which reads the GCPBayes output contains pleiotropic genes information, then show them based on their positions on a chromosome overview (called Karyotype plot). A Karyotype plot for GCPBayes output of BCAC and OCAC GWAS data (used in our study) while the pipeline run without LD clumping step would be as follow:
+
+
+
+**NOTE:** Since for drawing a Karyotype plot, the script uses the HUGO Gene Nomenclature Committee (HGNC) symbol (for each input gene symbol) extracted from Ensembl database, it would **NOT** be able to show the genes that their HGNC symbol did not find.  
+<br>
+<br>
+**Script:** code_analysis_E_gcpbayes_output_table_overview.R
 <br>
 **Input**
 - Input files needed for this step:
-  - gene_list.txt (list of pleiotropic genes symbols with “chr”, “gene_length”, and “snp_number” columns extracted from the output of the Section E 1.4.2, 1.4.3, 1.5.2, or 1.5.3) 
+  - gene_list.txt (list of pleiotropic genes symbols with “chr”, “gene_length”, and “snp_number” columns extracted from the output of the Section E) 
 - Output files created from this step:
   - gcpbayes_pleiotropy_summary_table.txt (Similar to Table 1 in the Manuscript)
-There is also a script called “code_analysis_E_gcpbayes_output_table_overview.R” which a user could perform on the GCPBayes pleiotropic genes output and has an overall information about potential pleiotropic genes (something similar to Table 1 in the manuscript). 
+
+There is also a script called “code_analysis_E_gcpbayes_output_table_overview.R” which a user could perform on the GCPBayes pleiotropic genes output and has an overall information about potential pleiotropic genes. Here is an example:
+
+
 
 ### References
-Frankish,A. et al. (2019) GENCODE reference annotation for the human and mouse genomes. Nucleic Acids Res., 47, D766–D773.
-Haycock,P.C. et al. (2021) Design and quality control of large-scale two-sample Mendelian randomisation studies. medRxiv, 2021.07.30.21260578.
-Phelan,C.M. et al. (2017) Identification of 12 new susceptibility loci for different histotypes of epithelial ovarian cancer. Nat. Genet., 49, 680–691.
-Zhang,H. et al. (2020) Genome-wide association study identifies 32 novel breast cancer susceptibility loci from overall and subtype-specific analyses. Nat. Genet. 2020 526, 52, 572–581.
+- Frankish,A. et al. (2019) GENCODE reference annotation for the human and mouse genomes. Nucleic Acids Res., 47, D766–D773.
+- Haycock,P.C. et al. (2021) Design and quality control of large-scale two-sample Mendelian randomisation studies. medRxiv, 2021.07.30.21260578.
+- Phelan,C.M. et al. (2017) Identification of 12 new susceptibility loci for different histotypes of epithelial ovarian cancer. Nat. Genet., 49, 680–691.
+- Zhang,H. et al. (2020) Genome-wide association study identifies 32 novel breast cancer susceptibility loci from overall and subtype-specific analyses. Nat. Genet. 2020 526, 52, 572–581.
 
 
-
-## Acknowledgements 
+### Acknowledgements 
 We gratefully acknowledge the following packages which we used throughout our pipeline:
 ```
 ggplot2
