@@ -5,12 +5,10 @@ Update: Jan 2022<br>
 https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
-## How to Cite
-Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x):x, doi: xxx[Paper_link](https://..../)
-<br>
-<br>
+
+### Here we have provided detailed information about how to work with the *GCPBayes pipeline* including tips and suggestions. 
+
 ## Some NOTES
-Here we have provided detailed information about the GCPBayes pipeline including tips and suggestions for running various steps. 
 <br><br>
 **IMPORTANT NOTE 1:** All SNPs and genes positions in the GWAS and annotation data are based on GRCh37 (hg19) Human Genome Assembly.
 <br><br>
@@ -34,3 +32,7 @@ A general overview of the main sections of the GCPBayes pipeline are as follow:
 <kbd> <img src="0_Images/Fig1_v3.jpg"/> </kbd>
 <br></br>
 
+## How to Cite
+Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x):x, doi: xxx[Paper_link](https://..../)
+<br>
+<br>
