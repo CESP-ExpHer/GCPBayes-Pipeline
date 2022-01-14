@@ -25,7 +25,7 @@ This file includes **THREE** major sections:
 - Detailed information for all scripts in the pipeline.
 **IMPORTANT NOTE:** This part includes all concepts and information for each scripts used in the GCPBayes pipeline in order to provide an option to modify/add/remove any part by a user based on its strategy.
 
-# Acknowledgements 
+## Acknowledgements 
 We gratefully acknowledge the following packages which we used throughout our pipeline:
 ```
 ggplot2
