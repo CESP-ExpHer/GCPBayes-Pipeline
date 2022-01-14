@@ -1,0 +1,18 @@
+#       			Annotation GWAS with PLINK 
+# ===============================================================================
+# Written by: Yazdan Asgari
+# Initial Creation Date: 07/2021
+# Edited Date: 1/2022
+# ===============================================================================
+# Now it needs to run PLINK to Annotate "GWAS" file considering 
+
+# input files:
+# annot_gencode_v38lift37_modified_gene_class_coding_chr_num_plink_input.txt
+# BCAC_2020_onco_ALL_reformatted.assoc
+# snp129.attrib.gz (downloaded from PLINK website: https://zzz.bwh.harvard.edu/plink/res.shtml#attrib or https://zzz.bwh.harvard.edu/plink/annot.shtml)
+
+# output:
+# plink.annot
+#===============================================================================
+# PLINK command:
+plink --annotate BCAC_2020_onco_ALL_reformatted.assoc attrib=snp129.attrib.gz ranges=annot_gencode_v38lift37_modified_gene_class_coding_chr_num_plink_input.txt
