@@ -34,13 +34,3 @@ A general overview of the main sections of the GCPBayes pipeline are as follow:
 <kbd> <img src="0_Images/Fig1_v3.jpg"/> </kbd>
 <br></br>
 
-## Acknowledgements 
-We gratefully acknowledge the following packages which we used throughout our pipeline:
-```
-ggplot2
-gwasrapidd
-ieugwasr
-biomaRt
-dplyr
-tibble
-```
