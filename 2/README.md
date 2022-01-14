@@ -663,12 +663,33 @@ There is also a script called “code_analysis_E_gcpbayes_output_table_overview.
 - Zhang,H. et al. (2020) Genome-wide association study identifies 32 novel breast cancer susceptibility loci from overall and subtype-specific analyses. Nat. Genet. 2020 526, 52, 572–581.
 
 ## Acknowledgements 
-We gratefully acknowledge the following packages which we used throughout our pipeline:
+We gratefully acknowledge the following packages/softwares which we used throughout our pipeline:
 ```
-ggplot2
-gwasrapidd
-ieugwasr
-biomaRt
+vroom
 dplyr
-tibble
+data.table
+devtools
+MASS
+tidyr
+PLACO
+genetics.binaRies
+tidyverse
+tictoc
+GCPBayes
+BhGLM
+splitstackshape
+PLINK
+ieugwasr
+gwasrapidd
+CheckSumStats
+ggplot2
+plotly
+patchwork
+biomaRt
+regioneR
+karyoploteR
+readxl
+defaultdict
+stats
+datetime
 ```
