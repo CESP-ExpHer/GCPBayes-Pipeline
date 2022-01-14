@@ -44,7 +44,7 @@ Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level
   * [Section C](#section-c)
   * [Section D](#section-d-2)
   * [Section E](#section-e-2)
-  * [References](#references)
+- [References](#references)
 - [Acknowledgements](#acknowledgements)
 
 
@@ -656,7 +656,7 @@ There is also a script called “code_analysis_E_gcpbayes_output_table_overview.
 | 21	| 2	| 49,232	| 104,701	| 82	| 151 |
 | 22	| 3	| 15,476	| 701,851	| 30	| 652 |
 
-### References
+## References
 - Frankish,A. et al. (2019) GENCODE reference annotation for the human and mouse genomes. Nucleic Acids Res., 47, D766–D773.
 - Haycock,P.C. et al. (2021) Design and quality control of large-scale two-sample Mendelian randomisation studies. medRxiv, 2021.07.30.21260578.
 - Phelan,C.M. et al. (2017) Identification of 12 new susceptibility loci for different histotypes of epithelial ovarian cancer. Nat. Genet., 49, 680–691.
