@@ -489,28 +489,23 @@ The output derived after running the script on OCAC GWAS data (created from Sect
 A user could have an overview from the annotation file created in the Section B. 
 <br>
 There are two possibilities for the visualization of the file:
-1.	Running “code_analysis_B_annotation_file_coding.R” script using RStudio
-After running, an interactive pie chart would be created in which a user could find various information regarding each part of the plot (total number of genes, percentage, etc.) by moving mouse cursor on the section: 
+1.	Running “code_analysis_B_annotation_file_coding.R” script using RStudio. After running, an interactive pie chart would be created in which a user could find various information regarding each part of the plot (total number of genes, percentage, etc.) by moving mouse cursor on the section: 
 
-</br></br>
+</br>
 <kbd> <img src="Images/pie_chart_interactive_1_1.JPG"/> </kbd>
 <br></br>
 
 In addition, by clicking on every items of the legend, it is possible to show/hide that part on the pie chart:
 
-</br></br>
+</br>
 <kbd> <img src="Images/pie_chart_interactive_2_1.JPG"/> </kbd>
 <br></br>
 
-2.	Running “code_analysis_B_annotation_file_coding.R” script using R command line (in UNIX or other Operating Systems (OS))
-<br>
-A pie chart including an overview of genes distribution (here just coding-genes) among all chromosomes would be created in “.jpeg” and “.pdf” format.
-<br>
-**NOTE:** since “plotly” package creates an interactive plot, for saving such plots in static file formats (like “.jpeg” or “.pdf”), a user needs to install “orca” on the OS (see https://github.com/plotly/orca#installation for more details).
-<br>
+2.	Running “code_analysis_B_annotation_file_coding.R” script using R command line (in UNIX or other Operating Systems (OS)). A pie chart including an overview of genes distribution (here just coding-genes) among all chromosomes would be created in “.jpeg” and “.pdf” format. **NOTE:** since “plotly” package creates an interactive plot, for saving such plots in static file formats (like “.jpeg” or “.pdf”), a user needs to install “orca” on the OS (see https://github.com/plotly/orca#installation for more details).
+
 An example of a pie chart created from the protein-coding genes annotation file (“annot_gencode_v38lift37_modified_gene_class_coding.txt”) is shown:
 
-</br></br>
+</br>
 <kbd> <img src="Images/pie_chart_protein_coding_genes_chromosome.JPG"/> </kbd>
 <br></br>
 
