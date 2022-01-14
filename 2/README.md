@@ -144,7 +144,7 @@ We used the annotation file downloaded from GENCODE webpage (Frankish et al., 20
 <br>
 **Input**
 - Input files needed for this step:
- - REMAP_gencode.v28lift37.annotation.gtf
+  - REMAP_gencode.v28lift37.annotation.gtf
 
 **Output**
 - Output file created after running this step:
