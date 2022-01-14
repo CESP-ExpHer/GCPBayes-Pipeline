@@ -25,10 +25,10 @@ Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level
 - [Standardization-Section A](#standardization-section-a)
   * [First Step](#first-step)
   * [Second Step](#second-step)
-- [Annotation](#annotation)
+- [Annotation-Section B](#annotation-section-b)
   * [First Step](#first-step-1)
   * [Second Step](#second-step-1)
-- [LD Clumping](#ld-clumping)
+- [LD Clumping-Section C](#ld-clumping-section-c)
   * [First Step](#first-step-2)
   * [Second Step](#second-step-2)
   * [Third Step](#third-step)
@@ -172,7 +172,7 @@ Consider that OCAC GWAS summary statistics data (Phelan et al., 2017). We used t
   - OCAC_BCAC_2020_onco_ALL_SNP_weird_alleles.txt
   - OCAC_BCAC_2020_onco_ALL_Summary_SNP.txt
 
-## Annotation 
+## Annotation-Section B 
 ***(Section B) (R, PLINK)***
 <br>
 This section creates two files (one would be used in Section D4 and the other used in Section D2).
@@ -204,7 +204,7 @@ To create an annotation file that would be used in the Section D2, a user should
   - plink.annot
   - Annot_BCAC_2020_onco_ALL_reformatted_coding.txt 
 
-## LD Clumping 
+## LD Clumping-Section C 
 ***(Section C) (R)***
 <br>
 **NOTE:** If a user do not want to consider LD clumping through the pipeline, it could ignore this section and move to the next section.
