@@ -14,7 +14,7 @@ Here we have provided detailed information about the GCPBayes pipeline including
 <br>
 **IMPORTANT NOTE 1:** All SNPs and genes positions in the GWAS and annotation data are based on GRCh37 (hg19) Human Genome Assembly.
 <br>
-**IMPORTANT NOTE 2:** The Section names that are mentioned in this page are correspondence to Figure provided in the [An Overview of the Pipeline](##An-Overview-of-the-Pipeline).
+**IMPORTANT NOTE 2:** The Section names that are mentioned in this page are correspondence to Figure provided in the [An Overview of the Pipeline](#An-Overview-of-the-Pipeline).
 <br>
 <br>
 ## Contents
