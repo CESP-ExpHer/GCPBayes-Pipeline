@@ -94,21 +94,25 @@ Consider that BCAC GWAS summary statistics data (v. 2020) (Zhang et al., 2020) d
 
 ### Second Step (Second GWAS Summary Statistics Data):
 **Script:** A2_code_reformatting_file_ocac_bcac_2020_all.py
+<br>
+**Input**
 - Input files needed for running this step:
   - BCAC_2020_onco_ALL_reformatted.txt (created from the First Step)
   - extraction_OCAC.txt
+
 Consider that OCAC GWAS summary statistics data (Phelan et al., 2017). We used the python script to extract the following columns and rename them as follows:
-File name: extraction_OCAC.txt
-- column 2: chr (chromosome)
-- column 3: bp_hg19 (base pair position)
-- column 4: Effect_A (Effect Allele)
-- column 5: nonEffect_A (non-Effect Allele)
-- column 6: EAF (Effect Allele Frequency)
-- column 7: nEAF (non-Effect Allele Frequency)
-- column 8: beta (beta value)
-- column 9: se (standard error)
-- column 10: pval (P-value)
-- column 11: info (r2 value)
+<br>
+- File name: extraction_OCAC.txt
+  - column 2: chr (chromosome)
+  - column 3: bp_hg19 (base pair position)
+  - column 4: Effect_A (Effect Allele)
+  - column 5: nonEffect_A (non-Effect Allele)
+  - column 6: EAF (Effect Allele Frequency)
+  - column 7: nEAF (non-Effect Allele Frequency)
+  - column 8: beta (beta value)
+  - column 9: se (standard error)
+  - column 10: pval (P-value)
+  - column 11: info (r2 value)
 
 **NOTE:** A user MUST modify the **“DEFINITION SECTION”** which includes the following options:
 - Path for the GWAS reference file: (in our example “~/BCAC_OCAC/”)
@@ -118,6 +122,7 @@ File name: extraction_OCAC.txt
 - Path for the output file: (in our example “~/BCAC_OCAC/”)
 - First part of the output file names: (in our example “OCAC_BCAC_2020_onco_ALL”)
 
+**Output**
 - Output files created after running this step:
   - OCAC_BCAC_2020_onco_ALL_reformatted.txt
   - OCAC_BCAC_2020_onco_ALL_SNP_ambiguous.txt
