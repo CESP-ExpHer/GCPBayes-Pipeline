@@ -19,6 +19,9 @@ Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level
 <br>
 
 ## Table of Contents
+- [Tutorial](#tutorial)
+  * [Summary: Running the GCPBayes pipeline without LD Clumping](#summary)
+  * [Summary: Running the GCPBayes pipeline with LD Clumping](#summary--running-the-gcpbayes-pipeline-with-ld-clumping)
 
 
 
