@@ -426,50 +426,57 @@ To create an annotation file that would be used in the Section D2, a user should
 **Script:** code_analysis_A_checksumstats_BCAC.R
 <br>
 **Input**
-	Input files needed for this step:
-o	BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
-	Output files created from this step:
-o	Some Plots compared to known SNPs in the public databases
+- Input files needed for this step:
+  - BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
+
+**Output**
+- Output files created from this step:
+  - Some Plots compared to known SNPs in the public databases
+
 The script uses a R package recently introduced (called “CheckSumStats”) (Haycock et al., 2021) to  extracts some SNPs from the BCAC GWAS summary statistics input file and compare them with GWAS database (such as GWAS catalog and 1000 Genome). Here is the steps available in the script:
-i.	Extracting SNPs list based on EFO ID of Breast Carcinoma
-ii.	Checking allele frequency (NOTE: We also checked an output if a user selects the “effect” and “non-effect” alleles columns WRONG!)
-iii.	Checking the effect allele by comparing Z scores in the test and GWAS catalog datasets
-iv.	Checking the effect allele by comparing effect allele frequency (EAF) between the test dataset and the GWAS catalog
-v.	Checking for errors or analytical issues in the summary data
-vi.	Comparing the expected and reported effect sizes
-vii.	Plotting the relative bias, i.e. the percentage deviation of the expected from the reported effect size
-viii.	Checking whether the reported P values correspond to the reported effect sizes in the dataset
-ix.	Saving all outputs in one file
-The output derived after running the script on BCAC GWAS data (created from Section A) is shown in Fig. S1. 
+1.  Extracting SNPs list based on EFO ID of Breast Carcinoma
+2.  Checking allele frequency (NOTE: We also checked an output if a user selects the “effect” and “non-effect” alleles columns WRONG!)
+3.  Checking the effect allele by comparing Z scores in the test and GWAS catalog datasets
+4.  Checking the effect allele by comparing effect allele frequency (EAF) between the test dataset and the GWAS catalog
+5.  Checking for errors or analytical issues in the summary data
+6.  Comparing the expected and reported effect sizes
+7.  Plotting the relative bias, i.e. the percentage deviation of the expected from the reported effect size
+8.  Checking whether the reported P values correspond to the reported effect sizes in the dataset
+9.  Saving all outputs in one file
+
+The output derived after running the script on BCAC GWAS data (created from Section A) is: 
 
 Also, we performed similar checking on OCAC data as well: 
-Script: code_analysis_A_checksumstats_OCAC.R
+**Script:** code_analysis_A_checksumstats_OCAC.R
 <br>
 **Input**
-	Input files needed for this step:
-o	OCAC_BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
-	Output files created from this step:
-o	Some Plots compared to known SNPs in the public databases
-Here is the steps available in the script:
-i.	Extracting SNPs list based on EFO ID of Ovarian Carcinoma
-ii.	Checking allele frequency 
-iii.	Checking the effect allele by comparing Z scores in the test and GWAS catalog datasets
-iv.	Checking the effect allele by comparing effect allele frequency (EAF) between the test dataset and the GWAS catalog
-v.	Checking for errors or analytical issues in the summary data
-vi.	Comparing the expected and reported effect sizes
-vii.	Plotting the relative bias, i.e. the percentage deviation of the expected from the reported effect size
-viii.	Checking whether the reported P values correspond to the reported effect sizes in the dataset
-ix.	Saving all outputs in one file
-The output derived after running the script on OCAC GWAS data (created from Section A) is shown in Fig. S2.
+- Input files needed for this step:
+  - OCAC_BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
+- Output files created from this step:
+  - Some Plots compared to known SNPs in the public databases
 
-2.6.2.	Section B
-Script: code_analysis_B_annotation_file_coding.R
+Here is the steps available in the script:
+1.  Extracting SNPs list based on EFO ID of Ovarian Carcinoma
+2.  Checking allele frequency 
+3.  Checking the effect allele by comparing Z scores in the test and GWAS catalog datasets
+4.  Checking the effect allele by comparing effect allele frequency (EAF) between the test dataset and the GWAS catalog
+5.  Checking for errors or analytical issues in the summary data
+6.  Comparing the expected and reported effect sizes
+7.  Plotting the relative bias, i.e. the percentage deviation of the expected from the reported effect size
+8.  Checking whether the reported P values correspond to the reported effect sizes in the dataset
+9.  Saving all outputs in one file
+
+The output derived after running the script on OCAC GWAS data (created from Section A) is:
+
+### Section B
+**Script:** code_analysis_B_annotation_file_coding.R
 <br>
 **Input**
-	Input files needed for this step:
-o	annot_gencode_v38lift37_modified_gene_class_coding.txt (created from Section B)
-	Output files created from this step:
-o	Pie Chart
+- Input files needed for this step:
+  - annot_gencode_v38lift37_modified_gene_class_coding.txt (created from Section B)
+- Output files created from this step:
+  - Pie Chart
+
 A user could have an overview from the annotation file created in the Section B. There are two possibilities for the visualization of the file:
 1.	Running “code_analysis_B_annotation_file_coding.R” script using RStudio
 After running, an interactive pie chart would be created in which a user could find various information regarding each part of the plot (total number of genes, percentage, etc.) by moving mouse cursor on the section (Fig. S3-A). In addition, by clicking on every items of the legend, it is possible to show/hide that part on the pie chart (Fig. S3-B).
@@ -482,52 +489,52 @@ An example of a pie chart created from the protein-coding genes annotation file 
 Script: code_analysis_C_PLACO_results_one_pair.R 
 <br>
 **Input**
-	Input files needed for this step:
-o	output_PLACO_BCAC_2020_ALL_OCAC.txt (created from Section C 1.3.2)
-	Output files created from this step:
-o	Manhattan Plot 
-o	Significant SNPs from the PLACO result (p < 5×10-8)
+- Input files needed for this step:
+  - output_PLACO_BCAC_2020_ALL_OCAC.txt (created from Section C 1.3.2)
+- Output files created from this step:
+  - Manhattan Plot 
+  - Significant SNPs from the PLACO result (p < 5×10-8)
 A user could run the “code_analysis_C_PLACO_results_one_pair.R” script which perform three analyses as follow:
 1.	Performing a global correlation analysis between two traits (using Z columns) based on two methods (spearman and pearson) and save the results in “…_cor_test.txt” file.
 2.	Finding significant SNPs from the PLACO result (p < 5×10-8) and save the results in “output_PLACO_BCAC_2020_ALL_OCAC_Sig.txt” file.
 3.	Creation of a Manhattan Plot for all chromosomes and drawing a horizontal dashed line in black (indicating p-value threshold 5×10-8). In addition, SNPs with positive effect are colored in red while SNPs with negative effect are in blue. The plot would be saved as a “.png” file format. An example of the Manhattan Plot for PLACO output for BCAC and OCAC GWAS data (used in our study) is shown in Fig. S5.
 
-2.6.4.	Section D
+### Section D
 Script: code_analysis_D_gcpbayes_input_ggplot.R
 <br>
 **Input**
-	Input files needed for this step:
-o	Matrices_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata (created from Section D 1.4.1)
+- Input files needed for this step:
+  - Matrices_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata (created from Section D 1.4.1)
 OR
-o	Matrices_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata (created from Section D 1.5.1)
-	Output files created from this step:
-o	Histogram and Bar Plots
+  - Matrices_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata (created from Section D 1.5.1)
+- Output files created from this step:
+  - Histogram and Bar Plots
 A user could run the “code_analysis_D_gcpbayes_input_ggplot.R” script and obtain an overview about distribution of genes with different number of SNPs. We designed two different overviews for a user as follow:
 1.	A histogram (based on number of SNPs available for each gene) for all genes. For example, the histogram for GCPBayes input file for BCAC and OCAC GWAS data (used in our study) while the pipeline run without LD clumping step is shown in Fig. S6.
 
 a.	Based on our experience, in a GWAS data, most of the genes contain a number of SNPs less than 50 (due to our practical experience with various GWAS datasets, especially when working with only protein-coding genes). Therefore, in order to have a deeper overview, a user could define a threshold value (Default = 50) to have a plot with a more detailed view (bar plot) to see the number of genes with SNPs less than the threshold value, as well as a histogram for genes in which the number of SNPs are more than the threshold value. For instance, two plots for GCPBayes input file for BCAC and OCAC GWAS data (used in our study) while the pipeline run without LD clumping step are shown in Fig. S7.
 
-2.6.5.	Section E
+### Section E
 Script: code_analysis_E_gcpbayes_output_karyotype.R
 <br>
 **Input**
-	Input files needed for this step:
-o	gene_list.txt (list of pleiotropic genes symbols in one column extracted from the output of the Section E 1.4.2, 1.4.3, 1.5.2, or 1.5.3) 
-	Output files created from this step:
-o	Pleiotropic Genes Karyotype Plot
+- Input files needed for this step:
+  - gene_list.txt (list of pleiotropic genes symbols in one column extracted from the output of the Section E 1.4.2, 1.4.3, 1.5.2, or 1.5.3) 
+- Output files created from this step:
+  - Pleiotropic Genes Karyotype Plot
 A user could run the “code_analysis_E_gcpbayes_output_karyotype.R” script which reads the GCPBayes output contains pleiotropic genes information, then show them based on their positions on a chromosome overview (called Karyotype plot).  Fig. S8 demonstrates a Karyotype plot for GCPBayes output of BCAC and OCAC GWAS data (used in our study) while the pipeline run without LD clumping step.
 NOTE: Since for drawing a Karyotype plot, the script uses the HUGO Gene Nomenclature Committee (HGNC) symbol (for each input gene symbol) extracted from Ensembl database, it would NOT be able to show the genes that their HGNC symbol did not find.  
 
 Script: code_analysis_E_gcpbayes_output_table_overview.R
 <br>
 **Input**
-	Input files needed for this step:
-o	gene_list.txt (list of pleiotropic genes symbols with “chr”, “gene_length”, and “snp_number” columns extracted from the output of the Section E 1.4.2, 1.4.3, 1.5.2, or 1.5.3) 
-	Output files created from this step:
-o	gcpbayes_pleiotropy_summary_table.txt (Similar to Table 1 in the Manuscript)
+- Input files needed for this step:
+  - gene_list.txt (list of pleiotropic genes symbols with “chr”, “gene_length”, and “snp_number” columns extracted from the output of the Section E 1.4.2, 1.4.3, 1.5.2, or 1.5.3) 
+- Output files created from this step:
+  - gcpbayes_pleiotropy_summary_table.txt (Similar to Table 1 in the Manuscript)
 There is also a script called “code_analysis_E_gcpbayes_output_table_overview.R” which a user could perform on the GCPBayes pleiotropic genes output and has an overall information about potential pleiotropic genes (something similar to Table 1 in the manuscript). 
 
-References
+### References
 Frankish,A. et al. (2019) GENCODE reference annotation for the human and mouse genomes. Nucleic Acids Res., 47, D766–D773.
 Haycock,P.C. et al. (2021) Design and quality control of large-scale two-sample Mendelian randomisation studies. medRxiv, 2021.07.30.21260578.
 Phelan,C.M. et al. (2017) Identification of 12 new susceptibility loci for different histotypes of epithelial ovarian cancer. Nat. Genet., 49, 680–691.
