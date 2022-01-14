@@ -15,7 +15,7 @@ Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level
 <br><br>
 **IMPORTANT NOTE 2:** In order to follow all procedure easier, we considered all paths in the same directory (for inputs and outputs) throughout the pipeline (in our example: “~/BCAC_OCAC/”)
 <br><br>
-**IMPORTANT NOTE 3:** The Section names that are mentioned in this page are correspondence to Figure provided in the [An Overview of the Pipeline](/#An-Overview-of-the-Pipeline).
+**IMPORTANT NOTE 3:** The Section names that are mentioned in this page are correspondence to Figure provided in the [An Overview of the Pipeline](../#An-Overview-of-the-Pipeline).
 <br>
 
 ## Table of Contents
