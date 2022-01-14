@@ -166,218 +166,266 @@ To create an annotation file that would be used in the Section D2, a user should
   - Annot_BCAC_2020_onco_ALL_reformatted_coding.txt 
 
 ## LD Clumping (Section C) (R)
-NOTE: If a user do not want to consider LD clumping through the pipeline, it could ignore this section and move to the next section.
-2.3.1.	First Step (finding shared SNPs between two traits)
-Script: C1_code_find_shared_snps_one_pair.R
-	Input files needed for running this step:
-o	BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
-o	OCAC_BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
-NOTE: If a user performed the standardization (Section A) using our scripts, the column names are correct. Otherwise, a user MUST consider that the following column names are needed to be available during the running process. So, a user might need rename them in GWAS data or make change in the script. The column names used in the script are as follows:
-•	snp (RS ID)
-•	chr (chromosome)
-•	bp_hg19 (base pair position)
-•	Effect_A (Effect Allele)
-•	nonEffect_A (non-Effect Allele)
-•	beta (beta value)
-•	se (standard error)
-•	pval (P-value)
-•	info (r2 value)
-•	EAF (Effect Allele Frequency)
-•	MAF (Minor Allele Frequency)
-NOTE: A user MUST modify the “DEFINITION SECTION” which includes the following options:
-•	Path for two GWAS input files: (in our example “~/BCAC_OCAC/”)
-•	Input file names: (in our example “BCAC_2020_onco_ALL_reformatted.txt” and “OCAC_BCAC_2020_onco_ALL_reformatted.txt”)
-•	Path for the output file: (in our example “~/BCAC_OCAC/”)
-•	Output file names: (in our example “BCAC_2020_ALL_Shared_OCAC_inc_Z.txt” and “OCAC_Shared_BCAC_2020_ALL_inc_Z.txt”)
-•	info_threshold (used for filtering GWAS data) (in our example = 0.8)
-•	MAF_threshold (used for filtering GWAS data) (in our example = 0.01)
+**NOTE:** If a user do not want to consider LD clumping through the pipeline, it could ignore this section and move to the next section.
+### First Step (finding shared SNPs between two traits)
+**Script:** C1_code_find_shared_snps_one_pair.R
+<br>
+**Input**
+- Input files needed for running this step:
+  - BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
+  - OCAC_BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
 
-	Output files created after running this step:
-o	BCAC_2020_ALL_Shared_OCAC_inc_Z.txt
-o	OCAC_Shared_BCAC_2020_ALL_inc_Z.txt
-2.3.2.	Second Step (running PLACO)
-Script: C2_code_run_PLACO_decor_one_pair.R
-	Input files needed for running this step:
-o	BCAC_2020_ALL_Shared_OCAC_inc_Z.txt (created from Section C1.3.1)
-o	OCAC_Shared_BCAC_2020_ALL_inc_Z. txt (created from Section C1.3.1)
-NOTE: A user MUST modify the “DEFINITION SECTION” which includes the following options:
-•	Path for two input files: (in our example “~/BCAC_OCAC/”)
-•	Input file names: (in our example “BCAC_2020_ALL_Shared_OCAC_inc_Z.txt” and “OCAC_Shared_BCAC_2020_ALL_inc_Z.txt”)
-•	Path for the output file: (in our example “~/BCAC_OCAC/”)
-•	Output file names: (in our example “output_PLACO_BCAC_2020_ALL_OCAC”)
-•	pval_threshold (used for decorrelating the Z-scores) (in our example = 0.05)
+**NOTE:** If a user performed the standardization (Section A) using our scripts, the column names are correct. Otherwise, a user MUST consider that the following column names are needed to be available during the running process. So, a user might need rename them in GWAS data or make change in the script. The column names used in the script are as follows:
+  - snp (RS ID)
+  - chr (chromosome)
+  - bp_hg19 (base pair position)
+  - Effect_A (Effect Allele)
+  - nonEffect_A (non-Effect Allele)
+  - beta (beta value)
+  - se (standard error)
+  - pval (P-value)
+  - info (r2 value)
+  - EAF (Effect Allele Frequency)
+  - MAF (Minor Allele Frequency)
 
-	Output file created after running this step:
-o	output_PLACO_BCAC_2020_ALL_OCAC.txt 
-2.3.3.	Third Step (running LD Clumping)
-Script: C3_code_ldclumping_local.R
-	Input files needed for running this step:
-o	output_PLACO_BCAC_2020_ALL_OCAC.txt (created from Section C1.3.2)
-NOTE: A user MUST modify the “DEFINITION SECTION” which includes the following options:
-•	Path for the input file: (in our example “~/BCAC_OCAC/”)
-•	PLACO Input file name: (in our example “output_PLACO_BCAC_2020_ALL_OCAC.txt”) (created from Section C1.3.2)
-•	Path for the output file: (in our example “~/BCAC_OCAC/”)
-•	Output file name: (in our example “output_ld_clumping_08_BCAC_2020_ALL_OCAC.txt”)
-NOTE: A user MUST also modify the LD Calculation parameters in the “RUNNING SECTION” which includes the following options:
-•	clump_r2 (Clumping r2 threshold) (in our example = 0.8)
-•	pop (super-population to use as reference panel) (in our example = “EUR”)
-•	bfile (the PATH where the super-population files exists) (in our example “~/BCAC_OCAC/1000K_ref_data/EUR”)
+**NOTE:** A user MUST modify the **“DEFINITION SECTION”** which includes the following options:
+- Path for two GWAS input files: (in our example “~/BCAC_OCAC/”)
+- Input file names: (in our example “BCAC_2020_onco_ALL_reformatted.txt” and “OCAC_BCAC_2020_onco_ALL_reformatted.txt”)
+- Path for the output file: (in our example “~/BCAC_OCAC/”)
+- Output file names: (in our example “BCAC_2020_ALL_Shared_OCAC_inc_Z.txt” and “OCAC_Shared_BCAC_2020_ALL_inc_Z.txt”)
+- info_threshold (used for filtering GWAS data) (in our example = 0.8)
+- MAF_threshold (used for filtering GWAS data) (in our example = 0.01)
 
-	Output file created after running this step:
-o	output_ld_clumping_08_BCAC_2020_ALL_OCAC.txt 
-2.4.	Core and Running GCPBayes (Section D without LD Clumping + Section E) (R)
-2.4.1.	Section D
-Script: D1_code_pipeline_annot_coding_withoutldclumping_extra_info.R
-	Input files needed for running this step:
-o	BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
-o	OCAC_BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
-o	Annot_BCAC_2020_onco_ALL_reformatted_coding.txt (created from Section B)
-o	annot_gencode_v38lift37_modified_gene_class.txt (created from Section B)
-NOTE: A user MUST modify the “DEFINITION SECTION” which includes the following options:
-•	Path for two GWAS input files: (in our example “~/BCAC_OCAC/”)
-•	GWAS input file names: (in our example “BCAC_2020_onco_ALL_reformatted.txt” and “OCAC_BCAC_2020_onco_ALL_reformatted.txt”)
-•	First GWAS Annotation file path (in our example “~/BCAC_OCAC/”)
-•	First GWAS Annotation file name (in our example “Annot_BCAC_2020_onco_ALL_reformatted_coding.txt”)
-•	Second GWAS Annotation file path (in our example “~/BCAC_OCAC/”)
-•	Second GWAS Annotation file name (in our example “annot_gencode_v38lift37_modified_gene_class.txt”)
-•	Path for saving/reading files created by this script (called “path_input_data” and “path_output_data”) (in our example “~/BCAC_OCAC/”)
-•	Definition of some file names used during running the script in different steps. In our example are:
-o	output_pipeline_BCAC_ALL_Shared_OCAC_coding_withoutclumping
-o	output_pipeline_OCAC_Shared_BCAC_ALL_coding_withoutclumping
-o	output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping
-o	output_pipeline_Summary_SNP_in_genes_BCAC_ALL_OCAC_coding_withoutclumping
-o	output_pipeline_Summary_SNP_in_genes_OCAC_BCAC_ALL_coding_withoutclumping
-•	info_threshold (used for filtering GWAS data) (in our example = 0.9)
-•	MAF_threshold (used for filtering GWAS data) (in our example = 0.05)
+**Output**
+- Output files created after running this step:
+  - BCAC_2020_ALL_Shared_OCAC_inc_Z.txt
+  - OCAC_Shared_BCAC_2020_ALL_inc_Z.txt
 
-	Output files created after running this step:
-o	output_pipeline_BCAC_ALL_Shared_OCAC_coding_withoutclumping.txt
-o	output_pipeline_OCAC_Shared_BCAC_ALL_coding_withoutclumping.txt
-o	output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.txt
-o	output_pipeline_Summary_SNP_in_genes_BCAC_ALL_OCAC_coding_withoutclumping.txt
-o	output_pipeline_Summary_SNP_in_genes_OCAC_BCAC_ALL_coding_withoutclumping.txt
-o	Matrices_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata
-o	Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata
-2.4.2.	Section E (for genes with number of SNPs less than a threshold)
-Script: E1_code_gcpbayes_less_extra_info.R
-	Input files needed for running this step:
-o	Matrices_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata (created from Section 1.4.1)
-o	Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata (created from Section 1.4.1)
-NOTE: A user MUST modify the “DEFINITION SECTION” which includes the following options:
-•	Path for two GCPBayes input files: (in our example “~/BCAC_OCAC/”)
-•	GCPBayes input file names: (in our example “Matrices_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata” and “Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata”)
-•	Path for the output files: (in our example “~/BCAC_OCAC/”)
-•	Output file names. In our example are:
-o	output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_less_threshold_500_results
-o	output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_less_threshold_500_ pleiotropy
-o	output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_less_threshold_500_ errors
-•	SNP_number_threshold (A threshold for splitting genes based on SNP numbers) (in our example = 500)
-•	theta_threshold (for considering genes with potential pleiotropic effect) (in our example = 0.5)
+### Second Step (running PLACO)
+**Script:** C2_code_run_PLACO_decor_one_pair.R
+<br>
+**Input**
+- Input files needed for running this step:
+  - BCAC_2020_ALL_Shared_OCAC_inc_Z.txt (created from Section C1.3.1)
+  - OCAC_Shared_BCAC_2020_ALL_inc_Z. txt (created from Section C1.3.1)
 
-	Output files created after running this step:
-o	output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_less_threshold_500_results.txt
-o	output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_less_threshold_500_ pleiotropy.txt (if any genes with pleiotropic signals found)
-o	output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_less_threshold_500_ errors.txt (if any error occurred during calculation for each gene)
-2.4.3.	Section E (for genes with number of SNPs greater than a threshold)
-Script: E2_code_gcpbayes_greater_extra_info.R
-	Input files needed for running this step:
-o	Matrices_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata (created from Section 1.4.1)
-o	Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata (created from Section 1.4.1)
-NOTE: A user MUST modify the “DEFINITION SECTION” which includes the following options:
-•	Path for two GCPBayes input files: (in our example “~/BCAC_OCAC/”)
-•	GCPBayes input file names: (in our example “Matrices_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata” and “Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata”)
-•	Path for the output files: (in our example “~/BCAC_OCAC/”)
-•	Output file names. In our example are:
-o	output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_greater_threshold_500_results
-o	output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_ greater _threshold_500_ pleiotropy
-o	output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_ greater _threshold_500_ errors
-•	SNP_number_threshold (A threshold for splitting genes based on SNP numbers) (in our example = 500)
-•	theta_threshold (for considering genes with potential pleiotropic effect) (in our example = 0.5)
+**NOTE:** A user MUST modify the **“DEFINITION SECTION”** which includes the following options:
+- Path for two input files: (in our example “~/BCAC_OCAC/”)
+- Input file names: (in our example “BCAC_2020_ALL_Shared_OCAC_inc_Z.txt” and “OCAC_Shared_BCAC_2020_ALL_inc_Z.txt”)
+- Path for the output file: (in our example “~/BCAC_OCAC/”)
+- Output file names: (in our example “output_PLACO_BCAC_2020_ALL_OCAC”)
+- pval_threshold (used for decorrelating the Z-scores) (in our example = 0.05)
 
-	Output files created after running this step:
-o	output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_ greater _threshold_500_results.txt
-o	output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_ greater _threshold_500_pleiotropy.txt (if any genes with pleiotropic signals found)
-o	output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_ greater _threshold_500_errors.txt (if any error occurred during calculation for each gene)
-2.5.	Core and Running GCPBayes (Section D with LD Clumping + Section E) (R)
-2.5.1.	Section D
-Script: D2_code_pipeline_annot_coding_ldclumping_extra_info.R
-	Input files needed for running this step:
-o	BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
-o	OCAC_BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
-o	Annot_BCAC_2020_onco_ALL_reformatted_coding.txt (created from Section B)
-o	annot_gencode_v38lift37_modified_gene_class.txt (created from Section B)
-o	output_ld_clumping_08_BCAC_2020_ALL_OCAC.txt (created from Section C)
-NOTE: A user MUST modify the “DEFINITION SECTION” which includes the following options:
-•	Path for two GWAS input files: (in our example “~/BCAC_OCAC/”)
-•	GWAS input file names: (in our example “BCAC_2020_onco_ALL_reformatted.txt” and “OCAC_BCAC_2020_onco_ALL_reformatted.txt”)
-•	First GWAS Annotation file path (in our example “~/BCAC_OCAC/”)
-•	First GWAS Annotation file name (in our example “Annot_BCAC_2020_onco_ALL_reformatted_coding.txt”)
-•	Second GWAS Annotation file path (in our example “~/BCAC_OCAC/”)
-•	Second GWAS Annotation file name (in our example “annot_gencode_v38lift37_modified_gene_class.txt”)
-•	Path for LD Clumping input file: (in our example “~/BCAC_OCAC/”)
-•	LD Clumping file names: (in our example “output_ld_clumping_08_BCAC_2020_ALL_OCAC.txt”
-•	Path for saving/reading files created by this script (called “path_input_data” and “path_output_data”) (in our example “~/BCAC_OCAC/”)
-•	Definition of some file names used during running the script in different steps. In our example are:
-o	output_pipeline_BCAC_ALL_Shared_OCAC_coding_clumping_08 
-o	output_pipeline_OCAC_Shared_BCAC_ALL_coding_clumping_08 
-o	output_pipeline_BCAC_ALL_OCAC_coding_clumping_08 
-o	output_pipeline_Summary_SNP_in_genes_BCAC_ALL_OCAC_coding_clumping_08 
-o	output_pipeline_Summary_SNP_in_genes_OCAC_BCAC_ALL_coding_clumping_08 
-•	info_threshold (used for filtering GWAS data) (in our example = 0.9)
-•	MAF_threshold (used for filtering GWAS data) (in our example = 0.05)
+**Output**
+- Output file created after running this step:
+  - output_PLACO_BCAC_2020_ALL_OCAC.txt 
 
-	Output files created after running this step:
-o	output_pipeline_BCAC_ALL_Shared_OCAC_coding_clumping_08.txt 
-o	output_pipeline_OCAC_Shared_BCAC_ALL_coding_clumping_08.txt 
-o	output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.txt 
-o	output_pipeline_Summary_SNP_in_genes_BCAC_ALL_OCAC_coding_clumping_08.txt 
-o	output_pipeline_Summary_SNP_in_genes_OCAC_BCAC_ALL_coding_clumping_08.txt 
-o	Matrices_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata
-o	Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata
-2.5.2.	Section E (for genes with number of SNPs less than a threshold)
-Script: E1_code_gcpbayes_less_extra_info.R
-	Input files needed for running this step:
-o	Matrices_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata (created from Section 1.4.1)
-o	Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata (created from Section 1.4.1)
-NOTE: A user MUST modify the “DEFINITION SECTION” which includes the following options:
-•	Path for two GCPBayes input files: (in our example “~/BCAC_OCAC/”)
-•	GCPBayes input file names: (in our example “Matrices_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata” and “Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata”)
-•	Path for the output files: (in our example “~/BCAC_OCAC/”)
-•	Output file names. In our example are:
-o	output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_less_threshold_500_results
-o	output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_less_threshold_500_pleiotropy
-o	output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_less_threshold_500_errors
-•	SNP_number_threshold (A threshold for splitting genes based on SNP numbers) (in our example = 500)
-•	theta_threshold (for considering genes with potential pleiotropic effect) (in our example = 0.5)
+### Third Step (running LD Clumping)
+**Script:** C3_code_ldclumping_local.R
+<br>
+**Input**
+- Input files needed for running this step:
+  - output_PLACO_BCAC_2020_ALL_OCAC.txt (created from Section C1.3.2)
 
-	Output files created after running this step:
-o	output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_less_threshold_500_results.txt
-o	output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_less_threshold_500_pleiotropy.txt (if any genes with pleiotropic signals found)
-o	output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_less_threshold_500_errors.txt (if any error occurred during calculation for each gene)
-2.5.3.	Section E (for genes with number of SNPs greater than a threshold)
-Script: E2_code_gcpbayes_greater_extra_info.R
-	Input files needed for running this step:
-o	Matrices_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata (created from Section 1.4.1)
-o	Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata (created from Section 1.4.1)
-NOTE: A user MUST modify the “DEFINITION SECTION” which includes the following options:
-•	Path for two GCPBayes input files: (in our example “~/BCAC_OCAC/”)
-•	GCPBayes input file names: (in our example “Matrices_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata” and “Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata”)
-•	Path for the output files: (in our example “~/BCAC_OCAC/”)
-•	Output file names. In our example are:
-o	output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_results
-o	output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_pleiotropy
-o	output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_errors
-•	SNP_number_threshold (A threshold for splitting genes based on SNP numbers) (in our example = 500)
-•	theta_threshold (for considering genes with potential pleiotropic effect) (in our example = 0.5)
+**NOTE:** A user MUST modify the **“DEFINITION SECTION”** which includes the following options:
+- Path for the input file: (in our example “~/BCAC_OCAC/”)
+- PLACO Input file name: (in our example “output_PLACO_BCAC_2020_ALL_OCAC.txt”) (created from Section C1.3.2)
+- Path for the output file: (in our example “~/BCAC_OCAC/”)
+- Output file name: (in our example “output_ld_clumping_08_BCAC_2020_ALL_OCAC.txt”)
 
-	Output files created after running this step:
-o	output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_results.txt
-o	output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_pleiotropy.txt (if any genes with pleiotropic signals found)
-o	output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_errors.txt (if any error occurred during calculation for each gene)
+**NOTE:** A user MUST also modify the LD Calculation parameters in the **“RUNNING SECTION”** which includes the following options:
+- clump_r2 (Clumping r2 threshold) (in our example = 0.8)
+- pop (super-population to use as reference panel) (in our example = “EUR”)
+- bfile (the PATH where the super-population files exists) (in our example “~/BCAC_OCAC/1000K_ref_data/EUR”)
 
-2.6.	Visualization (R)
-2.6.1.	Section A
-Script: code_analysis_A_checksumstats_BCAC.R
+**Output**
+- Output file created after running this step:
+- output_ld_clumping_08_BCAC_2020_ALL_OCAC.txt 
+
+## Core and Running GCPBayes (Section D without LD Clumping + Section E) (R)
+### Section D
+**Script:** D1_code_pipeline_annot_coding_withoutldclumping_extra_info.R
+<br>
+**Input**
+- Input files needed for running this step:
+  - BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
+  - OCAC_BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
+  - Annot_BCAC_2020_onco_ALL_reformatted_coding.txt (created from Section B)
+  - annot_gencode_v38lift37_modified_gene_class.txt (created from Section B)
+
+**NOTE:** A user MUST modify the **“DEFINITION SECTION”** which includes the following options:
+- Path for two GWAS input files: (in our example “~/BCAC_OCAC/”)
+- GWAS input file names: (in our example “BCAC_2020_onco_ALL_reformatted.txt” and “OCAC_BCAC_2020_onco_ALL_reformatted.txt”)
+- First GWAS Annotation file path (in our example “~/BCAC_OCAC/”)
+- First GWAS Annotation file name (in our example “Annot_BCAC_2020_onco_ALL_reformatted_coding.txt”)
+- Second GWAS Annotation file path (in our example “~/BCAC_OCAC/”)
+- Second GWAS Annotation file name (in our example “annot_gencode_v38lift37_modified_gene_class.txt”)
+- Path for saving/reading files created by this script (called “path_input_data” and “path_output_data”) (in our example “~/BCAC_OCAC/”)
+- Definition of some file names used during running the script in different steps. In our example are:
+  - output_pipeline_BCAC_ALL_Shared_OCAC_coding_withoutclumping
+  - output_pipeline_OCAC_Shared_BCAC_ALL_coding_withoutclumping
+  - output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping
+  - output_pipeline_Summary_SNP_in_genes_BCAC_ALL_OCAC_coding_withoutclumping
+  - output_pipeline_Summary_SNP_in_genes_OCAC_BCAC_ALL_coding_withoutclumping
+- info_threshold (used for filtering GWAS data) (in our example = 0.9)
+- MAF_threshold (used for filtering GWAS data) (in our example = 0.05)
+
+**Output**
+- Output files created after running this step:
+  - output_pipeline_BCAC_ALL_Shared_OCAC_coding_withoutclumping.txt
+  - output_pipeline_OCAC_Shared_BCAC_ALL_coding_withoutclumping.txt
+  - output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.txt
+  - output_pipeline_Summary_SNP_in_genes_BCAC_ALL_OCAC_coding_withoutclumping.txt
+  - output_pipeline_Summary_SNP_in_genes_OCAC_BCAC_ALL_coding_withoutclumping.txt
+  - Matrices_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata
+  - Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata
+
+### Section E (for genes with number of SNPs less than a threshold)
+**Script:** E1_code_gcpbayes_less_extra_info.R
+<br>
+**Input**
+- Input files needed for running this step:
+  - Matrices_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata (created from Section 1.4.1)
+  - Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata (created from Section 1.4.1)
+
+**NOTE:** A user MUST modify the **“DEFINITION SECTION”** which includes the following options:
+- Path for two GCPBayes input files: (in our example “~/BCAC_OCAC/”)
+- GCPBayes input file names: (in our example “Matrices_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata” and “Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata”)
+- Path for the output files: (in our example “~/BCAC_OCAC/”)
+- Output file names. In our example are:
+  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_less_threshold_500_results
+  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_less_threshold_500_ pleiotropy
+  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_less_threshold_500_ errors
+- SNP_number_threshold (A threshold for splitting genes based on SNP numbers) (in our example = 500)
+- theta_threshold (for considering genes with potential pleiotropic effect) (in our example = 0.5)
+
+**Output**
+- Output files created after running this step:
+  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_less_threshold_500_results.txt
+  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_less_threshold_500_ pleiotropy.txt (if any genes with pleiotropic signals found)
+  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_less_threshold_500_ errors.txt (if any error occurred during calculation for each gene)
+
+### Section E (for genes with number of SNPs greater than a threshold)
+**Script:** E2_code_gcpbayes_greater_extra_info.R
+<br>
+**Input**
+- Input files needed for running this step:
+  - Matrices_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata (created from Section 1.4.1)
+  - Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata (created from Section 1.4.1)
+
+**NOTE:** A user MUST modify the **“DEFINITION SECTION”** which includes the following options:
+- Path for two GCPBayes input files: (in our example “~/BCAC_OCAC/”)
+- GCPBayes input file names: (in our example “Matrices_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata” and “Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata”)
+- Path for the output files: (in our example “~/BCAC_OCAC/”)
+- Output file names. In our example are:
+  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_greater_threshold_500_results
+  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_ greater _threshold_500_ pleiotropy
+  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_ greater _threshold_500_ errors
+- SNP_number_threshold (A threshold for splitting genes based on SNP numbers) (in our example = 500)
+- theta_threshold (for considering genes with potential pleiotropic effect) (in our example = 0.5)
+
+**Output**
+- Output files created after running this step:
+  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_ greater _threshold_500_results.txt
+  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_ greater _threshold_500_pleiotropy.txt (if any genes with pleiotropic signals found)
+  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_ greater _threshold_500_errors.txt (if any error occurred during calculation for each gene)
+
+## Core and Running GCPBayes (Section D with LD Clumping + Section E) (R)
+### Section D
+**Script:** D2_code_pipeline_annot_coding_ldclumping_extra_info.R
+<br>
+**Input**
+- Input files needed for running this step:
+  - BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
+  - OCAC_BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
+  - Annot_BCAC_2020_onco_ALL_reformatted_coding.txt (created from Section B)
+  - annot_gencode_v38lift37_modified_gene_class.txt (created from Section B)
+  - output_ld_clumping_08_BCAC_2020_ALL_OCAC.txt (created from Section C)
+
+**NOTE:** A user MUST modify the **“DEFINITION SECTION”** which includes the following options:
+- Path for two GWAS input files: (in our example “~/BCAC_OCAC/”)
+- GWAS input file names: (in our example “BCAC_2020_onco_ALL_reformatted.txt” and “OCAC_BCAC_2020_onco_ALL_reformatted.txt”)
+- First GWAS Annotation file path (in our example “~/BCAC_OCAC/”)
+- First GWAS Annotation file name (in our example “Annot_BCAC_2020_onco_ALL_reformatted_coding.txt”)
+- Second GWAS Annotation file path (in our example “~/BCAC_OCAC/”)
+- Second GWAS Annotation file name (in our example “annot_gencode_v38lift37_modified_gene_class.txt”)
+- Path for LD Clumping input file: (in our example “~/BCAC_OCAC/”)
+- LD Clumping file names: (in our example “output_ld_clumping_08_BCAC_2020_ALL_OCAC.txt”
+- Path for saving/reading files created by this script (called “path_input_data” and “path_output_data”) (in our example “~/BCAC_OCAC/”)
+- Definition of some file names used during running the script in different steps. In our example are:
+  - output_pipeline_BCAC_ALL_Shared_OCAC_coding_clumping_08 
+  - output_pipeline_OCAC_Shared_BCAC_ALL_coding_clumping_08 
+  - output_pipeline_BCAC_ALL_OCAC_coding_clumping_08 
+  - output_pipeline_Summary_SNP_in_genes_BCAC_ALL_OCAC_coding_clumping_08 
+  - output_pipeline_Summary_SNP_in_genes_OCAC_BCAC_ALL_coding_clumping_08 
+- info_threshold (used for filtering GWAS data) (in our example = 0.9)
+- MAF_threshold (used for filtering GWAS data) (in our example = 0.05)
+
+**Output**
+- Output files created after running this step:
+  - output_pipeline_BCAC_ALL_Shared_OCAC_coding_clumping_08.txt 
+  - output_pipeline_OCAC_Shared_BCAC_ALL_coding_clumping_08.txt 
+  - output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.txt 
+  - output_pipeline_Summary_SNP_in_genes_BCAC_ALL_OCAC_coding_clumping_08.txt 
+  - output_pipeline_Summary_SNP_in_genes_OCAC_BCAC_ALL_coding_clumping_08.txt 
+  - Matrices_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata
+  - Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata
+
+### Section E (for genes with number of SNPs less than a threshold)
+**Script:** E1_code_gcpbayes_less_extra_info.R
+<br>
+**Input**
+- Input files needed for running this step:
+  - Matrices_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata (created from Section 1.4.1)
+  - Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata (created from Section 1.4.1)
+
+**NOTE:** A user MUST modify the **“DEFINITION SECTION”** which includes the following options:
+- Path for two GCPBayes input files: (in our example “~/BCAC_OCAC/”)
+- GCPBayes input file names: (in our example “Matrices_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata” and “Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata”)
+- Path for the output files: (in our example “~/BCAC_OCAC/”)
+- Output file names. In our example are:
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_less_threshold_500_results
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_less_threshold_500_pleiotropy
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_less_threshold_500_errors
+- SNP_number_threshold (A threshold for splitting genes based on SNP numbers) (in our example = 500)
+- theta_threshold (for considering genes with potential pleiotropic effect) (in our example = 0.5)
+
+**Output**
+- Output files created after running this step:
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_less_threshold_500_results.txt
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_less_threshold_500_pleiotropy.txt (if any genes with pleiotropic signals found)
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_less_threshold_500_errors.txt (if any error occurred during calculation for each gene)
+
+### Section E (for genes with number of SNPs greater than a threshold)
+**Script:** E2_code_gcpbayes_greater_extra_info.R
+<br>
+**Input**
+- Input files needed for running this step:
+  - Matrices_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata (created from Section 1.4.1)
+  - Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata (created from Section 1.4.1)
+
+**NOTE:** A user MUST modify the **“DEFINITION SECTION”** which includes the following options:
+- Path for two GCPBayes input files: (in our example “~/BCAC_OCAC/”)
+- GCPBayes input file names: (in our example “Matrices_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata” and “Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata”)
+- Path for the output files: (in our example “~/BCAC_OCAC/”)
+- Output file names. In our example are:
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_results
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_pleiotropy
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_errors
+- SNP_number_threshold (A threshold for splitting genes based on SNP numbers) (in our example = 500)
+- theta_threshold (for considering genes with potential pleiotropic effect) (in our example = 0.5)
+
+**Output**
+- Output files created after running this step:
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_results.txt
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_pleiotropy.txt (if any genes with pleiotropic signals found)
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_errors.txt (if any error occurred during calculation for each gene)
+
+## Visualization (R)
+### Section A
+**Script:** code_analysis_A_checksumstats_BCAC.R
+<br>
+**Input**
 	Input files needed for this step:
 o	BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
 	Output files created from this step:
@@ -396,6 +444,8 @@ The output derived after running the script on BCAC GWAS data (created from Sect
 
 Also, we performed similar checking on OCAC data as well: 
 Script: code_analysis_A_checksumstats_OCAC.R
+<br>
+**Input**
 	Input files needed for this step:
 o	OCAC_BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
 	Output files created from this step:
@@ -414,6 +464,8 @@ The output derived after running the script on OCAC GWAS data (created from Sect
 
 2.6.2.	Section B
 Script: code_analysis_B_annotation_file_coding.R
+<br>
+**Input**
 	Input files needed for this step:
 o	annot_gencode_v38lift37_modified_gene_class_coding.txt (created from Section B)
 	Output files created from this step:
@@ -428,6 +480,8 @@ An example of a pie chart created from the protein-coding genes annotation file 
 
 2.6.3.	Section C
 Script: code_analysis_C_PLACO_results_one_pair.R 
+<br>
+**Input**
 	Input files needed for this step:
 o	output_PLACO_BCAC_2020_ALL_OCAC.txt (created from Section C 1.3.2)
 	Output files created from this step:
@@ -440,6 +494,8 @@ A user could run the “code_analysis_C_PLACO_results_one_pair.R” script which
 
 2.6.4.	Section D
 Script: code_analysis_D_gcpbayes_input_ggplot.R
+<br>
+**Input**
 	Input files needed for this step:
 o	Matrices_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata (created from Section D 1.4.1)
 OR
@@ -453,6 +509,8 @@ a.	Based on our experience, in a GWAS data, most of the genes contain a number o
 
 2.6.5.	Section E
 Script: code_analysis_E_gcpbayes_output_karyotype.R
+<br>
+**Input**
 	Input files needed for this step:
 o	gene_list.txt (list of pleiotropic genes symbols in one column extracted from the output of the Section E 1.4.2, 1.4.3, 1.5.2, or 1.5.3) 
 	Output files created from this step:
@@ -461,6 +519,8 @@ A user could run the “code_analysis_E_gcpbayes_output_karyotype.R” script wh
 NOTE: Since for drawing a Karyotype plot, the script uses the HUGO Gene Nomenclature Committee (HGNC) symbol (for each input gene symbol) extracted from Ensembl database, it would NOT be able to show the genes that their HGNC symbol did not find.  
 
 Script: code_analysis_E_gcpbayes_output_table_overview.R
+<br>
+**Input**
 	Input files needed for this step:
 o	gene_list.txt (list of pleiotropic genes symbols with “chr”, “gene_length”, and “snp_number” columns extracted from the output of the Section E 1.4.2, 1.4.3, 1.5.2, or 1.5.3) 
 	Output files created from this step:
