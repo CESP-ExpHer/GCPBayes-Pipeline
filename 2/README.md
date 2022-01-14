@@ -11,7 +11,8 @@ Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level
 <br>
 
 ## Some NOTES
-**IMPORTANT NOTE:** In order to follow all procedure easier, we considered all paths in the same directory (for inputs and outputs) throughout the pipeline (in our example: “~/BCAC_OCAC/”)
+**IMPORTANT NOTE1:** All scripts all available in the [**folder**]()
+**IMPORTANT NOTE2:** In order to follow all procedure easier, we considered all paths in the same directory (for inputs and outputs) throughout the pipeline (in our example: “~/BCAC_OCAC/”)
 
 ## Contents
 An overall summary of running the GCPBayes pipeline for BCAC and OCAC GWAS summary statistics data used in the manuscript is provided in the following **TWO Tables**:
@@ -54,75 +55,75 @@ An overall summary of running the GCPBayes pipeline for BCAC and OCAC GWAS summa
 | 16	| code_analysis_E_gcpbayes_output_karyotype.R	| Visualization (E)	| R |
 | 17	| code_analysis_E_gcpbayes_output_table_overview.R	| Visualization (E)	| R |
 
-
-
 Here are the steps a user should RESPECTIVELY run in order to get the results shown in the manuscript: 
-2.1.	Standardization (Section A) (Python)
-First Step (First GWAS Summary Statistics Data called as a Reference file):
-Script: A1_code_reformatting_file_bcac_2020_all.py
-	Input files needed for running this step:
-o	icogs_onco_gwas_meta_overall_breast_cancer_summary_level_statistics.txt
+## Standardization (Section A) (Python)
+### First Step (First GWAS Summary Statistics Data called as a Reference file):
+**Script:** A1_code_reformatting_file_bcac_2020_all.py
+- Input files needed for running this step:
+  - icogs_onco_gwas_meta_overall_breast_cancer_summary_level_statistics.txt
 Consider that BCAC GWAS summary statistics data (v. 2020) (Zhang et al., 2020) downloaded from the consortium webpage (https://bcac.ccge.medschl.cam.ac.uk/bcacdata/oncoarray/). We used the python script to extract the following columns and rename them as follows:
+<br>
 File name: icogs_onco_gwas_meta_overall_breast_cancer_summary_level_statistics.txt
-•	column 24: snp (RS ID)
-•	column 25: chr (chromosome)
-•	column 26: bp_hg19 (base pair position)
-•	column 27: Effect_A (Effect Allele)
-•	column 28: nonEffect_A (non-Effect Allele)
-•	column 29: EAF (Effect Allele Frequency)
-•	column 31: info (r2 value)
-•	column 33: beta (beta value)
-•	column 34: se (standard error)
-•	column 38: pval (P-value)
-NOTE: A user MUST modify the “DEFINITION SECTION” which includes the following options:
-•	Path for the input file: (in our example “~/BCAC_OCAC/”)
-•	Input file name: (in our example “icogs_onco_gwas_meta_overall_breast_cancer_summary_level_statistics.txt”)
-•	Path for the output file: (in our example “~/BCAC_OCAC/”)
+- column 24: snp (RS ID)
+- column 25: chr (chromosome)
+- column 26: bp_hg19 (base pair position)
+- column 27: Effect_A (Effect Allele)
+- column 28: nonEffect_A (non-Effect Allele)
+- column 29: EAF (Effect Allele Frequency)
+- column 31: info (r2 value)
+- column 33: beta (beta value)
+- column 34: se (standard error)
+- column 38: pval (P-value)
+**NOTE:** A user MUST modify the **“DEFINITION SECTION”** which includes the following options:
+- Path for the input file: (in our example “~/BCAC_OCAC/”)
+- Input file name: (in our example “icogs_onco_gwas_meta_overall_breast_cancer_summary_level_statistics.txt”)
+- Path for the output file: (in our example “~/BCAC_OCAC/”)
 
-	Output files created after running this step:
-o	BCAC_2020_onco_ALL_reformatted.txt
-o	BCAC_2020_onco_ALL_SNP_ambiguous.txt
-o	BCAC_2020_onco_ALL_SNP_dupicated.txt
-o	BCAC_2020_onco_ALL_SNP_duplication_set.txt
-o	BCAC_2020_onco_ALL_SNP_weird_alleles.txt
-o	BCAC_2020_onco_ALL_Summary.txt
+- Output files created after running this step:
+  - BCAC_2020_onco_ALL_reformatted.txt
+  - BCAC_2020_onco_ALL_SNP_ambiguous.txt
+  - BCAC_2020_onco_ALL_SNP_dupicated.txt
+  - BCAC_2020_onco_ALL_SNP_duplication_set.txt
+  - BCAC_2020_onco_ALL_SNP_weird_alleles.txt
+  - BCAC_2020_onco_ALL_Summary.txt
 
-Second Step (Second GWAS Summary Statistics Data):
-Script: A2_code_reformatting_file_ocac_bcac_2020_all.py
-	Input files needed for running this step:
-o	BCAC_2020_onco_ALL_reformatted.txt (created from the First Step)
-o	extraction_OCAC.txt
+### Second Step (Second GWAS Summary Statistics Data):
+**Script:** A2_code_reformatting_file_ocac_bcac_2020_all.py
+- Input files needed for running this step:
+  - BCAC_2020_onco_ALL_reformatted.txt (created from the First Step)
+  - extraction_OCAC.txt
 Consider that OCAC GWAS summary statistics data (Phelan et al., 2017). We used the python script to extract the following columns and rename them as follows:
 File name: extraction_OCAC.txt
-•	column 2: chr (chromosome)
-•	column 3: bp_hg19 (base pair position)
-•	column 4: Effect_A (Effect Allele)
-•	column 5: nonEffect_A (non-Effect Allele)
-•	column 6: EAF (Effect Allele Frequency)
-•	column 7: nEAF (non-Effect Allele Frequency)
-•	column 8: beta (beta value)
-•	column 9: se (standard error)
-•	column 10: pval (P-value)
-•	column 11: info (r2 value)
+- column 2: chr (chromosome)
+- column 3: bp_hg19 (base pair position)
+- column 4: Effect_A (Effect Allele)
+- column 5: nonEffect_A (non-Effect Allele)
+- column 6: EAF (Effect Allele Frequency)
+- column 7: nEAF (non-Effect Allele Frequency)
+- column 8: beta (beta value)
+- column 9: se (standard error)
+- column 10: pval (P-value)
+- column 11: info (r2 value)
 
-NOTE: A user MUST modify the “DEFINITION SECTION” which includes the following options:
-•	Path for the GWAS reference file: (in our example “~/BCAC_OCAC/”)
-•	Reference file name: (in our example “BCAC_2020_onco_ALL_reformatted.txt”)
-•	Path for the input file: (in our example “~/BCAC_OCAC/”)
-•	Input file name: (in our example “extraction_OCAC.txt”)
-•	Path for the output file: (in our example “~/BCAC_OCAC/”)
-•	First part of the output file names: (in our example “OCAC_BCAC_2020_onco_ALL”)
+**NOTE:** A user MUST modify the **“DEFINITION SECTION”** which includes the following options:
+- Path for the GWAS reference file: (in our example “~/BCAC_OCAC/”)
+- Reference file name: (in our example “BCAC_2020_onco_ALL_reformatted.txt”)
+- Path for the input file: (in our example “~/BCAC_OCAC/”)
+- Input file name: (in our example “extraction_OCAC.txt”)
+- Path for the output file: (in our example “~/BCAC_OCAC/”)
+- First part of the output file names: (in our example “OCAC_BCAC_2020_onco_ALL”)
 
-	Output files created after running this step:
-o	OCAC_BCAC_2020_onco_ALL_reformatted.txt
-o	OCAC_BCAC_2020_onco_ALL_SNP_ambiguous.txt
-o	OCAC_BCAC_2020_onco_ALL_SNP_dupicated.txt
-o	OCAC_BCAC_2020_onco_ALL_SNP_duplication_set.txt
-o	OCAC_BCAC_2020_onco_ALL_SNP_removed_from_file.txt
-o	OCAC_BCAC_2020_onco_ALL_SNP_removed_from_ref.txt
-o	OCAC_BCAC_2020_onco_ALL_SNP_weird_alleles.txt
-o	OCAC_BCAC_2020_onco_ALL_Summary_SNP.txt
-2.2.	Annotation (Section B) (R, PLINK)
+- Output files created after running this step:
+  - OCAC_BCAC_2020_onco_ALL_reformatted.txt
+  - OCAC_BCAC_2020_onco_ALL_SNP_ambiguous.txt
+  - OCAC_BCAC_2020_onco_ALL_SNP_dupicated.txt
+  - OCAC_BCAC_2020_onco_ALL_SNP_duplication_set.txt
+  - OCAC_BCAC_2020_onco_ALL_SNP_removed_from_file.txt
+  - OCAC_BCAC_2020_onco_ALL_SNP_removed_from_ref.txt
+  - OCAC_BCAC_2020_onco_ALL_SNP_weird_alleles.txt
+  - OCAC_BCAC_2020_onco_ALL_Summary_SNP.txt
+
+## Annotation (Section B) (R, PLINK)
 This section creates two files (one would be used in Section D4 and the other used in Section D2).
 First Step 
 To create an annotation file that would be used in the Section D4, a user should follow the procedure explained in details in our GitHub page: 
