@@ -11,8 +11,10 @@ Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level
 <br>
 
 ## Some NOTES
-**IMPORTANT NOTE1:** All scripts all available in the [**folder**]()
-**IMPORTANT NOTE2:** In order to follow all procedure easier, we considered all paths in the same directory (for inputs and outputs) throughout the pipeline (in our example: “~/BCAC_OCAC/”)
+**IMPORTANT NOTE 1:** All scripts all available in the [**folder**]()
+**IMPORTANT NOTE 2:** In order to follow all procedure easier, we considered all paths in the same directory (for inputs and outputs) throughout the pipeline (in our example: “~/BCAC_OCAC/”)
+**IMPORTANT NOTE 3:** The Section names that are mentioned in this page are correspondence to Figure provided in the [An Overview of the Pipeline](#An-Overview-of-the-Pipeline).
+<br>
 
 ## Contents
 An overall summary of running the GCPBayes pipeline for BCAC and OCAC GWAS summary statistics data used in the manuscript is provided in the following **TWO Tables**:
@@ -135,26 +137,32 @@ Consider that OCAC GWAS summary statistics data (Phelan et al., 2017). We used t
 
 ## Annotation (Section B) (R, PLINK)
 This section creates two files (one would be used in Section D4 and the other used in Section D2).
-First Step 
-To create an annotation file that would be used in the Section D4, a user should follow the procedure explained in details in our GitHub page: 
-https://github.com/CESP-ExpHer/Gene_Annotation/tree/main/1_hg19
+### First Step 
+To create an annotation file that would be used in the Section D4, a user should follow the procedure explained in details in our [Annotation GitHub page](https://github.com/CESP-ExpHer/Gene_Annotation/tree/main/1_hg19)
+<br>
 We used the annotation file downloaded from GENCODE webpage (Frankish et al., 2019) and just used protein-coding genes for this study.
-	Input files needed for this step:
-o	REMAP_gencode.v28lift37.annotation.gtf
-	Output file created after running this step:
-o	annot_gencode_v38lift37_modified_gene_class.txt
-Second Step
-To create an annotation file that would be used in the Section D2, a user should run the procedures mentioned in the section 3.2.2 of this document (which consists of some commands in R for preparation of input files, one annotation command in PLINK, and finally some post-processing commands in R on the PLINK annotation output file).
-	Input files needed for this step:
-o	BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
-o	annot_gencode_v38lift37_modified_gene_class.txt (created from First Step)
-	Output files created after running this step:
-o	annot_gencode_v38lift37_modified_gene_class_coding.txt
-o	annot_gencode_v38lift37_modified_gene_class_coding_chr_num_plink_input.txt
-o	BCAC_2020_onco_ALL_reformatted.assoc
-o	plink.annot
-o	Annot_BCAC_2020_onco_ALL_reformatted_coding.txt 
-2.3.	LD Clumping (Section C) (R)
+<br>
+**Input**
+- Input files needed for this step:
+ - REMAP_gencode.v28lift37.annotation.gtf
+**Output**
+- Output file created after running this step:
+  - annot_gencode_v38lift37_modified_gene_class.txt
+### Second Step
+To create an annotation file that would be used in the Section D2, a user should run the procedures mentioned in the section XXX of our [GitHub page](XXX) (which consists of some commands in R for preparation of input files, one annotation command in PLINK, and finally some post-processing commands in R on the PLINK annotation output file).
+<br>
+**Input**
+- Input files needed for this step:
+  - BCAC_2020_onco_ALL_reformatted.txt (created from Section A)
+  - annot_gencode_v38lift37_modified_gene_class.txt (created from First Step)
+- Output files created after running this step:
+  - annot_gencode_v38lift37_modified_gene_class_coding.txt
+  - annot_gencode_v38lift37_modified_gene_class_coding_chr_num_plink_input.txt
+  - BCAC_2020_onco_ALL_reformatted.assoc
+  - plink.annot
+  - Annot_BCAC_2020_onco_ALL_reformatted_coding.txt 
+
+## LD Clumping (Section C) (R)
 NOTE: If a user do not want to consider LD clumping through the pipeline, it could ignore this section and move to the next section.
 2.3.1.	First Step (finding shared SNPs between two traits)
 Script: C1_code_find_shared_snps_one_pair.R
