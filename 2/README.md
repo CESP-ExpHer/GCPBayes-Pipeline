@@ -446,7 +446,7 @@ The script uses a R package recently introduced (called “CheckSumStats”) (Ha
 
 The output derived after running the script on BCAC GWAS data (created from Section A) is: 
 
-<br></br>
+</br>
 <kbd> <img src="Images/checksumstats_BCAC_2020_report.png"/> </kbd>
 <br></br>
 
@@ -473,7 +473,7 @@ Here is the steps available in the script:
 
 The output derived after running the script on OCAC GWAS data (created from Section A) is:
 
-<br></br>
+</br>
 <kbd> <img src="Images/checksumstats_OCAC_BCAC2020_report.png"/> </kbd>
 <br></br>
 
