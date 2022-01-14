@@ -9,7 +9,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 ### Here we have provided detailed information about how to work with the *GCPBayes pipeline* including tips and suggestions. 
 <br>
 
-## Some NOTES
+## NOTES
 **IMPORTANT NOTE 1:** All SNPs and genes positions in the GWAS and annotation data are based on GRCh37 (hg19) Human Genome Assembly.
 <br><br>
 **IMPORTANT NOTE 2:** The Section names that are mentioned in this page are correspondence to Figure provided in [An Overview of the Pipeline](#An-Overview-of-the-Pipeline) section in the current page.
