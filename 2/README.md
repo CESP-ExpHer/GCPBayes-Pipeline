@@ -490,7 +490,6 @@ A user could have an overview from the annotation file created in the Section B.
 <br>
 There are two possibilities for the visualization of the file:
 1.	Running “code_analysis_B_annotation_file_coding.R” script using RStudio
-
 After running, an interactive pie chart would be created in which a user could find various information regarding each part of the plot (total number of genes, percentage, etc.) by moving mouse cursor on the section: 
 
 </br></br>
