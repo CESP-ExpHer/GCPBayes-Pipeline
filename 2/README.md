@@ -319,16 +319,16 @@ To create an annotation file that would be used in the Section D2, a user should
 - Path for the output files: (in our example “~/BCAC_OCAC/”)
 - Output file names. In our example are:
   - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_greater_threshold_500_results
-  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_ greater _threshold_500_ pleiotropy
-  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_ greater _threshold_500_ errors
+  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_greater_threshold_500_pleiotropy
+  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_greater_threshold_500_errors
 - SNP_number_threshold (A threshold for splitting genes based on SNP numbers) (in our example = 500)
 - theta_threshold (for considering genes with potential pleiotropic effect) (in our example = 0.5)
 
 **Output**
 - Output files created after running this step:
-  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_ greater _threshold_500_results.txt
-  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_ greater _threshold_500_pleiotropy.txt (if any genes with pleiotropic signals found)
-  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_ greater _threshold_500_errors.txt (if any error occurred during calculation for each gene)
+  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_greater_threshold_500_results.txt
+  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_greater_threshold_500_pleiotropy.txt (if any genes with pleiotropic signals found)
+  - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_greater_threshold_500_errors.txt (if any error occurred during calculation for each gene)
 
 ## Core and Running GCPBayes (Section D with LD Clumping + Section E) (R)
 ### Section D
@@ -409,17 +409,17 @@ To create an annotation file that would be used in the Section D2, a user should
 - GCPBayes input file names: (in our example “Matrices_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata” and “Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata”)
 - Path for the output files: (in our example “~/BCAC_OCAC/”)
 - Output file names. In our example are:
-  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_results
-  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_pleiotropy
-  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_errors
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_greater_threshold_500_results
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_greater_threshold_500_pleiotropy
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_greater_threshold_500_errors
 - SNP_number_threshold (A threshold for splitting genes based on SNP numbers) (in our example = 500)
 - theta_threshold (for considering genes with potential pleiotropic effect) (in our example = 0.5)
 
 **Output**
 - Output files created after running this step:
-  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_results.txt
-  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_pleiotropy.txt (if any genes with pleiotropic signals found)
-  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_ greater_threshold_500_errors.txt (if any error occurred during calculation for each gene)
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_greater_threshold_500_results.txt
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_greater_threshold_500_pleiotropy.txt (if any genes with pleiotropic signals found)
+  - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_greater_threshold_500_errors.txt (if any error occurred during calculation for each gene)
 
 ## Visualization (R)
 ### Section A
