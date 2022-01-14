@@ -19,13 +19,13 @@ Here we have provided detailed information about the GCPBayes pipeline including
 <br>
 ## Contents
 This file includes **THREE** major sections:
-- Description of a Bash file (a plain text file that contains a series of commands) for running the whole procedure with a series of options.
+- [**Description of Bash files**](1) (plain text files that contain a series of commands) for running the whole procedure with a series of options.
 **IMPORTANT NOTE:** The Bash file was tested on a Unix-based server with CentOS 7.
 
-- A step-by-step tutorial for how to use the GCPBayes pipeline to explore genes with potential pleiotropic effects on Breast and Ovarian cancers using GWAS summary statistics data of Breast (BCAC) and Ovarian (OCAC) cancers (which their results were presented in the manuscript).
+- [**A step-by-step tutorial**](2) for how to use the GCPBayes pipeline to explore genes with potential pleiotropic effects on Breast and Ovarian cancers using GWAS summary statistics data of Breast (BCAC) and Ovarian (OCAC) cancers (which their results were presented in the manuscript).
 **IMPORTANT NOTE:** This tutorial could be run on all Operating Systems (OS) including Windows, Linux, and Mac.
 
-- GCPBayes Pipeline Wiki for All Scripts which includes detailed information for all scripts used in the pipeline.
+- [**GCPBayes Pipeline Wiki**](3) for All Scripts which includes detailed information for all scripts used in the pipeline.
 **IMPORTANT NOTE:** This part includes all concepts and information for each scripts used in the GCPBayes pipeline in order to provide an option to modify/add/remove any part by a user based on its strategy.
 
 ## An Overview of the Pipeline
