@@ -22,7 +22,7 @@ Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level
 - [Summary](#summary)
   * [Running the GCPBayes pipeline without LD Clumping](#running-the-gcpbayes-pipeline-without-ld-clumping)
   * [Running the GCPBayes pipeline with LD Clumping](#running-the-gcpbayes-pipeline-with-ld-clumping)
-- [Standardization](#standardization)
+- [Standardization-Section A](#standardization-section-a)
   * [First Step](#first-step)
   * [Second Step](#second-step)
 - [Annotation](#annotation)
@@ -90,7 +90,7 @@ An overall summary of running the GCPBayes pipeline for BCAC and OCAC GWAS summa
 | 17	| code_analysis_E_gcpbayes_output_table_overview.R	| Visualization (E)	| R |
 
 Here are detailed information for running each step which a user should RESPECTIVELY run in order to get the results provided in the manuscript: 
-## Standardization 
+## Standardization-Section A 
 ***(Section A) (Python)***
 ### First Step 
 ***(First GWAS Summary Statistics Data called as a Reference file):***
