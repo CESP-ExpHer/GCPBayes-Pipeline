@@ -20,7 +20,7 @@ Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level
 
 ## Table of Contents
 - [Tutorial](#tutorial)
-  * [Summary: Running the GCPBayes pipeline without LD Clumping](#summary--running-the-gcpbayes-pipeline-without-ld-clumping)
+  * [Summary: Running the GCPBayes pipeline without LD Clumping](# summary:-running-the-gcpbayes-pipeline-without-ld-clumping)
   * [Summary: Running the GCPBayes pipeline with LD Clumping](#summary:-running-the-gcpbayes-pipeline-with-ld-clumping)
 - [Standardization (Section A) (Python)](#standardization--section-a---python-)
   * [First Step (First GWAS Summary Statistics Data called as a Reference file):](#first-step--first-gwas-summary-statistics-data-called-as-a-reference-file--)
