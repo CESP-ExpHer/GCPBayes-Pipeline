@@ -61,6 +61,7 @@ Here are the steps a user should RESPECTIVELY run in order to get the results sh
 **Script:** A1_code_reformatting_file_bcac_2020_all.py
 - Input files needed for running this step:
   - icogs_onco_gwas_meta_overall_breast_cancer_summary_level_statistics.txt
+
 Consider that BCAC GWAS summary statistics data (v. 2020) (Zhang et al., 2020) downloaded from the consortium webpage (https://bcac.ccge.medschl.cam.ac.uk/bcacdata/oncoarray/). We used the python script to extract the following columns and rename them as follows:
 <br>
 File name: icogs_onco_gwas_meta_overall_breast_cancer_summary_level_statistics.txt
