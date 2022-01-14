@@ -490,16 +490,16 @@ A user could have an overview from the annotation file created in the Section B.
 <br>
 There are two possibilities for the visualization of the file:
 1.	Running “code_analysis_B_annotation_file_coding.R” script using RStudio
-<br>
+
 After running, an interactive pie chart would be created in which a user could find various information regarding each part of the plot (total number of genes, percentage, etc.) by moving mouse cursor on the section: 
 
-</br>
+</br></br>
 <kbd> <img src="Images/pie_chart_interactive_1_1.JPG"/> </kbd>
 <br></br>
 
 In addition, by clicking on every items of the legend, it is possible to show/hide that part on the pie chart:
 
-</br>
+</br></br>
 <kbd> <img src="Images/pie_chart_interactive_2_1.JPG"/> </kbd>
 <br></br>
 
@@ -511,7 +511,7 @@ A pie chart including an overview of genes distribution (here just coding-genes)
 <br>
 An example of a pie chart created from the protein-coding genes annotation file (“annot_gencode_v38lift37_modified_gene_class_coding.txt”) is shown:
 
-</br>
+</br></br>
 <kbd> <img src="Images/pie_chart_protein_coding_genes_chromosome.JPG"/> </kbd>
 <br></br>
 
