@@ -19,13 +19,36 @@ Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level
 <br>
 
 ## Table of Contents
-- [Tutorial](#tutorial)
-  * [Summary: Running the GCPBayes pipeline without LD Clumping](#summary)
-  * [Summary: Running the GCPBayes pipeline with LD Clumping](#summary--running-the-gcpbayes-pipeline-with-ld-clumping)
+- [Summary](#summary)
+  * [Running the GCPBayes pipeline without LD Clumping](#running-the-gcpbayes-pipeline-without-ld-clumping)
+  * [Running the GCPBayes pipeline with LD Clumping](#running-the-gcpbayes-pipeline-with-ld-clumping)
+- [Standardization](#standardization)
+  * [First Step](#first-step)
+  * [Second Step](#second-step)
+- [Annotation](#annotation)
+  * [First Step](#first-step-1)
+  * [Second Step](#second-step-1)
+- [LD Clumping](#ld-clumping)
+  * [First Step](#first-step-2)
+  * [Second Step](#second-step-2)
+  * [Third Step](#third-step)
+- [Core and Running GCPBayes without LD Clumping](#core-and-running-gcpbayes-without-ld-clumping)
+  * [Section D](#section-d)
+  * [Section E](#section-e)
+- [Core and Running GCPBayes with LD Clumping](#core-and-running-gcpbayes-with-ld-clumping)
+  * [Section D](#section-d-1)
+  * [Section E](#section-e-1)
+- [Visualization](#visualization)
+  * [Section A](#section-a)
+  * [Section B](#section-b)
+  * [Section C](#section-c)
+  * [Section D](#section-d-2)
+  * [Section E](#section-e-2)
+  * [References](#references)
+- [Acknowledgements](#acknowledgements)
 
 
-
-## Tutorial
+## Summary
 An overall summary of running the GCPBayes pipeline for BCAC and OCAC GWAS summary statistics data is provided in the following **TWO Tables**:
 <br>
 ### Running the GCPBayes pipeline without LD Clumping
@@ -71,6 +94,7 @@ Here are detailed information for running each step which a user should RESPECTI
 ***(Section A) (Python)***
 ### First Step 
 ***(First GWAS Summary Statistics Data called as a Reference file):***
+<br>
 **Script:** A1_code_reformatting_file_bcac_2020_all.py
 <br>
 **Input**
@@ -105,7 +129,9 @@ Consider that BCAC GWAS summary statistics data (v. 2020) (Zhang et al., 2020) d
   - BCAC_2020_onco_ALL_SNP_weird_alleles.txt
   - BCAC_2020_onco_ALL_Summary.txt
 
-### Second Step (Second GWAS Summary Statistics Data):
+### Second Step 
+***(Second GWAS Summary Statistics Data):***
+<br>
 **Script:** A2_code_reformatting_file_ocac_bcac_2020_all.py
 <br>
 **Input**
@@ -146,7 +172,9 @@ Consider that OCAC GWAS summary statistics data (Phelan et al., 2017). We used t
   - OCAC_BCAC_2020_onco_ALL_SNP_weird_alleles.txt
   - OCAC_BCAC_2020_onco_ALL_Summary_SNP.txt
 
-## Annotation (Section B) (R, PLINK)
+## Annotation 
+***(Section B) (R, PLINK)***
+<br>
 This section creates two files (one would be used in Section D4 and the other used in Section D2).
 ### First Step 
 To create an annotation file that would be used in the Section D4, a user should follow the procedure explained in details in our [Annotation GitHub page](https://github.com/CESP-ExpHer/Gene_Annotation/tree/main/1_hg19)
@@ -176,9 +204,13 @@ To create an annotation file that would be used in the Section D2, a user should
   - plink.annot
   - Annot_BCAC_2020_onco_ALL_reformatted_coding.txt 
 
-## LD Clumping (Section C) (R)
+## LD Clumping 
+***(Section C) (R)***
+<br>
 **NOTE:** If a user do not want to consider LD clumping through the pipeline, it could ignore this section and move to the next section.
-### First Step (finding shared SNPs between two traits)
+### First Step 
+***(finding shared SNPs between two traits)***
+<br>
 **Script:** C1_code_find_shared_snps_one_pair.R
 <br>
 **Input**
@@ -212,7 +244,9 @@ To create an annotation file that would be used in the Section D2, a user should
   - BCAC_2020_ALL_Shared_OCAC_inc_Z.txt
   - OCAC_Shared_BCAC_2020_ALL_inc_Z.txt
 
-### Second Step (running PLACO)
+### Second Step 
+***(running PLACO)***
+<br>
 **Script:** C2_code_run_PLACO_decor_one_pair.R
 <br>
 **Input**
@@ -231,7 +265,9 @@ To create an annotation file that would be used in the Section D2, a user should
 - Output file created after running this step:
   - output_PLACO_BCAC_2020_ALL_OCAC.txt 
 
-### Third Step (running LD Clumping)
+### Third Step 
+***(running LD Clumping)***
+<br>
 **Script:** C3_code_ldclumping_local.R
 <br>
 **Input**
@@ -253,7 +289,8 @@ To create an annotation file that would be used in the Section D2, a user should
 - Output file created after running this step:
 - output_ld_clumping_08_BCAC_2020_ALL_OCAC.txt 
 
-## Core and Running GCPBayes (Section D without LD Clumping + Section E) (R)
+## Core and Running GCPBayes without LD Clumping
+***(Section D without LD Clumping + Section E) (R)***
 ### Section D
 **Script:** D1_code_pipeline_annot_coding_withoutldclumping_extra_info.R
 <br>
@@ -291,7 +328,9 @@ To create an annotation file that would be used in the Section D2, a user should
   - Matrices_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata
   - Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata
 
-### Section E (for genes with number of SNPs less than a threshold)
+### Section E 
+***(for genes with number of SNPs less than a threshold)***
+<br>
 **Script:** E1_code_gcpbayes_less_extra_info.R
 <br>
 **Input**
@@ -316,7 +355,8 @@ To create an annotation file that would be used in the Section D2, a user should
   - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_less_threshold_500_ pleiotropy.txt (if any genes with pleiotropic signals found)
   - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_less_threshold_500_ errors.txt (if any error occurred during calculation for each gene)
 
-### Section E (for genes with number of SNPs greater than a threshold)
+***(for genes with number of SNPs greater than a threshold)***
+<br>
 **Script:** E2_code_gcpbayes_greater_extra_info.R
 <br>
 **Input**
@@ -341,7 +381,8 @@ To create an annotation file that would be used in the Section D2, a user should
   - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_greater_threshold_500_pleiotropy.txt (if any genes with pleiotropic signals found)
   - output_GCPBayes_BCAC_All_OCAC_coding_withoutclumping_greater_threshold_500_errors.txt (if any error occurred during calculation for each gene)
 
-## Core and Running GCPBayes (Section D with LD Clumping + Section E) (R)
+## Core and Running GCPBayes with LD Clumping
+***(Section D with LD Clumping + Section E) (R)***
 ### Section D
 **Script:** D2_code_pipeline_annot_coding_ldclumping_extra_info.R
 <br>
@@ -382,7 +423,9 @@ To create an annotation file that would be used in the Section D2, a user should
   - Matrices_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata
   - Matrices_extra_info_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata
 
-### Section E (for genes with number of SNPs less than a threshold)
+### Section E 
+***(for genes with number of SNPs less than a threshold)***
+<br>
 **Script:** E1_code_gcpbayes_less_extra_info.R
 <br>
 **Input**
@@ -407,7 +450,7 @@ To create an annotation file that would be used in the Section D2, a user should
   - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_less_threshold_500_pleiotropy.txt (if any genes with pleiotropic signals found)
   - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_less_threshold_500_errors.txt (if any error occurred during calculation for each gene)
 
-### Section E (for genes with number of SNPs greater than a threshold)
+***(for genes with number of SNPs greater than a threshold)***
 **Script:** E2_code_gcpbayes_greater_extra_info.R
 <br>
 **Input**
@@ -432,7 +475,7 @@ To create an annotation file that would be used in the Section D2, a user should
   - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_greater_threshold_500_pleiotropy.txt (if any genes with pleiotropic signals found)
   - output_GCPBayes_BCAC_All_OCAC_coding_ldclumping_08_greater_threshold_500_errors.txt (if any error occurred during calculation for each gene)
 
-## Visualization (R)
+## Visualization
 ### Section A
 **Script:** code_analysis_A_checksumstats_BCAC.R
 <br>
