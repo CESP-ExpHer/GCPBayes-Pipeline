@@ -446,6 +446,10 @@ The script uses a R package recently introduced (called “CheckSumStats”) (Ha
 
 The output derived after running the script on BCAC GWAS data (created from Section A) is: 
 
+<br></br>
+<kbd> <img src="Images/checksumstats_BCAC_2020_report.png"/> </kbd>
+<br></br>
+
 Also, we performed similar checking on OCAC data as well: 
 <br>
 **Script:** code_analysis_A_checksumstats_OCAC.R
@@ -468,6 +472,10 @@ Here is the steps available in the script:
 9.  Saving all outputs in one file
 
 The output derived after running the script on OCAC GWAS data (created from Section A) is:
+
+<br></br>
+<kbd> <img src="Images/checksumstats_OCAC_BCAC2020_report.png"/> </kbd>
+<br></br>
 
 ### Section B
 **Script:** code_analysis_B_annotation_file_coding.R
