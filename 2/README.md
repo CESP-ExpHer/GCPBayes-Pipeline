@@ -534,7 +534,7 @@ A user could run the “code_analysis_C_PLACO_results_one_pair.R” script which
 **Input**
 - Input files needed for this step:
   - Matrices_output_pipeline_BCAC_ALL_OCAC_coding_withoutclumping.Rdata (created from Section D without LD clumping)
-  - OR
+  - *OR*
   - Matrices_output_pipeline_BCAC_ALL_OCAC_coding_clumping_08.Rdata (created from Section D with LD clumping)
 - Output files created from this step:
   - Histogram and Bar Plots
