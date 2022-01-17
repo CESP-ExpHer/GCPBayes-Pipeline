@@ -9,7 +9,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 ## NOTES
 **IMPORTANT NOTE 1:** All scripts all available in the [**"Codes folder"**](../0_Codes)
 <br>
-**IMPORTANT NOTE 2:** All files used in the *GCPBayes pipeline* are available in this [**"folder"**](../0_Files)
+**IMPORTANT NOTE 2:** All files used in the *GCPBayes pipeline* are available in the [**folder containing files**](../0_Files)
 
 ## Contents
 Here is all concepts and information for each script used in the *GCPBayes pipeline* in order to provide more detailed information for developers who want to modify/add/remove of the pipeline. [**See this page for more information**](0_Files/GCPBayes_Pipeline_Wiki_v1.pdf)
