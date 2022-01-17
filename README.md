@@ -33,6 +33,6 @@ A general overview of the main sections of the GCPBayes pipeline are as follow:
 <br></br>
 
 ## How to Cite
-Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x):x, doi: xxx[Paper_link](https://..../)
+Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x), doi:xxx [Link](https://..../)
 <br>
 <br>
