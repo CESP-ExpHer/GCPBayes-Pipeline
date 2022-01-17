@@ -5,10 +5,6 @@ Update: Jan 2022<br>
 https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
-## How to Cite
-Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x):x, doi: xxx[Paper_link](https://..../)
-<br>
-<br>
 
 ## Some NOTES
 **IMPORTANT NOTE 1:** All scripts all available in the [**"Codes folder"**](../0_Codes)
@@ -46,6 +42,7 @@ Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level
   * [Section E](#section-e-2)
 - [References](#references)
 - [Acknowledgements](#acknowledgements)
+- [How to Cite](#how-to-cite)
 
 
 ## Summary
@@ -693,3 +690,5 @@ defaultdict
 stats
 datetime
 ```
+## How to Cite
+Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x):x, doi: xxx[Paper_link](https://..../)
