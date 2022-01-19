@@ -13,6 +13,9 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 **IMPORTANT NOTE 2:** We recommend a user to edit **"Global Bash file"** and use it for running any GWAS summary statistics data two traits. 
 <br>
 <br>
+**IMPORTANT NOTE 3:** We have provided **THREE** different **Bash** files. All files are available in the **"Bash Folder"**. 
+<br>
+<br>
 
 ## Table of Contents
 - [Bash file without LD Clumping](#bash-file-without-ld-clumping)
@@ -24,7 +27,6 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 - [Acknowledgements](#acknowledgements)
 - [How to Cite](#how-to-cite)
 
-We have provided **THREE** different **Bash** files. All files are available in the **"Bash Folder"**:
 <br>
 <br>
 ## Bash file without LD Clumping
