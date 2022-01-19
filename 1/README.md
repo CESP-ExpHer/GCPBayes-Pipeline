@@ -17,7 +17,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 ## Table of Contents
 - [Bash file without LD Clumping](#bash-file-without-ld-clumping)
 - [Bash file with LD Clumping](#bash-file-with-ld-clumping)
-- [A Global Bash file](#a-global-bash-file)
+- [Bash file - Global](#bash-file---global)
   * [Description of required parameters](#description-of-required-parameters)
   * [User specifications](#user-specifications)
   * [Different steps run by the bash file](#different-steps-run-by-the-bash-file)
@@ -39,7 +39,7 @@ This bash file runs the *GCPBayes pipeline* used in the paper (without LD clumpi
 This bash file runs the *GCPBayes pipeline* used in the paper (with LD clumping step) on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data.
 <br>
 
-## A Global Bash file 
+## Bash file - Global 
 **Bash file Name:** 00_Global_run_GCPBayes.sh
 <br><br>
 We provided an overall bash file for performing analyses on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data. However, a user could edit this Bash file and use it for running any GWAS summary statistics data two traits. 
@@ -77,7 +77,7 @@ Here are some examples of parameters with defaults values:
 
 ### Different steps run by the bash file
 **Bash file Name:** "00_Global_run_GCPBayes.sh” will run the different steps of the pipeline by using corresponding scripts. 
-<br>
+<br><br>
 In summary, these steps are presented below:
 - **Step 1:** To extract common SNPs between dataset by using “C1_code_find_common_snps_one_pair.R”
 - **Step 2:** To run PLACO on each dataset by using “C2_code_run_PLACO_decor_one_pair.R”. This step is run only if Clumping=”TRUE”. Also, this step will not be performed if a corresponding output already exist in the working directory.
