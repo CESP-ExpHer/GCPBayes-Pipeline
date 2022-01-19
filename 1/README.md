@@ -86,8 +86,8 @@ In summary, these steps are presented below:
 - **Step 4:** To prepare the GCPBayes inputs in the right format by using Rscript “D1_code_pipeline_annot_coding_withoutldclumping_extra_info.R” and Rscript “D2_code_pipeline_annot_coding_ldclumping_extra_info.R”. The second code will be run only if Clumping=”TRUE”.
 - **Step 5:** To get correct list of groups for further analysis according to wanted threshold (length of groups) by using “D3_code_separate_groups_length_threshold.R”
 - **Step 6:** To run GCPBayes (DS Method) by using “E1_code_gcpbayes_less_extra_info.R”. If Clumping=”TRUE”, this step will be done separately in two different lists of groups (according to the lengths of the groups).
-- **Step 7:** To run GCPBayes (HS Method) on groups with “theta > theta_exploration” only, by using “E2_code_gcpbayes_HS_less_extra_info.R” (work in progress)
-- **Step 8:** To plot figures (work in progress)
+- **Step 7:** To run GCPBayes (HS Method) on groups with “theta > theta_exploration” only, by using “E2_code_gcpbayes_HS_less_extra_info.R” *(work in progress)*
+- **Step 8:** To plot figures *(work in progress)*
 
 ## Acknowledgements 
 We gratefully acknowledge the following packages/softwares which we used throughout our pipeline:
