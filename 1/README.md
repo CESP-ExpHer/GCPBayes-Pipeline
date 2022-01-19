@@ -5,19 +5,30 @@ Update: Jan 2022<br>
 https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
+
 Description of Bash file (a plain text file that contains a series of commands) for running the whole procedure with a series of options.
 <br>
-**IMPORTANT NOTE:** The Bash file was tested on a Unix-based server with CentOS 7.
+**IMPORTANT NOTE 1:** The Bash file was tested on a Unix-based server with CentOS 7.
+**IMPORTANT NOTE 2:** We recommend a user to edit **"Global Bash file"** and use it for running any GWAS summary statistics data two traits. 
 <br>
-We have provided **THREE** different **Bash** files:
+We have provided **THREE** different **Bash** files. All files are available in the **"Bash Folder"**:
 
+## Bash file without LD Clumping
+**Bash file Name:** 00_Global_run_GCPBayes_Strategy_Without_LDClumping_sizemax700.sh
+<br>
+This bash file runs the *GCPBayes pipeline* used in the paper (without LD clumping at all) on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data.
+<br>
+
+## Bash file with LD Clumping 
+**Bash file Name:** 00_Global_run_GCPBayes_Strategy_With_LDClumping_for_all_sizemax700.sh
+<br>
+This bash file runs the *GCPBayes pipeline* used in the paper (with LD clumping step) on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data.
+<br>
 
 ## A Global Bash file 
 **Bash file Name:** 00_Global_run_GCPBayes.sh
 <br>
-We provided an overall bash file for performing analyses on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data:
-<br>
-**IMPORTANT NOTE:** We recommend a user to edit this Bash file and use it for running any GWAS summary statistics data two traits. 
+We provided an overall bash file for performing analyses on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data. However, a user could edit this Bash file and use it for running any GWAS summary statistics data two traits. 
 <br>
 This code is running the GCPBayes pipeline from **Section C** to **Section E**, by calling for different *R scripts* in a simple and automated way. 
 <br>
