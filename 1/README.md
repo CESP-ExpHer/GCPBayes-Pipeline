@@ -1,4 +1,4 @@
-# Description of Bash files
+# Description of Bash file (a plain text file that contains a series of commands) for running the whole procedure with a series of options
 Created by: Pierre-Emmanuel Sugier, Yazdan Asgari<br>
 Creation date: 14 Jan 2022<br>
 Update: Jan 2022<br>
@@ -6,13 +6,16 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
 
-Description of Bash file (a plain text file that contains a series of commands) for running the whole procedure with a series of options.
-<br>
+
 **IMPORTANT NOTE 1:** The Bash file was tested on a Unix-based server with CentOS 7.
+<br>
+<br>
 **IMPORTANT NOTE 2:** We recommend a user to edit **"Global Bash file"** and use it for running any GWAS summary statistics data two traits. 
 <br>
+<br>
 We have provided **THREE** different **Bash** files. All files are available in the **"Bash Folder"**:
-
+<br>
+<br>
 ## Bash file without LD Clumping
 **Bash file Name:** 00_Global_run_GCPBayes_Strategy_Without_LDClumping_sizemax700.sh
 <br>
