@@ -13,24 +13,35 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 **IMPORTANT NOTE 2:** We recommend a user to edit **"Global Bash file"** and use it for running any GWAS summary statistics data two traits. 
 <br>
 <br>
+
+## Table of Contents
+- [Bash file without LD Clumping](#bash-file-without-ld-clumping)
+- [Bash file with LD Clumping](#bash-file-with-ld-clumping)
+- [A Global Bash file](#a-global-bash-file)
+  * [Description of required parameters](#description-of-required-parameters)
+  * [User specifications](#user-specifications)
+  * [Different steps run by the bash file](#different-steps-run-by-the-bash-file)
+- [Acknowledgements](#acknowledgements)
+- [How to Cite](#how-to-cite)
+
 We have provided **THREE** different **Bash** files. All files are available in the **"Bash Folder"**:
 <br>
 <br>
 ## Bash file without LD Clumping
 **Bash file Name:** 00_Global_run_GCPBayes_Strategy_Without_LDClumping_sizemax700.sh
-<br>
+<br><br>
 This bash file runs the *GCPBayes pipeline* used in the paper (without LD clumping at all) on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data.
 <br>
 
 ## Bash file with LD Clumping 
 **Bash file Name:** 00_Global_run_GCPBayes_Strategy_With_LDClumping_for_all_sizemax700.sh
-<br>
+<br><br>
 This bash file runs the *GCPBayes pipeline* used in the paper (with LD clumping step) on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data.
 <br>
 
 ## A Global Bash file 
 **Bash file Name:** 00_Global_run_GCPBayes.sh
-<br>
+<br><br>
 We provided an overall bash file for performing analyses on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data. However, a user could edit this Bash file and use it for running any GWAS summary statistics data two traits. 
 <br>
 This code is running the GCPBayes pipeline from **Section C** to **Section E**, by calling for different *R scripts* in a simple and automated way. 
