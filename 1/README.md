@@ -27,8 +27,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 - [Acknowledgements](#acknowledgements)
 - [How to Cite](#how-to-cite)
 
-<br>
-<br>
+
 ## Bash file without LD Clumping
 **Bash file Name:** 00_Global_run_GCPBayes_Strategy_Without_LDClumping_sizemax700.sh
 <br><br>
