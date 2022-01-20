@@ -32,14 +32,18 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 **Bash file Name:** [00_Global_run_GCPBayes_Strategy_Without_LDClumping_sizemax700.sh](../0_Bash)
 <br><br>
 This bash file runs the *GCPBayes pipeline* used in the paper (without LD clumping at all) on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data.
-<br>
+<br><br>
+To run it, simply type in the terminal:
+~~~
+$ ./00_Global_run_GCPBayes_Strategy_Without_LDClumping_sizemax700.sh
+~~~
 
 ## Bash file with LD Clumping 
 **Bash file Name:** [00_Global_run_GCPBayes_Strategy_With_LDClumping_for_all_sizemax700.sh](../0_Bash)
 <br><br>
 This bash file runs the *GCPBayes pipeline* used in the paper (with LD clumping step) on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data.
-<br>
-To run it, simply:
+<br><br>
+To run it, simply type in the terminal:
 ~~~
 $ ./00_Global_run_GCPBayes_Strategy_With_LDClumping_for_all_sizemax700.sh
 ~~~
@@ -55,7 +59,11 @@ The overall bash file and all other scripts of the pipeline, from **Section C** 
 Then, a user can use this bash file to run the overall analysis once their inputs have been formatted. 
 <br>
 A user can use annotated files we already prepared or use his own annotation files.
-
+<br><br>
+To run it, simply type in the terminal:
+~~~
+$ ./00_Global_run_GCPBayes.sh
+~~~
 ### Description of required parameters
 A short description of each parameter can be found at the beginning of the script, in the **“PARAMETERS”** section, as the default values of the parameters we propose to use when it is relevant. Also, a short description for inputs and outputs can be found in the **“INTPUTS”** and **“OUTPUTS”** sections.
 
