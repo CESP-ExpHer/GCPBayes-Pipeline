@@ -39,7 +39,10 @@ This bash file runs the *GCPBayes pipeline* used in the paper (without LD clumpi
 <br><br>
 This bash file runs the *GCPBayes pipeline* used in the paper (with LD clumping step) on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data.
 <br>
-
+To run it, simply:
+~~~
+$ ./00_Global_run_GCPBayes_Strategy_With_LDClumping_for_all_sizemax700.sh
+~~~
 ## Bash file - Global 
 **Bash file Name:** [00_Global_run_GCPBayes.sh](../0_Bash)
 <br><br>
