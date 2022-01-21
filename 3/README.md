@@ -12,7 +12,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 **IMPORTANT NOTE 2:** All files used in the *GCPBayes pipeline* are available in the [**folder containing files**](../0_Files)
 
 ## Contents
-Here is all concepts and information for each script used in the *GCPBayes pipeline* in order to provide more detailed information for **DEVELOPERS** who want to modify/add/remove of the pipeline. [**SEE THIS FILE FOR MORE INFORMATION**](0_Files/GCPBayes_Pipeline_Wiki_v1.pdf)
+Here is all concepts and information for each script used in the *GCPBayes pipeline* in order to provide more detailed information for **DEVELOPERS** who want to "modify/add/remove" the pipeline. [**SEE THIS FILE FOR MORE INFORMATION**](0_Files/GCPBayes_Pipeline_Wiki_v1.pdf)
 
 ## How to Cite
 Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x):x, doi: xxx[Paper_link](https://..../)
