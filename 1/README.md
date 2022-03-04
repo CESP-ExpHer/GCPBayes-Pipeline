@@ -1,7 +1,7 @@
 # Description of Bash file (a plain text file that contains a series of commands) for running the whole procedure with a series of options
 Created by: Pierre-Emmanuel Sugier, Yazdan Asgari<br>
 Creation date: 14 Jan 2022<br>
-Update: Jan 2022<br>
+Update: Mar 2022<br>
 https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
