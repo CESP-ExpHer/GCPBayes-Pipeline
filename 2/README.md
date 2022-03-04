@@ -1,7 +1,7 @@
 # A Step-by-Step Tutorial for Analyses of BCAC and OCAC GWAS Summary Statistics Data
 Created by: Yazdan Asgari<br>
 Creation date: 14 Jan 2022<br>
-Update: Jan 2022<br>
+Update: Mar 2022<br>
 https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
