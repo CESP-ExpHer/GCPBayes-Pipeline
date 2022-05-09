@@ -30,7 +30,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 ## Bash file - Global 
 **Bash file Name:** [00_Global_run_GCPBayes.sh](../0_Bash)
 <br><br>
-We provided an overall bash file for performing analyses on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data. However, a user could edit this Bash file and use it for running any GWAS summary statistics data two traits. 
+We provided an overall bash file for performing analyses on GWAS summary statistics data. A user could edit this Bash file and use it for running any GWAS summary statistics data two traits. 
 <br>
 This code is running the GCPBayes pipeline from **Section C** to **Section E**, by calling for different *R scripts* in a simple and automated way. 
 <br>
