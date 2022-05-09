@@ -1,7 +1,7 @@
 # Description of Bash file (a plain text file that contains a series of commands) for running the whole procedure with a series of options
 Created by: Pierre-Emmanuel Sugier, Yazdan Asgari<br>
 Creation date: 14 Jan 2022<br>
-Update: Mar 2022<br>
+Update: May 2022<br>
 https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
@@ -13,40 +13,20 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 **IMPORTANT NOTE 2:** We recommend a user to edit [**"Global Bash file"**](#bash-file---global) and use it for running any GWAS summary statistics data two traits. 
 <br>
 <br>
-**IMPORTANT NOTE 3:** We have provided **THREE** different **Bash** files. All files are available in the [**"Bash Folder"**](../0_Bash).
+**IMPORTANT NOTE 3:** We have provided **TWO** different **Bash** files. All files are available in the [**"Bash Folder"**](../0_Bash).
 <br>
 <br>
 
 ## Table of Contents
-- [Bash file without LD Clumping](#bash-file-without-ld-clumping)
-- [Bash file with LD Clumping](#bash-file-with-ld-clumping)
 - [Bash file - Global](#bash-file---global)
   * [Description of required parameters](#description-of-required-parameters)
   * [User specifications](#user-specifications)
   * [Different steps run by the bash file](#different-steps-run-by-the-bash-file)
+- [Bash file for running on Breast and Ovarian Cancer data](#bash-file-for-running-on-breast-and-ovarian-cancer-data)
 - [Acknowledgements](#acknowledgements)
 - [How to Cite](#how-to-cite)
 
 
-## Bash file without LD Clumping
-**Bash file Name:** [00_Global_run_GCPBayes_Strategy_Without_LDClumping_sizemax700.sh](../0_Bash)
-<br><br>
-This bash file runs the *GCPBayes pipeline* used in the paper (without LD clumping at all) on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data.
-<br><br>
-To run it, simply type in the terminal:
-~~~
-$ ./00_Global_run_GCPBayes_Strategy_Without_LDClumping_sizemax700.sh
-~~~
-
-## Bash file with LD Clumping 
-**Bash file Name:** [00_Global_run_GCPBayes_Strategy_With_LDClumping_for_all_sizemax700.sh](../0_Bash)
-<br><br>
-This bash file runs the *GCPBayes pipeline* used in the paper (with LD clumping step) on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data.
-<br><br>
-To run it, simply type in the terminal:
-~~~
-$ ./00_Global_run_GCPBayes_Strategy_With_LDClumping_for_all_sizemax700.sh
-~~~
 ## Bash file - Global 
 **Bash file Name:** [00_Global_run_GCPBayes.sh](../0_Bash)
 <br><br>
@@ -99,6 +79,19 @@ In summary, these steps are presented below:
 - **Step 6:** To run GCPBayes (DS Method) by using “E1_code_gcpbayes_less_extra_info.R”. If Clumping=”TRUE”, this step will be done separately in two different lists of groups (according to the lengths of the groups).
 - **Step 7:** To run GCPBayes (HS Method) on groups with “theta > theta_exploration” only, by using “E2_code_gcpbayes_HS_less_extra_info.R” *(work in progress)*
 - **Step 8:** To plot figures *(work in progress)*
+
+
+## Bash file for running on Breast and Ovarian Cancer data
+**Bash file Name:** [00_Global_run_GCPBayes_Strategy_bcac_ocac_manuscript.sh](../0_Bash)
+<br><br>
+This bash file runs the *GCPBayes pipeline* on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data based on our recommendation at the end of the paper.
+<br><br>
+In summary, it runs *GCPBayes package* **without ld clumping step** for genes with **less than 700 SNPs**, then runs *GCPBayes package* **with ld clumping step** for genes with **more than 700 SNPs**.
+<br><br>
+To run it, simply type in the terminal:
+~~~
+$ ./00_Global_run_GCPBayes_Strategy_bcac_ocac_manuscript.sh
+~~~
 
 ## Acknowledgements 
 We gratefully acknowledge the following packages/softwares which we used throughout our pipeline:
