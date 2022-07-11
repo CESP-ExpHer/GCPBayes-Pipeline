@@ -41,10 +41,10 @@ theta_threshold <- 0.5
 # libraries used in the code
 # please install the following packages if needed
 # BiocManager::install("arm")
+# BiocManager::install("GCPBayes")
+# BiocManager::install("devtools")
 # library(devtools)
-# devtools::install_github("https://github.com/cran/bglm")
 # devtools::install_github("https://github.com/nyiuab/BhGLM.git")
-# devtools::install_github("https://github.com/tbaghfalaki/GCPBayes")
 library(tictoc)
 library(GCPBayes)
 library(BhGLM)
