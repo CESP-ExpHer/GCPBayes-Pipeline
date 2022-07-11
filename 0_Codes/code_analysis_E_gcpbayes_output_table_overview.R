@@ -15,9 +15,9 @@ start_time <- Sys.time()
 # libraries used in the code
 # please install the following packages if needed
 #BiocManager::install("readxl")
-#BiocManager::install("dplyr")
+#BiocManager::install("tidyverse")
 library(readxl)
-library(dplyr)
+library(tidyverse)
 
 # ================================================================================
 # 								DEFINITION SECTION
