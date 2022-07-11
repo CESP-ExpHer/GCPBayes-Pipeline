@@ -16,15 +16,11 @@ start_time <- Sys.time()
 # ================================================================================
 # libraries used in the code
 # please install the following packages if needed
-#BiocManager::install("ggplot2")
 #BiocManager::install("patchwork")
-#BiocManager::install("tidyr")
-#BiocManager::install("dplyr")
+#BiocManager::install("tidyverse")
 #BiocManager::install("vroom")
-library(ggplot2)
 library(patchwork)
-library(tidyr)
-library(dplyr)
+library(tidyverse)
 library(vroom)
 
 # ================================================================================
