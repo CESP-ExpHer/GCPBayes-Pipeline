@@ -22,7 +22,7 @@ input_data = "BCAC_2020_onco_ALL_reformatted.txt"
 # please install the following packages if needed
 # BiocManager::install("ieugwasr")
 # BiocManager::install("gwasrapidd")
-# install.packages("devtools")
+# BiocManager::install("devtools")
 # devtools::install_github("MRCIEU/CheckSumStats")
 library(ieugwasr)
 library(gwasrapidd)
