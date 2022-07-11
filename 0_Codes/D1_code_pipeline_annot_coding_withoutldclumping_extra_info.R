@@ -71,14 +71,10 @@ MAF_threshold=0.05
 # please install the following packages if needed
 # ================================================================================
 #BiocManager::install("vroom")
-#BiocManager::install("dplyr")
 #BiocManager::install("data.table")
-#BiocManager::install("tidyr")
 #BiocManager::install("tidyverse")
 library(vroom)
-library(dplyr)
 library(data.table)
-library(tidyr)
 library(tidyverse)
 
 # ================================================================================
