@@ -42,7 +42,7 @@ A user can use annotated files we already prepared or use his own annotation fil
 <br><br>
 To run it, simply type in the terminal:
 ~~~
-$ ./00_Global_run_GCPBayes.sh
+$ ./00_Global_run_GCPBayes.sh parameters.ini
 ~~~
 ### Description of required parameters
 A short description of each parameter can be found at the beginning of the script, in the **“PARAMETERS”** section, as the default values of the parameters we propose to use when it is relevant. Also, a short description for inputs and outputs can be found in the **“INTPUTS”** and **“OUTPUTS”** sections.
@@ -90,18 +90,17 @@ In summary, it runs *GCPBayes package* **without ld clumping step** for genes wi
 <br><br>
 To run it, simply type in the terminal:
 ~~~
-$ ./00_Global_run_GCPBayes_Strategy_bcac_ocac_manuscript.sh
+$ ./00_Global_run_GCPBayes.sh parameters_Strategy_bcac_ocac_manuscript.ini
 ~~~
 
 ## Acknowledgements 
 We gratefully acknowledge the following packages/softwares which we used throughout our pipeline:
 ```
+BiocManager
 vroom
-dplyr
 data.table
 devtools
 MASS
-tidyr
 PLACO
 genetics.binaRies
 tidyverse
@@ -113,7 +112,6 @@ PLINK
 ieugwasr
 gwasrapidd
 CheckSumStats
-ggplot2
 plotly
 patchwork
 biomaRt
