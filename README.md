@@ -55,11 +55,11 @@ Here, we provide a small dataset for testing the Pipeline. The data are GWAS sum
 - Download the BASH file (*run_test_set.sh*) [Download](0_test_dataset)
 - Now, all you need is to run the following command in the terminal:
 ~~~
-$ ./00_Global_run_GCPBayes.sh
+$ ./run_test_set.sh parameters_Strategy_bcac_ocac_test_set.ini
 ~~~
 **NOTE:** You might need to change the permission of the BASH file in order to be executed.
 ~~~
-$ ./00_Global_run_GCPBayes.sh
+$ chmod 777 run_test_set.sh
 ~~~
 - Output files
   - *C1_output_BCAC_common_OCAC.txt*
