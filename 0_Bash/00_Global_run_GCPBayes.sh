@@ -102,10 +102,13 @@
 #     library(devtools)
 #     devtools::install_github("https://github.com/cran/bglm")
 #     devtools::install_github("https://github.com/nyiuab/BhGLM.git")
-#     BiocManager::install("GCPBayes")
+#     devtools::install_github("https://github.com/tbaghfalaki/GCPBayes")
 #     BiocManager::install("vroom")
+#     BiocManager::install("dplyr")
 #     BiocManager::install("data.table")
-#     BiocManager::install("optparse")
+#     BiocManager::install("tidyr")
+#     BiocManager::install("tidyverse")
+#     install.packages("optparse")
 # ================================================================================
 
 ## REQUIRED INFORMATIONS
@@ -130,9 +133,9 @@ source $ref_file_parameters
 
 Rscript ${script_dir}/C1_code_find_common_snps_one_pair.R \
 											--path1 ${path_inputfile_trait1} \
-											--file1 ${Input_file_trait1} \
+											--file1 ${Input_file_trait1}.txt \
 											--path2 ${path_inputfile_trait2} \
-											--file2 ${Input_file_trait2} \
+											--file2 ${Input_file_trait2}.txt \
 											--pathout ${work_dir} \
 											--out1 ${output_step1}_${short_data1}_common_${short_data2} \
 											--out2 ${output_step1}_${short_data2}_common_${short_data1} \
