@@ -32,6 +32,14 @@ A general overview of the main sections of the GCPBayes pipeline are as follow:
 <kbd> <img src="0_Images/Fig1_v3.jpg"/> </kbd>
 <br></br>
 
+## Test Dataset
+Here, we provide a small dataset for testing the Pipeline. The data are GWAS summary statistics for The Breast Cancer Association Consortium (BCAC) and The Ovarian Cancer Association Consortium (OCAC) chromosome #5 and we want to run the Pipeline (without LD clumping method) and GCPBayes at a gene-level. For running the pipeline in the test set, please perform the following steps:
+- Download input files: [Download](....)
+-- BCAC and OCAC GWAS data on chromosome #5 (gwas_BCAC_chr5.txt, gwas_OCAC_chr5.txt)
+-- An annotation file including all coding genes (annot_gencode_v38lift37_modified_gene_class.txt)
+-- BCAC GWAS file with a gene column (Annot_BCAC_2020_onco_ALL_reformatted_coding.txt)
+- Download the scripts and put them in the same folder as input data
+
 ## How to Cite
 Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x), doi:xxx [Link](https://..../)
 <br>
