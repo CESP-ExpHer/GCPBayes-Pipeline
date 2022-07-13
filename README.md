@@ -74,7 +74,7 @@ $ ./00_Global_run_GCPBayes.sh
   - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_results.txt*
   - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_pleiotropy.txt*
 
-**Running Time:** It took about 3 minutes to run the pipeline before GCPBayes (in a system with Intel Core i7 with 16 GB RAM). For the GCPBayes, we just use the first 50 genes from the data and it took 2 minutes to run and found any potential pleitropic signal among them.
+**Running Time:** It took about **3 minutes** to run the *pipeline before GCPBayes* (in a system with Intel Core i7 with 16 GB RAM). For the *GCPBayes*, we just use the first 50 genes from the data and it took **2 minutes** to run and found any potential pleitropic signal among them.
 
 **Note:** During running GCPBayes, a user could check these two file to see the results:
 - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_results.txt*
