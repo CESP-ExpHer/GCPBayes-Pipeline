@@ -34,11 +34,35 @@ A general overview of the main sections of the GCPBayes pipeline are as follow:
 
 ## Test Dataset
 Here, we provide a small dataset for testing the Pipeline. The data are GWAS summary statistics for The Breast Cancer Association Consortium (BCAC) and The Ovarian Cancer Association Consortium (OCAC) chromosome #5 and we want to run the Pipeline (without LD clumping method) and GCPBayes at a gene-level. For running the pipeline in the test set, please perform the following steps:
-- Download input files: [Download](....)
-  - BCAC and OCAC GWAS data on chromosome #5 (gwas_BCAC_chr5.txt, gwas_OCAC_chr5.txt)
-  - An annotation file including all coding genes (annot_gencode_v38lift37_modified_gene_class.txt)
-  - BCAC GWAS file with a gene column (Annot_BCAC_2020_onco_ALL_reformatted_coding.txt)
-- Download the scripts and put them in the same folder as input data
+- Download input files [Download](....)
+  - BCAC and OCAC GWAS data on chromosome #5 (*gwas_BCAC_chr5.txt*, *gwas_OCAC_chr5.txt*)
+  - An annotation file including all coding genes (*annot_gencode_v38lift37_modified_gene_class.txt*)
+  - BCAC GWAS file with a gene column (*Annot_BCAC_2020_onco_ALL_reformatted_coding.txt*)
+- Download the scripts and put them in the same folder as input data [Download](....)
+  - *C1_code_find_common_snps_one_pair.R*
+  - *C2_code_run_PLACO_decor_one_pair.R*
+  - *C3_code_ldclumping_local.R*
+  - *D1_code_pipeline_annot_coding_withoutldclumping_extra_info.R*
+  - *D2_code_pipeline_annot_coding_ldclumping_extra_info.R*
+  - *D3_code_separate_groups_length_threshold.R*
+  - *E1_code_gcpbayes_less_extra_info.R*
+  - *E2_code_gcpbayes_greater_extra_info.R*
+- Download the parameter file (*parameters_Strategy_bcac_ocac_test_set.ini*) [Download](....)
+  - You **just** need to change the following **PATHS** in the file:
+    - working directory
+    - Input files - datasets
+    - Input files - annotation
+- Download the BASH file (*run_test_set.sh*) [Download](....)
+- Now, all you need is to run the following command in the terminal:
+'''
+
+'''
+**NOTE:** You might need to change the permission of the BASH file in order to be executed.
+'''
+
+'''
+
+
 
 ## How to Cite
 Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x), doi:xxx [Link](https://..../)
