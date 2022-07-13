@@ -15,7 +15,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 **IMPORTANT NOTE 2:** The Section names that are mentioned in this page are correspondence to Figure provided in [An Overview of the Pipeline](#An-Overview-of-the-Pipeline) section in the current page.
 <br>
 <br>
-## Contents
+## Usage
 This file includes **THREE** major sections:
 - [**Description of Bash Files**](1) (plain text files that contain a series of commands) for running the whole procedure with a series of options.
 **IMPORTANT NOTE:** The Bash file was tested on a Unix-based server with CentOS 7.
