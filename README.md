@@ -73,7 +73,9 @@ $ ./00_Global_run_GCPBayes.sh
   - *D1_Matrices_extra_info_output_pipeline_BCAC_OCAC_coding_withoutclumping.Rdata*
   - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_results.txt*
   - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_pleiotropy.txt*
+
 **Running Time:** It took about 3 minutes to run the pipeline before GCPBayes (in a system with Intel Core i7 with 16 GB RAM). For the GCPBayes, it took .... hours to measure pleiotropy for 772 genes.
+
 **Note:** During running GCPBayes, a user could check these two file to see the results:
 - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_results.txt*
 - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_pleiotropy.txt*
