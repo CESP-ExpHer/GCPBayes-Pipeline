@@ -10,17 +10,13 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 **IMPORTANT NOTE 1:** The Bash file was tested on a Unix-based server with CentOS 7.
 <br>
 <br>
-**IMPORTANT NOTE 2:** All a user needs is to define parameters and Paths in the **parameters.ini** file We recommend a user to edit [**"Global Bash file"**](#bash-file---global) and use it for running any GWAS summary statistics data two traits. 
-<br>
-<br>
-**IMPORTANT NOTE 3:** We have provided **TWO** different **Bash** files. All files are available in the [**"Bash Folder"**](../0_Bash).
+**IMPORTANT NOTE 2:** All a user needs is to define parameters and Paths in the [**parameters.ini**](../0_Bash) file and run the bash file [**"00_Global_run_GCPBayes.sh"**](../0_Bash) for running any GWAS summary statistics data two traits. 
 <br>
 <br>
 
 ## Table of Contents
 - [Bash file - Global](#bash-file---global)
   * [Description of required parameters](#description-of-required-parameters)
-  * [User specifications](#user-specifications)
   * [Different steps run by the bash file](#different-steps-run-by-the-bash-file)
 - [Bash file for running on Breast and Ovarian Cancer data](#bash-file-for-running-on-breast-and-ovarian-cancer-data)
 - [Acknowledgements](#acknowledgements)
@@ -30,7 +26,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 ## Bash file - Global 
 **Bash file Name:** [00_Global_run_GCPBayes.sh](../0_Bash)
 <br><br>
-We provided an overall bash file for performing analyses on GWAS summary statistics data. A user could edit this Bash file and use it for running any GWAS summary statistics data two traits. 
+We provided an overall bash file for performing analyses on GWAS summary statistics data. A user could edit this **parameters.ini** file and use it for running any GWAS summary statistics data two traits. 
 <br>
 This code is running the GCPBayes pipeline from **Section C** to **Section E**, by calling for different *R scripts* in a simple and automated way. 
 <br>
@@ -45,26 +41,8 @@ To run it, simply type in the terminal:
 $ ./00_Global_run_GCPBayes.sh parameters.ini
 ~~~
 ### Description of required parameters
-A short description of each parameter can be found at the beginning of the script, in the **“PARAMETERS”** section, as the default values of the parameters we propose to use when it is relevant. Also, a short description for inputs and outputs can be found in the **“INTPUTS”** and **“OUTPUTS”** sections.
-
-### User specifications
-At first, a user needs to specify different parameter inside the script that can be found in the **“USER SPECIFICATIONS”** section of the script. 
-<br>
-Here are some examples of parameters the user needs to fill (without default value):
--	Path of the directories the user wants to user as working directory and directory for final outputs of GCPBayes
--	Paths and file names for inputs of each dataset
--	Short names defining the dataset 1 and the dataset 2
--	Path and file names for annotated data that will be used for annotation of groups (genes or pathways) for GCPBayes
--	Path for folder containing the bfiles for reference data
-
-Here are some examples of parameters with defaults values:
--	Quality control parameters: thresholds for quality of imputation (=0.9) and MAF (=0.05) to consider SNPs in the analysis
--	Threshold for theta values to consider further exploration with HS (=0.1), or to consider pleiotropy (=0.5)
--	Threshold for group length to consider LD clumping (=500), or to not consider for analysis (=1500)
--	Boolean value to consider LD Clumping or not (default value=”TRUE”)
--	Threshold for p-value in PLACO (=0.05)
--	Different parameters used for LD Clumping
-
+A description of each parameter can be found in [**parameters.ini**](../0_Bash) file. A user could change them based on own relevance. 
+<br><br>
 **NOTE:** The values of parameters coded in the HARD CODED section of the script do not need to be modified.
 
 ### Different steps run by the bash file
@@ -82,9 +60,7 @@ In summary, these steps are presented below:
 
 
 ## Bash file for running on Breast and Ovarian Cancer data
-**Bash file Name:** [00_Global_run_GCPBayes_Strategy_bcac_ocac_manuscript.sh](../0_Bash)
-<br><br>
-This bash file runs the *GCPBayes pipeline* on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data based on our recommendation at the end of the paper.
+For running the *GCPBayes pipeline* on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data (appeared in our manuscript), all a user needs is to use the **"parameters_Strategy_bcac_ocac_manuscript.ini"** file.
 <br><br>
 In summary, it runs *GCPBayes package* **without ld clumping step** for genes with **less than 700 SNPs**, then runs *GCPBayes package* **with ld clumping step** for genes with **more than 700 SNPs**.
 <br><br>
