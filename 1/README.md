@@ -10,7 +10,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 **IMPORTANT NOTE 1:** The Bash file was tested on a Unix-based server with CentOS 7.
 <br>
 <br>
-**IMPORTANT NOTE 2:** We recommend a user to edit [**"Global Bash file"**](#bash-file---global) and use it for running any GWAS summary statistics data two traits. 
+**IMPORTANT NOTE 2:** All a user needs is to define parameters and Paths in the **parameters.ini** file We recommend a user to edit [**"Global Bash file"**](#bash-file---global) and use it for running any GWAS summary statistics data two traits. 
 <br>
 <br>
 **IMPORTANT NOTE 3:** We have provided **TWO** different **Bash** files. All files are available in the [**"Bash Folder"**](../0_Bash).
