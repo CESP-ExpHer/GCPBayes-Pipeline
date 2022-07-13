@@ -48,7 +48,7 @@ Here, we provide a small dataset for testing the Pipeline. The data are GWAS sum
   - *E1_code_gcpbayes_less_extra_info.R*
   - *E2_code_gcpbayes_greater_extra_info.R*
 - Download the parameter file (*parameters_Strategy_bcac_ocac_test_set.ini*) [Download](....)
-  - You **just** need to change the following **PATHS** in the file:
+  - You **just** need to change this file for running. So, change the following **PATHS** based on your system paths:
     - working directory
     - Input files - datasets
     - Input files - annotation
@@ -61,8 +61,20 @@ Here, we provide a small dataset for testing the Pipeline. The data are GWAS sum
 '''
 
 '''
-
-
+- Output files
+  - *C1_output_BCAC_common_OCAC.txt*
+  - *C1_output_OCAC_common_BCAC.txt*
+  - *D1_output_pipeline_BCAC_common_OCAC_coding_withoutclumping.txt*
+  - *D1_output_pipeline_OCAC_common_BCAC_coding_withoutclumping.txt*
+  - *D1_output_pipeline_SNP_in_genes_output_pipeline_BCAC_OCAC_coding_withoutclumping.txt*
+  - *D1_Summary_SNP_in_genes_output_pipeline_BCAC_OCAC_coding_withoutclumping.txt*
+  - *D1_Summary_SNP_in_genes_output_pipeline_OCAC_BCAC_coding_withoutclumping.txt*
+  - *D1_Matrices_output_pipeline_BCAC_OCAC_coding_withoutclumping.Rdata*
+  - *D1_Matrices_extra_info_output_pipeline_BCAC_OCAC_coding_withoutclumping.Rdata*
+  - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_results.txt*
+  - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_pleiotropy.txt*
+**Running Time:** It took about 3 minutes to run the pipeline before GCPBayes (in a system with Intel Core i7 with 16 GB RAM). For the GCPBayes, it took .... hours to measure pleiotropy for 772 genes.
+**Note:**  
 
 ## How to Cite
 Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x), doi:xxx [Link](https://..../)
