@@ -54,13 +54,13 @@ Here, we provide a small dataset for testing the Pipeline. The data are GWAS sum
     - Input files - annotation
 - Download the BASH file (*run_test_set.sh*) [Download](....)
 - Now, all you need is to run the following command in the terminal:
-'''
-
-'''
+~~~
+$ ./00_Global_run_GCPBayes.sh
+~~~
 **NOTE:** You might need to change the permission of the BASH file in order to be executed.
-'''
-
-'''
+~~~
+$ ./00_Global_run_GCPBayes.sh
+~~~
 - Output files
   - *C1_output_BCAC_common_OCAC.txt*
   - *C1_output_OCAC_common_BCAC.txt*
@@ -74,7 +74,9 @@ Here, we provide a small dataset for testing the Pipeline. The data are GWAS sum
   - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_results.txt*
   - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_pleiotropy.txt*
 **Running Time:** It took about 3 minutes to run the pipeline before GCPBayes (in a system with Intel Core i7 with 16 GB RAM). For the GCPBayes, it took .... hours to measure pleiotropy for 772 genes.
-**Note:**  
+**Note:** During running GCPBayes, a user could check these two file to see the results:
+- *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_results.txt*
+- *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_pleiotropy.txt*
 
 ## How to Cite
 Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x), doi:xxx [Link](https://..../)
