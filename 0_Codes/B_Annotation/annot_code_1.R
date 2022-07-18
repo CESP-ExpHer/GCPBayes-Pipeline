@@ -39,6 +39,7 @@ library(dplyr)
 annot_all <- read.table(file = paste0(path_input_data, input_data), header = TRUE)
 
 coding <- filter(annot_all, annot_all$gene_type == "protein_coding")
+coding[,1] <- as.character(coding[,1])
 
 write.table(coding, file = paste0(path_output_data_coding, output_data_coding), 
             quote = FALSE, col.names = TRUE, sep = "\t")
