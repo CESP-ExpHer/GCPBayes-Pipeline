@@ -16,7 +16,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
 ## Installation
-1. Make sure all required packages/software have been installed on your system [Link](#Required_Packages_Software)
+1. Make sure all required packages/software have been installed on your system [Link](#Required-Packages-or-Software)
 2. Change the parameters on the *"parameters.ini"* file. [Link](0_Bash)
 3. Run the *"run_test_set"* [Link](0_Bash) bash file using the following command:
 ~~~
@@ -93,7 +93,7 @@ $ chmod 777 run_test_set.sh
 - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_results.txt*
 - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_pleiotropy.txt*
 
-## Required Packages_Software
+## Required Packages or Software
 For using the whole functionality of the GCPBayes pipeline, a user should install the following packages/software on the system:
 - R Packages
   - BiocManager
