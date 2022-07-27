@@ -16,9 +16,9 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
 ## Installation
-1- Make sure all required packages/software have been installed on your system [Link](Required Packages/Software)
-2- Change the parameters on the *"parameters.ini"* file. [Link](0_Bash)
-3- Run the *"run_test_set"* [Link](0_Bash) bash file using the following command:
+1 - Make sure all required packages/software have been installed on your system [Link](Required Packages/Software)
+2 - Change the parameters on the *"parameters.ini"* file. [Link](0_Bash)
+3 - Run the *"run_test_set"* [Link](0_Bash) bash file using the following command:
 ~~~
 $ ./run_test_set.sh parameters_Strategy_bcac_ocac_test_set.ini
 ~~~
