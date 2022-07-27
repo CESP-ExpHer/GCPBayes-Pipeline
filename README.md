@@ -27,7 +27,7 @@ $ ./run_test_set.sh parameters_Strategy_bcac_ocac_test_set.ini
 $ chmod 777 run_test_set.sh
 ~~~
 4. For running each section individually, use the source codes on the *"0_Codes"* folder [Link](0_Codes) and follow the tutorial provided in the [**"Tutorial"** section](2) or the [**"Wiki"** section](3)
-5. You could run the [**"Test Dataset"**](#Test_Dataset) for running a small example file to test the pipeline.
+5. You could run the [**"Test Dataset"**](#Test-Dataset) for running a small example file to test the pipeline.
 ## Usage
 This file includes **THREE** major sections:
 - [**Description of Bash Files**](1) (plain text files that contain a series of commands) for running the whole procedure with a series of options.<br>
