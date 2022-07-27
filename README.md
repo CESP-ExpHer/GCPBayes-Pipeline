@@ -18,13 +18,13 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 ## Installation
 1. Make sure all required packages/software have been installed on your system [Link](#Required-Packages-or-Software)
 2. Change the parameters on the *"parameters.ini"* file. [Link](0_Bash)
-3. Run the *"run_test_set"* [Link](0_Bash) bash file using the following command:
+3. Run the *"00_Global_run_GCPBayes.sh"* [Link](0_Bash) bash file using the following command:
 ~~~
-$ ./run_test_set.sh parameters_Strategy_bcac_ocac_test_set.ini
+$ ./00_Global_run_GCPBayes.sh parameters.ini
 ~~~
 **NOTE:** You might need to change the permission of the BASH file in order to be executed.
 ~~~
-$ chmod 777 run_test_set.sh
+$ chmod 777 00_Global_run_GCPBayes.sh
 ~~~
 4. For running each section individually, use the source codes on the *"0_Codes"* folder [Link](0_Codes) and follow the tutorial provided in the [**"Tutorial"** section](2) or the [**"Wiki"** section](3)
 5. You could run the [**"Test Dataset"**](#Test-Dataset) for running a small example file to test the pipeline.
