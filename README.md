@@ -96,31 +96,31 @@ $ chmod 777 run_test_set.sh
 ## Required Packages or Software
 For using the whole functionality of the GCPBayes pipeline, a user should install the following packages/software on the system:
 - R Packages
+  - BhGLM
   - BiocManager
-  - vroom
+  - biomaRt
+  - CheckSumStats
   - data.table
   - devtools
-  - MASS
-  - PLACO
-  - genetics.binaRies
-  - tidyverse
-  - tictoc
   - GCPBayes
-  - BhGLM
-  - splitstackshape
-  - ieugwasr
+  - genetics.binaRies
   - gwasrapidd
-  - CheckSumStats
-  - plotly
-  - patchwork
-  - biomaRt
-  - regioneR
+  - ieugwasr
   - karyoploteR
+  - MASS
+  - patchwork
+  - PLACO
+  - plotly
   - readxl
+  - regioneR
+  - splitstackshape
+  - tictoc
+  - tidyverse
+  - vroom
 - Python Packages
   - defaultdict
-  - stats
   - datetime
+  - stats
 - PLINK
 ## How to Cite
 Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x), doi:xxx [Link](https://..../)
