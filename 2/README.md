@@ -89,6 +89,8 @@ An overall summary of running the GCPBayes pipeline for BCAC and OCAC GWAS summa
 Here are detailed information for running each step which a user should RESPECTIVELY run in order to get the results provided in the manuscript: 
 ## Standardization-Section A 
 ***(Section A) (Python)***
+<br>
+**NOTE:** For more information about details of **"Standardization Process"** you could see another **GitHub Page** from our group. [Link](https://github.com/CESP-ExpHer/GWAS-Standardization)
 ### First Step 
 ***(First GWAS Summary Statistics Data called as a Reference file):***
 <br>
