@@ -90,7 +90,8 @@ Here are detailed information for running each step which a user should RESPECTI
 ## Standardization-Section A 
 ***(Section A) (Python)***
 <br>
-**NOTE:** For more information about details of **"Standardization Process"** you could see another **GitHub Page** from our group. [Link](https://github.com/CESP-ExpHer/GWAS-Standardization)
+<br>
+**IMPORTANT NOTE:** For more information about details of **"Standardization Process"** you could see another **GitHub Page** from our group. [Link](https://github.com/CESP-ExpHer/GWAS-Standardization)
 ### First Step 
 ***(First GWAS Summary Statistics Data called as a Reference file):***
 <br>
