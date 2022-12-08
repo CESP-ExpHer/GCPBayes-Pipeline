@@ -31,16 +31,27 @@ This bash file uses the scripts in the "Bash" folder. In order to run it, the in
 
 **snp** = SNP rs id, **chr** = chromosome, **bp_hg19** = base pair position in hg19 assembly, **Effect_A** = Effect Allele, **Baseline_A** = Baseline Allele, **beta** = beta value, **se** = standard error, **pval** = P-value, **EAF** = Effect Allele Frequency, **MAF** = Minor Allele Frequency
 <br><br>
-**NOTE:** chr column should be in a **numeric** format.
+**NOTE:** **chr** column should be in a **numeric** format.
 <br><br>
-For running the Bash file, put all scripts (in this folder) and input GWAS data in a folder, then you need to make changes in two files (**parameters.ini** and **readinputs.txt**). Define the parameters and file paths in the **parameters.ini** file and also define the input files and their paths in the **readinputs.txt** file.<br><br>
+For running the Bash file, put all scripts (in this folder) and input GWAS data in a folder, then you need to make changes in two files (**parameters.ini** and **readinputs.txt**). Define the parameters and file paths in the **parameters.ini** file and also define the input files and their paths in the **readinputs.txt** file.
+<br><br>
 Then, to run, simply type in the terminal:
 ~~~
 $ ./00_Global_run_GCPBayes.sh parameters.ini readinputs.txt
 ~~~
 
+## Bash file - Parallel
+**Bash file Name:** [00_Global_run_GCPBayes_Parallel.sh](../0_Bash)
+<br><br>
 
+We also developed a Bash file which could run GCPBayes for more than one genes at the same time using different CPU cores. A user needs to define the **number of CPUs** in the **parameters.ini** file. All other options are the same as the **General Bash** file.
+<br><br>
+Then, to run, simply type in the terminal:
+~~~
+$ ./00_Global_run_GCPBayes_Parallel.sh parameters.ini readinputs.txt
+~~~
 
+**NOTE:** Using more CPUs also needs more RAMs for running the GCPBayes.
 
 ## Bash file - Global 
 **Bash file Name:** [00_Global_run_GCPBayes.sh](../0_Bash)
