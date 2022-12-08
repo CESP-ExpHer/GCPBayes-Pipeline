@@ -29,7 +29,7 @@ This bash file uses the scripts in the "Bash" folder. In order to run it, the in
 | snp	| chr	| bp_hg19	| Effect_A | Baseline_A | beta | se | pval | info | EAF | MAF |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
-snp = SNP rs id, chr = chromosome, bp_hg19 = base pair position in hg19 assembly, Effect_A = Effect Allele, Baseline_A = Baseline Allele, beta = beta value, se = standard error, pval = P-value, EAF = Effect Allele Frequency, MAF = Minor Allele Frequency
+**snp** = SNP rs id, **chr** = chromosome, **bp_hg19** = base pair position in hg19 assembly, **Effect_A** = Effect Allele, **Baseline_A** = Baseline Allele, **beta** = beta value, **se** = standard error, **pval** = P-value, **EAF** = Effect Allele Frequency, **MAF** = Minor Allele Frequency
 <br><br>
 **NOTE:** chr column should be in a **numeric** format.
 <br><br>
