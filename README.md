@@ -99,8 +99,10 @@ $ chmod 777 run_test_set.sh
 There are different visualizations for outputs from various steps. You could find more details through the visualizations scripts in the [**GCPBayes Wiki**](3).
 <br>
 For a GCPBayes pleiotropic candidates genes output, we developed a shiny App which you could find through the following link:
-<br>
+<br><br>
 [**GCPBayes_Output_Shiny_App**](https://cespexpher.shinyapps.io/gcpbayesoutput/)
+<br>
+For example, you could use this file as an example [Download](0_test_dataset) (it has the same format as an output of GCPBayes pipeline for pleiotropic genes) and see different visualization tools via the online shiny App.
 <br>
 ## Required Packages or Software
 For using the whole functionality of the GCPBayes pipeline, a user should install the following packages/software on the system:
