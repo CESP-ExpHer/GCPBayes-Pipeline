@@ -33,8 +33,8 @@ This bash file uses the scripts in the "Bash" folder. In order to run it, the in
 <br><br>
 **NOTE:** chr column should be in a **numeric** format.
 <br><br>
-For running the Bash file, put all scripts (in this folder) and input GWAS data in a folder, then you need to make changes in two files (**parameters.ini** and **readinputs.txt**). Define the parameters and file paths in the **parameters.ini** file and also define the input files and their paths in the **readinputs.txt** file.<br>
-Then, to run it, simply type in the terminal:
+For running the Bash file, put all scripts (in this folder) and input GWAS data in a folder, then you need to make changes in two files (**parameters.ini** and **readinputs.txt**). Define the parameters and file paths in the **parameters.ini** file and also define the input files and their paths in the **readinputs.txt** file.<br><br>
+Then, to run, simply type in the terminal:
 ~~~
 $ ./00_Global_run_GCPBayes.sh parameters.ini readinputs.txt
 ~~~
