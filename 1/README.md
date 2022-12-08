@@ -10,7 +10,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 **IMPORTANT NOTE 1:** The Bash file was tested on a Unix-based server with CentOS 7.
 <br>
 <br>
-**IMPORTANT NOTE 2:** All a user needs is to define parameters and Paths in the [**parameters.ini**](../0_Bash) and [**readinputs.txt**](../0_Bash) file and run a bash file for running on GWAS summary statistics data. 
+**IMPORTANT NOTE 2:** All a user needs is to define parameters and Paths in the [**parameters.ini**](../0_Codes/Bash) and [**readinputs.txt**](../0_Codes/Bash) file and run a bash file for running on GWAS summary statistics data. 
 <br>
 <br>
 
@@ -18,7 +18,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 
 
 ## Bash file - General
-**Bash file Name:** [00_Global_run_GCPBayes.sh](../0_Bash)
+**Bash file Name:** [00_Global_run_GCPBayes.sh](../0_Codes/Bash)
 <br><br>
 We developed a Bash file for running the GCPBayes pipeline from **Section C** to **Section E**, by calling for different *R scripts* in a simple and automated way. 
 <br>
@@ -51,7 +51,7 @@ $ ./00_Global_run_GCPBayes.sh parameters.ini readinputs.txt
 ~~~
 
 ## Bash file - Parallel
-**Bash file Name:** [00_Global_run_GCPBayes_Parallel.sh](../0_Bash)
+**Bash file Name:** [00_Global_run_GCPBayes_Parallel.sh](../0_Codes/Bash_Parallel)
 <br><br>
 
 We also developed a Bash file which could run GCPBayes for more than one genes at the same time using different CPU cores. A user needs to define the **number of CPUs** in the **parameters.ini** file. All other options are the same as the **General Bash** file.
