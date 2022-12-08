@@ -17,8 +17,9 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 ## Installation
 1. Make sure all required packages/software have been installed on your system [Link](#Required-Packages-or-Software)
-2. Change the parameters on the *"parameters.ini"* file. [Link](0_Bash)
-3. Run the *"00_Global_run_GCPBayes.sh"* [Link](0_Bash) bash file using the following command:
+2. Change the parameters on the *"parameters.ini"* file. [Link](../0_Codes/Bash)
+3. Change the file names inputs and paths on the *"readinputs.txt"* file. [Link](../0_Codes/Bash)
+4. Run the *"00_Global_run_GCPBayes.sh"* [Link](../0_Codes/Bash) BASH file using the following command:
 ~~~
 $ ./00_Global_run_GCPBayes.sh parameters.ini
 ~~~
@@ -30,8 +31,8 @@ $ chmod 777 00_Global_run_GCPBayes.sh
 5. You could run the [**"Test Dataset"**](#Test-Dataset) for running a small example file to test the pipeline.
 ## Usage
 This file includes **THREE** major sections:
-- [**Description of Bash Files**](1) (plain text files that contain a series of commands) for running the whole procedure with a series of options.<br>
-**IMPORTANT NOTE:** The Bash file was tested on a Unix-based server with CentOS 7.
+- [**Description of BASH Files**](1) (plain text files that contain a series of commands) for running the whole procedure with a series of options.<br>
+**IMPORTANT NOTE:** The BASH file was tested on a Unix-based server with CentOS 7.
 
 - [**A Step-by-Step Tutorial**](2) for how to use the GCPBayes pipeline to explore genes with potential pleiotropic effects on Breast and Ovarian cancers using GWAS summary statistics data of Breast (BCAC) and Ovarian (OCAC) cancers (which their results were presented in the manuscript).<br>
 **IMPORTANT NOTE:** This tutorial could be run on all Operating Systems (OS) including Windows, Linux, and Mac.
