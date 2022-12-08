@@ -10,17 +10,12 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 **IMPORTANT NOTE 1:** The Bash file was tested on a Unix-based server with CentOS 7.
 <br>
 <br>
-**IMPORTANT NOTE 2:** All a user needs is to define parameters and Paths in the [**parameters.ini**](../0_Bash) file and run the bash file [**"00_Global_run_GCPBayes.sh"**](../0_Bash) for running any GWAS summary statistics data two traits. 
+**IMPORTANT NOTE 2:** All a user needs is to define parameters and Paths in the [**parameters.ini**](../0_Bash) and [**readinputs.txt**](../0_Bash) file and run a bash file for running on GWAS summary statistics data. 
 <br>
 <br>
 
 ## Table of Contents
-- [Bash file - Global](#bash-file---global)
-  * [Description of required parameters](#description-of-required-parameters)
-  * [Different steps run by the bash file](#different-steps-run-by-the-bash-file)
-- [Bash file for running on Breast and Ovarian Cancer data](#bash-file-for-running-on-breast-and-ovarian-cancer-data)
-- [Acknowledgements](#acknowledgements)
-- [How to Cite](#how-to-cite)
+
 
 ## Bash file - General
 **Bash file Name:** [00_Global_run_GCPBayes.sh](../0_Bash)
