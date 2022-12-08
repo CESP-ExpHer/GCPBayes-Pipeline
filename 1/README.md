@@ -25,7 +25,9 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 ## Bash file - General
 **Bash file Name:** [00_Global_run_GCPBayes.sh](../0_Bash)
 <br><br>
-This bash file uses the scripts in the "Bash" folder. In order to run it, the input GWAS summary statistics data should have the following coulumns with **the same header names**:
+We developed a Bash file for running the GCPBayes pipeline from **Section C** to **Section E**, by calling for different *R scripts* in a simple and automated way. 
+<br>
+This bash file uses the scripts in the "Bash" folder. In order to run it, the input GWAS summary statistics data **MUST** have the following coulumns with **the same header names**:
 | snp	| chr	| bp_hg19	| Effect_A | Baseline_A | beta | se | pval | info | EAF | MAF |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
@@ -33,6 +35,19 @@ This bash file uses the scripts in the "Bash" folder. In order to run it, the in
 <br><br>
 **NOTE:** **chr** column should be in a **numeric** format.
 <br><br>
+
+### Different steps run by the bash file
+**Bash file Name:** "00_Global_run_GCPBayes.sh” will run the different steps of the pipeline by using corresponding scripts. 
+<br><br>
+In summary, these steps are presented below:
+- **Step 1:** To extract common SNPs between dataset by using “C1_code_find_common_snps_one_pair.R”
+- **Step 2:** To run PLACO on each dataset by using “C2_code_run_PLACO_decor_one_pair.R”. This step is run only if Clumping=”TRUE”. Also, this step will not be performed if a corresponding output already exist in the working directory.
+- **Step 3:** To perform LD Clumping (locally) by using “C3_code_ldclumping_local.R”. This step is run only if Clumping=”TRUE”.
+- **Step 4:** To prepare the GCPBayes inputs in the right format by using Rscript “D1_code_pipeline_annot_coding_withoutldclumping_extra_info.R” and Rscript “D2_code_pipeline_annot_coding_ldclumping_extra_info.R”. The second code will be run only if Clumping=”TRUE”.
+- **Step 5:** To get correct list of groups for further analysis according to wanted threshold (length of groups) by using “D3_code_separate_groups_length_threshold.R”
+- **Step 6:** To run GCPBayes (DS Method) by using “E1_code_gcpbayes_less_extra_info.R”. If Clumping=”TRUE”, this step will be done separately in two different lists of groups (according to the lengths of the groups).
+<br><br>
+
 For running the Bash file, put all scripts (in this folder) and input GWAS data in a folder, then you need to make changes in two files (**parameters.ini** and **readinputs.txt**). Define the parameters and file paths in the **parameters.ini** file and also define the input files and their paths in the **readinputs.txt** file.
 <br><br>
 Then, to run, simply type in the terminal:
@@ -52,42 +67,6 @@ $ ./00_Global_run_GCPBayes_Parallel.sh parameters.ini readinputs.txt
 ~~~
 
 **NOTE:** Using more CPUs also needs more RAMs for running the GCPBayes.
-
-## Bash file - Global 
-**Bash file Name:** [00_Global_run_GCPBayes.sh](../0_Bash)
-<br><br>
-We provided an overall bash file for performing analyses on GWAS summary statistics data. A user could edit this **parameters.ini** file and use it for running any GWAS summary statistics data two traits. 
-<br>
-This code is running the GCPBayes pipeline from **Section C** to **Section E**, by calling for different *R scripts* in a simple and automated way. 
-<br>
-The overall bash file and all other scripts of the pipeline, from **Section C** to **Section E**, have to be in the same folder. 
-<br>
-Then, a user can use this bash file to run the overall analysis once their inputs have been formatted. 
-<br>
-A user can use annotated files we already prepared or use his own annotation files.
-<br><br>
-To run it, simply type in the terminal:
-~~~
-$ ./00_Global_run_GCPBayes.sh parameters.ini
-~~~
-### Description of required parameters
-A description of each parameter can be found in [**parameters.ini**](../0_Bash) file. A user could change them based on own relevance. 
-<br><br>
-**NOTE:** The values of parameters coded in the HARD CODED section of the script do not need to be modified.
-
-### Different steps run by the bash file
-**Bash file Name:** "00_Global_run_GCPBayes.sh” will run the different steps of the pipeline by using corresponding scripts. 
-<br><br>
-In summary, these steps are presented below:
-- **Step 1:** To extract common SNPs between dataset by using “C1_code_find_common_snps_one_pair.R”
-- **Step 2:** To run PLACO on each dataset by using “C2_code_run_PLACO_decor_one_pair.R”. This step is run only if Clumping=”TRUE”. Also, this step will not be performed if a corresponding output already exist in the working directory.
-- **Step 3:** To perform LD Clumping (locally) by using “C3_code_ldclumping_local.R”. This step is run only if Clumping=”TRUE”.
-- **Step 4:** To prepare the GCPBayes inputs in the right format by using Rscript “D1_code_pipeline_annot_coding_withoutldclumping_extra_info.R” and Rscript “D2_code_pipeline_annot_coding_ldclumping_extra_info.R”. The second code will be run only if Clumping=”TRUE”.
-- **Step 5:** To get correct list of groups for further analysis according to wanted threshold (length of groups) by using “D3_code_separate_groups_length_threshold.R”
-- **Step 6:** To run GCPBayes (DS Method) by using “E1_code_gcpbayes_less_extra_info.R”. If Clumping=”TRUE”, this step will be done separately in two different lists of groups (according to the lengths of the groups).
-- **Step 7:** To run GCPBayes (HS Method) on groups with “theta > theta_exploration” only, by using “E2_code_gcpbayes_HS_less_extra_info.R” *(work in progress)*
-- **Step 8:** To plot figures *(work in progress)*
-
 
 ## Bash file for running on Breast and Ovarian Cancer data
 For running the *GCPBayes pipeline* on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data (appeared in our manuscript), all a user needs is to use the **"parameters_Strategy_bcac_ocac_manuscript.ini"** file.
