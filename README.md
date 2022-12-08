@@ -93,6 +93,9 @@ $ chmod 777 run_test_set.sh
 - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_results.txt*
 - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_pleiotropy.txt*
 
+
+## Visualization
+
 ## Required Packages or Software
 For using the whole functionality of the GCPBayes pipeline, a user should install the following packages/software on the system:
 - R Packages
