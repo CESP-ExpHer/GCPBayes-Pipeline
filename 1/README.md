@@ -26,7 +26,6 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 **Bash file Name:** [00_Global_run_GCPBayes.sh](../0_Bash)
 <br><br>
 This bash file uses the scripts in the "Bash" folder. In order to run it, the input GWAS summary statistics data should have the following coulumns with **the same header names**:
-
 | snp	| chr	| bp_hg19	| Effect_A | Baseline_A | beta | se | pval | info | EAF | MAF |
 
 snp = SNP rs id, chr = chromosome, bp_hg19 = base pair position in hg19 assembly, Effect_A = Effect Allele, Baseline_A = Baseline Allele, beta = beta value, se = standard error, pval = P-value, EAF = Effect Allele Frequency, MAF = Minor Allele Frequency
