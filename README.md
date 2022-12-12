@@ -111,8 +111,6 @@ For example, you could use this file as an example [Download](0_test_dataset) (i
 <br>
 
 - For a newer version of the shiny App, we added a new graph (Karyotype) which demonstrate the position of candidate pleiotropic genes in the chromosomes. This type of graph is not available in the online version, but you could use it by running the shiny script in your computer. You could download the script from [here](0_test_dataset).
-<br>
-
 **NOTE:** You need to install the following packages before running the shiny App: *shiny, datasets, ggplot2, gridExtra, tidyverse, BioCircos, plotly, ggpubr, biomaRt, regioneR,* and *karyoploteR*.
 <br>
 <br>
