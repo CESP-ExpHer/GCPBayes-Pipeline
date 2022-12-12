@@ -104,6 +104,18 @@ For a GCPBayes pleiotropic candidates genes output, we developed a shiny App whi
 <br><br>
 For example, you could use this file as an example [Download](0_test_dataset) (it has the same format as an output of GCPBayes pipeline for pleiotropic genes) and see different visualization tools via the online shiny App.
 <br>
+<br>
+It is also possible to use the script for the shiny App and run it in your computer. You could download the script from [here](0_test_dataset).
+<br>
+**NOTE:**You need to install the following packages before running the shiny App: *shiny, *datasets, ggplot2, gridExtra, tidyverse, BioCircos, plotly,* and *ggpubr*.
+<br>
+<br>
+For a newer version of the shiny App, we added a new graph (Karyotype) which demonstrate the position of candidate pleiotropic genes in the chromosomes. This type of graph is not available in the online version, but you could use it by running the shiny script in your computer. You could download the script from [here](0_test_dataset).
+<br>
+**NOTE:**You need to install the following packages before running the shiny App: *shiny, *datasets, ggplot2, gridExtra, tidyverse, BioCircos, plotly, ggpubr, biomaRt, regioneR,* and *karyoploteR*.
+<br>
+<br>
+
 ## Required Packages or Software
 For using the whole functionality of the GCPBayes pipeline, a user should install the following packages/software on the system:
 - R Packages
