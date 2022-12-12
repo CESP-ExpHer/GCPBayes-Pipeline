@@ -111,18 +111,18 @@ $ chmod 777 run_test_set.sh
 - There are different visualizations for outputs from various steps. You could find more details through the visualizations scripts in the [**GCPBayes Wiki**](3).
 <br>
 
-- For a GCPBayes pleiotropic candidates genes output, we developed a shiny App which you could find through the following link:
+- **Shiny App - Online:** For a GCPBayes pleiotropic candidates genes output, we developed a shiny App which you could find through the following link:
 <br><br>
 [**GCPBayes_Output_Shiny_App**](https://cespexpher.shinyapps.io/gcpbayesoutput/)
 <br><br>
 For example, you could use this file as an example [Download](0_test_dataset) (filename: *output_GCPBayes_pleiotropy_example.txt*) (it has the same format as an output of GCPBayes pipeline for pleiotropic genes) and see different visualization tools via the online shiny App. **NOTE**: You need to select **Space** as **separator** after uploading the data.
 <br>
 
-- It is also possible to use the script for the shiny App and run it in your computer. You could download the script from [here](0_Codes/Source_Codes) (filename: *shiny_gcpbayes_output_karyotype.R*).
+- **Shiny App - Local:** It is also possible to use the script for the shiny App and run it in your computer. You could download the script from [here](0_Codes/Source_Codes) (filename: *shiny_gcpbayes_output_karyotype.R*).
 **NOTE:** You need to install the following packages before running the shiny App: *shiny, datasets, ggplot2, gridExtra, tidyverse, BioCircos, plotly,* and *ggpubr*.
 <br>
 
-- For a newer version of the shiny App, we added a new graph (Karyotype) which demonstrate the position of candidate pleiotropic genes in the chromosomes. This type of graph is not available in the online version, but you could use it by running the shiny script in your computer. You could download the script from [here](0_Codes/Source_Codes) (filename: *shiny_gcpbayes_output.R*).
+- **Shiny App with Karyotype - Local:** For a newer version of the shiny App, we added a new graph (Karyotype) which demonstrate the position of candidate pleiotropic genes in the chromosomes. This type of graph is not available in the online version, but you could use it by running the shiny script in your computer. You could download the script from [here](0_Codes/Source_Codes) (filename: *shiny_gcpbayes_output.R*).
 **NOTE:** You need to install the following packages before running the shiny App: *shiny, datasets, ggplot2, gridExtra, tidyverse, BioCircos, plotly, ggpubr, biomaRt, regioneR,* and *karyoploteR*.
 <br>
 <br>
