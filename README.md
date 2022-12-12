@@ -15,6 +15,18 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 **IMPORTANT NOTE 2:** The Section names that are mentioned in this page are correspondence to Figure provided in [An Overview of the Pipeline](#An-Overview-of-the-Pipeline) section in the current page.
 <br>
 <br>
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [An Overview of the Pipeline](#an-overview-of-the-pipeline)
+- [Test Dataset](#test-dataset)
+- [Visualization](#visualization)
+- [Required Packages or Software](#required-packages-or-software)
+- [How to Cite](#how-to-cite)
+
+
+
 ## Installation
 1. Make sure all required packages/software have been installed on your system [Link](#Required-Packages-or-Software)
 2. Change the parameters on the *"parameters.ini"* file. [Link](../0_Codes/Bash)
