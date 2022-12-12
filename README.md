@@ -115,7 +115,7 @@ $ chmod 777 run_test_set.sh
 <br><br>
 [**GCPBayes_Output_Shiny_App**](https://cespexpher.shinyapps.io/gcpbayesoutput/)
 <br><br>
-For example, you could use this file as an example [Download](0_test_dataset) (filename: *output_GCPBayes_pleiotropy_example.txt*) (it has the same format as an output of GCPBayes pipeline for pleiotropic genes) and see different visualization tools via the online shiny App. **NOTE**: You need to select **Space** as **separator** after uploading the data.
+For example, you could use this file as an example [Download](0_Files) (filename: *output_GCPBayes_pleiotropy_example.txt*) (it has the same format as an output of GCPBayes pipeline for pleiotropic genes) and see different visualization tools via the online shiny App. **NOTE**: You need to select **Space** as **separator** after uploading the data.
 <br>
 
 - **Shiny App - Local:** It is also possible to use the script for the shiny App and run it in your computer. You could download the script from [here](0_Codes/Source_Codes) (filename: *shiny_gcpbayes_output_karyotype.R*).
