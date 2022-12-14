@@ -100,8 +100,8 @@ $ chmod 777 run_test_set.sh
 **Running Time:** It took about **3 minutes** to run the *pipeline before GCPBayes* (in a system with Intel Core i7 11th Gen 2.8 GHz with 16 GB RAM). For the *GCPBayes*, we just use the first 300 genes from the data and it took **3 minutes** to run.
 
 **Note:** During running GCPBayes, a user could check these two file to see the results:
-- *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_results.txt*
-- *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_pleiotropy.txt*
+- *output_output_GCPBayes_wo_clump_less_threshold_700_results.txt*
+- *output_output_GCPBayes_wo_clump_less_threshold_700_pleiotropy.txt*
 
 **Note:** After a successful running, there would be a gene **"*SETD9*"** in the pleiotropic output file which determines the gene as a candidate with potential pleitropic signal among both breast and ovarian cancers. *SETD9* has a 43 SNPs through our test datasets and one of its biological function is [Regulation of TP53 Activity through Methylation](https://www.ncbi.nlm.nih.gov/gene/133383).
 
