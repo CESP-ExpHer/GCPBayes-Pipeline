@@ -131,7 +131,7 @@ For example, you could use this file as an example [Download](0_Files) (filename
 **NOTE:** You need to install the following packages before running the shiny App: *shiny, datasets, ggplot2, gridExtra, tidyverse, BioCircos, plotly, ggpubr, biomaRt, regioneR,* and *karyoploteR*.
 
 ## Required Packages or Software
-For using the whole functionality of the GCPBayes pipeline, a user should install the following packages/software on the system:
+For using the whole functionality of the GCPBayes pipeline, a user should install the following packages/software on the system. We gratefully acknowledge the following packages/softwares which we used throughout our pipeline:
 - R Packages
   - BhGLM
   - BioCircos
