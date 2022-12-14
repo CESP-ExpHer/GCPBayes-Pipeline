@@ -103,7 +103,7 @@ $ chmod 777 run_test_set.sh
 - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_results.txt*
 - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_pleiotropy.txt*
 
-**Note:** After a successful running, there would be a gene **"*SETD9*"** in the pleiotropic output file which determines the gene as a candidate with potential pleitropic signal among both breast and ovarian cancers. *SETD9* has a function of [Regulation of TP53 Activity through Methylation](https://www.ncbi.nlm.nih.gov/gene/133383) which implies its relatedness to cancer behaviour.
+**Note:** After a successful running, there would be a gene **"*SETD9*"** in the pleiotropic output file which determines the gene as a candidate with potential pleitropic signal among both breast and ovarian cancers. *SETD9* has a 43 SNPs through our test datasets and one of its biological function is [Regulation of TP53 Activity through Methylation](https://www.ncbi.nlm.nih.gov/gene/133383).
 
 
 ## Visualization
