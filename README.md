@@ -62,7 +62,7 @@ A general overview of the main sections of the GCPBayes pipeline are as follow:
 Here, we provide a small dataset for testing the Pipeline. The data are GWAS summary statistics for The Breast Cancer Association Consortium (BCAC) and The Ovarian Cancer Association Consortium (OCAC) chromosome #5 and we want to run the Pipeline (without LD clumping method) and GCPBayes at a gene-level for 300 coding-genes. 
 <br>
 <br>
-**NOTE:** You need to install the following R packages before running the pipeline for this test dataset: (*vroom, tidyverse, data.table, optparse, dplyr, tidyr, tidyverse, tictoc, GCPBayes, devtools,* and *BhGLM*).
+**NOTE:** You need to install the following R packages before running the pipeline for this test dataset: (*vroom, tidyverse, data.table, optparse, tidyr, tidyverse, tictoc, GCPBayes, devtools,* and *BhGLM*).
 <br>
 <br>
 For running the pipeline in the test set, please perform the following steps:
@@ -147,6 +147,7 @@ For using the whole functionality of the GCPBayes pipeline, a user should instal
   - ieugwasr
   - karyoploteR
   - MASS
+  - optparse
   - patchwork
   - PLACO
   - plotly
@@ -154,6 +155,7 @@ For using the whole functionality of the GCPBayes pipeline, a user should instal
   - regioneR
   - splitstackshape
   - tictoc
+  - tidyr
   - tidyverse
   - vroom
 - Python Packages
