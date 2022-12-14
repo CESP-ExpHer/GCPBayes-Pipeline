@@ -33,7 +33,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 3. Change the file names inputs and paths on the *"readinputs.txt"* file. [Link](../0_Codes/Bash)
 4. Run the *"00_Global_run_GCPBayes.sh"* [Link](../0_Codes/Bash) BASH file using the following command:
 ~~~
-$ ./00_Global_run_GCPBayes.sh parameters.ini
+$ ./00_Global_run_GCPBayes.sh parameters.ini readinputs.txt
 ~~~
 **NOTE:** You might need to change the permission of the BASH file in order to be executed.
 ~~~
@@ -59,52 +59,51 @@ A general overview of the main sections of the GCPBayes pipeline are as follow:
 <br></br>
 
 ## Test Dataset
-Here, we provide a small dataset for testing the Pipeline. The data are GWAS summary statistics for The Breast Cancer Association Consortium (BCAC) and The Ovarian Cancer Association Consortium (OCAC) chromosome #5 and we want to run the Pipeline (without LD clumping method) and GCPBayes at a gene-level. For running the pipeline in the test set, please perform the following steps:
+Here, we provide a small dataset for testing the Pipeline. The data are GWAS summary statistics for The Breast Cancer Association Consortium (BCAC) and The Ovarian Cancer Association Consortium (OCAC) chromosome #5 and we want to run the Pipeline (without LD clumping method) and GCPBayes at a gene-level for 300 coding-genes. For running the pipeline in the test set, please perform the following steps:
 - Download INPUT files [Download](http://marge11.vjf.inserm.fr/ExpHer_shared/)
   - BCAC and OCAC GWAS data on chromosome #5 (*gwas_BCAC_chr5.txt*, *gwas_OCAC_chr5.txt*)
   - An annotation file including all coding genes (*annot_gencode_v38lift37_modified_gene_class.txt*)
   - BCAC GWAS file with a gene column (*Annot_BCAC_2020_onco_ALL_reformatted_coding.txt*)
 - Download the scripts and put them in the same folder as input data [Download](0_test_dataset)
   - *C1_code_find_common_snps_one_pair.R*
-  - *C2_code_run_PLACO_decor_one_pair.R*
-  - *C3_code_ldclumping_local.R*
   - *D1_code_pipeline_annot_coding_withoutldclumping_extra_info.R*
-  - *D2_code_pipeline_annot_coding_ldclumping_extra_info.R*
-  - *D3_code_separate_groups_length_threshold.R*
   - *E1_code_gcpbayes_less_extra_info.R*
-  - *E2_code_gcpbayes_greater_extra_info.R*
 - Download the parameter file (*parameters_Strategy_bcac_ocac_test_set.ini*) [Download](0_test_dataset)
-  - You **just** need to change this file for running. So, change the following **PATHS** based on your system paths:
+  - You **MUST** change this file before running. So, replace **/PATH/** with the path where you put all downloaded data and scripts. You need to change these three parts:
     - working directory
-    - Input files - datasets
-    - Input files - annotation
+    - output directory
+    - directory for scripts
+- Download the readinput file (*readinputs.txt*) [Download](0_test_dataset)
+  - You **MUST** change replace **/PATH/** with the same one you entered for the parameter file.
 - Download the BASH file (*run_test_set.sh*) [Download](0_test_dataset)
 - Now, all you need is to run the following command in the terminal:
 ~~~
-$ ./run_test_set.sh parameters_Strategy_bcac_ocac_test_set.ini
+$ ./run_test_set.sh parameters_Strategy_bcac_ocac_test_set.ini readinputs.txt
 ~~~
 **NOTE:** You might need to change the permission of the BASH file in order to be executed.
 ~~~
 $ chmod 777 run_test_set.sh
 ~~~
 - OUTPUT files
-  - *C1_output_BCAC_common_OCAC.txt*
-  - *C1_output_OCAC_common_BCAC.txt*
-  - *D1_output_pipeline_BCAC_common_OCAC_coding_withoutclumping.txt*
-  - *D1_output_pipeline_OCAC_common_BCAC_coding_withoutclumping.txt*
-  - *D1_output_pipeline_SNP_in_genes_output_pipeline_BCAC_OCAC_coding_withoutclumping.txt*
-  - *D1_Summary_SNP_in_genes_output_pipeline_BCAC_OCAC_coding_withoutclumping.txt*
-  - *D1_Summary_SNP_in_genes_output_pipeline_OCAC_BCAC_coding_withoutclumping.txt*
-  - *D1_Matrices_output_pipeline_BCAC_OCAC_coding_withoutclumping.Rdata*
-  - *D1_Matrices_extra_info_output_pipeline_BCAC_OCAC_coding_withoutclumping.Rdata*
-  - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_results.txt*
-  - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_pleiotropy.txt*
+  - *step1_output_BCAC.txt*
+  - *step1_output_OCAC.txt*
+  - *D1_output_pipeline_BCAC_common2all_2_studies_coding_wo_clumping.txt*
+  - *D1_output_pipeline_OCAC_common2all_2_studies_coding_wo_clumping.txt*
+  - *D1_output_pipeline_SNP_in_genes_output_pipeline_output_wo_clump.txt*
+  - *D1_Summary_SNP_in_genes_output_pipeline_BCAC_common2all_2_studies_coding_wo_clumping.txt*
+  - *D1_Summary_SNP_in_genes_output_pipeline_OCAC_common2all_2_studies_coding_wo_clumping.txt*
+  - *D1_Matrices_extra_info_output_pipeline_output_wo_clump.Rdata*
+  - *D1_Matrices_output_pipeline_output_wo_clump.Rdata*
+  - *output_output_GCPBayes_wo_clump_less_threshold_700_results.txt*
+  - *output_output_GCPBayes_wo_clump_less_threshold_700_pleiotropy.txt*
 
-**Running Time:** It took about **3 minutes** to run the *pipeline before GCPBayes* (in a system with Intel Core i7 11th Gen 2.8 GHz with 16 GB RAM). For the *GCPBayes*, we just use the first 50 genes from the data and it took **2 minutes** to run and found any potential pleitropic signal among them.
+**Running Time:** It took about **3 minutes** to run the *pipeline before GCPBayes* (in a system with Intel Core i7 11th Gen 2.8 GHz with 16 GB RAM). For the *GCPBayes*, we just use the first 300 genes from the data and it took **3 minutes** to run.
 
 **Note:** During running GCPBayes, a user could check these two file to see the results:
 - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_results.txt*
 - *E1_output_GCPBayes_BCAC_OCAC_without_ldclumping_less_threshold_700_pleiotropy.txt*
+
+**Note:** After a successful running, there would be a gene **"*SETD9*"** in the pleiotropic output file which determines the gene as a candidate with potential pleitropic signal among both breast and ovarian cancers. *SETD9* has a function of [Regulation of TP53 Activity through Methylation](https://www.ncbi.nlm.nih.gov/gene/133383) which implies its relatedness to cancer behaviour.
 
 
 ## Visualization
