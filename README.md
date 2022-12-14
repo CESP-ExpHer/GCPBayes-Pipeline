@@ -129,20 +129,23 @@ For example, you could use this file as an example [Download](0_Files) (filename
 
 - **Shiny App with Karyotype - Local:** For a newer version of the shiny App, we added a new graph (Karyotype) which demonstrate the position of candidate pleiotropic genes in the chromosomes. This type of graph is not available in the online version, but you could use it by running the shiny script in your computer. You could download the script from [here](0_Codes/Source_Codes) (filename: *shiny_gcpbayes_output.R*).
 **NOTE:** You need to install the following packages before running the shiny App: *shiny, datasets, ggplot2, gridExtra, tidyverse, BioCircos, plotly, ggpubr, biomaRt, regioneR,* and *karyoploteR*.
-<br>
-<br>
 
 ## Required Packages or Software
 For using the whole functionality of the GCPBayes pipeline, a user should install the following packages/software on the system:
 - R Packages
   - BhGLM
+  - BioCircos
   - BiocManager
   - biomaRt
   - CheckSumStats
   - data.table
+  - datasets
   - devtools
   - GCPBayes
   - genetics.binaRies
+  - ggplot2
+  - ggpubr
+  - gridExtra
   - gwasrapidd
   - ieugwasr
   - karyoploteR
@@ -153,6 +156,7 @@ For using the whole functionality of the GCPBayes pipeline, a user should instal
   - plotly
   - readxl
   - regioneR
+  - shiny
   - splitstackshape
   - tictoc
   - tidyr
