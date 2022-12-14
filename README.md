@@ -59,7 +59,10 @@ A general overview of the main sections of the GCPBayes pipeline are as follow:
 <br></br>
 
 ## Test Dataset
-Here, we provide a small dataset for testing the Pipeline. The data are GWAS summary statistics for The Breast Cancer Association Consortium (BCAC) and The Ovarian Cancer Association Consortium (OCAC) chromosome #5 and we want to run the Pipeline (without LD clumping method) and GCPBayes at a gene-level for 300 coding-genes. For running the pipeline in the test set, please perform the following steps:
+Here, we provide a small dataset for testing the Pipeline. The data are GWAS summary statistics for The Breast Cancer Association Consortium (BCAC) and The Ovarian Cancer Association Consortium (OCAC) chromosome #5 and we want to run the Pipeline (without LD clumping method) and GCPBayes at a gene-level for 300 coding-genes. 
+**NOTE:** You need to install the following R packages before running the pipeline for this test dataset: (vroom, tidyverse, data.table, optparse, dplyr, tidyr, tidyverse, tictoc, GCPBayes, devtools, and BhGLM).
+<br>
+For running the pipeline in the test set, please perform the following steps:
 - Download INPUT files [Download](http://marge11.vjf.inserm.fr/ExpHer_shared/)
   - BCAC and OCAC GWAS data on chromosome #5 (*gwas_BCAC_chr5.txt*, *gwas_OCAC_chr5.txt*)
   - An annotation file including all coding genes (*annot_gencode_v38lift37_modified_gene_class.txt*)
