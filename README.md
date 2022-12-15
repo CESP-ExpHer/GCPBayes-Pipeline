@@ -28,10 +28,10 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 
 
 ## Installation
-1. Make sure all required packages/software have been installed on your system [Link](#Required-Packages-or-Software)
+1. Make sure all required packages/software have been installed on your system [(Link)](#Required-Packages-or-Software)
 2. Change the parameters on the *"parameters.ini"* file. [(Link)](../0_Codes/Bash)
-3. Change the file names inputs and paths on the *"readinputs.txt"* file. [Link](../0_Codes/Bash)
-4. Run the *"00_Global_run_GCPBayes.sh"* [Link](../0_Codes/Bash) BASH file using the following command:
+3. Change the file names inputs and paths on the *"readinputs.txt"* file. [(Link)](../0_Codes/Bash)
+4. Run the *"00_Global_run_GCPBayes.sh"* [(Link)](../0_Codes/Bash) BASH file using the following command:
 ~~~
 $ ./00_Global_run_GCPBayes.sh parameters.ini readinputs.txt
 ~~~
@@ -39,7 +39,7 @@ $ ./00_Global_run_GCPBayes.sh parameters.ini readinputs.txt
 ~~~
 $ chmod 777 00_Global_run_GCPBayes.sh
 ~~~
-5. For running each section individually, use the source codes on the *"Source_Codes"* folder [Link](0_Codes/Source_Codes) and follow the tutorial provided in the [**"Tutorial"** section](2) or the [**"Wiki"** section](3)
+5. For running each section individually, use the source codes on the *"Source_Codes"* folder [(Link)](0_Codes/Source_Codes) and follow the tutorial provided in the [**"Tutorial"** section](2) or the [**"Wiki"** section](3)
 6. You could run the [**"Test Dataset"**](#Test-Dataset) for running a small example file to test the pipeline.
 ## Usage
 This file includes **THREE** major sections:
@@ -66,22 +66,22 @@ Here, we provide a small dataset for testing the Pipeline. The data are GWAS sum
 <br>
 <br>
 For running the pipeline in the test set, please perform the following steps:
-- Download INPUT files [Download](http://marge11.vjf.inserm.fr/ExpHer_shared/)
+- Download INPUT files [(Download)](http://marge11.vjf.inserm.fr/ExpHer_shared/)
   - BCAC and OCAC GWAS data on chromosome #5 (*gwas_BCAC_chr5.txt*, *gwas_OCAC_chr5.txt*)
   - An annotation file including all coding genes (*annot_gencode_v38lift37_modified_gene_class.txt*)
   - BCAC GWAS file with a gene column (*Annot_BCAC_2020_onco_ALL_reformatted_coding.txt*)
-- Download the scripts and put them in the same folder as input data [Download](0_test_dataset)
+- Download the scripts and put them in the same folder as input data [(Download)](0_test_dataset)
   - *C1_code_find_common_snps_one_pair.R*
   - *D1_code_pipeline_annot_coding_withoutldclumping_extra_info.R*
   - *E1_code_gcpbayes_less_extra_info.R*
-- Download the parameter file (*parameters_Strategy_bcac_ocac_test_set.ini*) [Download](0_test_dataset)
+- Download the parameter file (*parameters_Strategy_bcac_ocac_test_set.ini*) [(Download)](0_test_dataset)
   - You **MUST** change this file before running. So, replace **/PATH/** with the path where you put all downloaded data and scripts. You need to change these three parts:
     - working directory
     - output directory
     - directory for scripts
-- Download the readinput file (*readinputs.txt*) [Download](0_test_dataset)
+- Download the readinput file (*readinputs.txt*) [(Download)](0_test_dataset)
   - You **MUST** change replace **/PATH/** with the same one you entered for the parameter file.
-- Download the BASH file (*run_test_set.sh*) [Download](0_test_dataset)
+- Download the BASH file (*run_test_set.sh*) [(Download)](0_test_dataset)
 - Now, all you need is to run the following command in the terminal:
 ~~~
 $ ./run_test_set.sh parameters_Strategy_bcac_ocac_test_set.ini readinputs.txt
@@ -120,14 +120,14 @@ $ chmod 777 run_test_set.sh
 <br><br>
 [**GCPBayes_Output_Shiny_App**](https://cespexpher.shinyapps.io/gcpbayesoutput/)
 <br><br>
-For example, you could use this file as an example [Download](0_Files) (filename: *output_GCPBayes_pleiotropy_example.txt*) (it has the same format as an output of GCPBayes pipeline for pleiotropic genes) and see different visualization tools via the online shiny App. **NOTE**: You need to select **Space** as **separator** after uploading the data.
+For example, you could use this file as an example [(Download)](0_Files) (filename: *output_GCPBayes_pleiotropy_example.txt*) (it has the same format as an output of GCPBayes pipeline for pleiotropic genes) and see different visualization tools via the online shiny App. **NOTE**: You need to select **Space** as **separator** after uploading the data.
 <br>
 
-- **Shiny App - Local:** It is also possible to use the script for the shiny App and run it in your computer. You could download the script from [here](0_Codes/Source_Codes) (filename: *shiny_gcpbayes_output_karyotype.R*).
+- **Shiny App - Local:** It is also possible to use the script for the shiny App and run it in your computer. You could download the script from [**here**](0_Codes/Source_Codes) (filename: *shiny_gcpbayes_output_karyotype.R*).
 **NOTE:** You need to install the following packages before running the shiny App: *shiny, datasets, ggplot2, gridExtra, tidyverse, BioCircos, plotly,* and *ggpubr*.
 <br>
 
-- **Shiny App with Karyotype - Local:** For a newer version of the shiny App, we added a new graph (Karyotype) which demonstrate the position of candidate pleiotropic genes in the chromosomes. This type of graph is not available in the online version, but you could use it by running the shiny script in your computer. You could download the script from [here](0_Codes/Source_Codes) (filename: *shiny_gcpbayes_output.R*).
+- **Shiny App with Karyotype - Local:** For a newer version of the shiny App, we added a new graph (Karyotype) which demonstrate the position of candidate pleiotropic genes in the chromosomes. This type of graph is not available in the online version, but you could use it by running the shiny script in your computer. You could download the script from [**here**](0_Codes/Source_Codes) (filename: *shiny_gcpbayes_output.R*).
 **NOTE:** You need to install the following packages before running the shiny App: *shiny, datasets, ggplot2, gridExtra, tidyverse, BioCircos, plotly, ggpubr, biomaRt, regioneR,* and *karyoploteR*.
 
 ## Required Packages or Software
