@@ -29,7 +29,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 
 ## Installation
 1. Make sure all required packages/software have been installed on your system [Link](#Required-Packages-or-Software)
-2. Change the parameters on the *"parameters.ini"* file. [Link](../0_Codes/Bash)
+2. Change the parameters on the *"parameters.ini"* file. [(Link)](../0_Codes/Bash)
 3. Change the file names inputs and paths on the *"readinputs.txt"* file. [Link](../0_Codes/Bash)
 4. Run the *"00_Global_run_GCPBayes.sh"* [Link](../0_Codes/Bash) BASH file using the following command:
 ~~~
