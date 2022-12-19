@@ -143,7 +143,6 @@ For using the whole functionality of the GCPBayes pipeline, a user should instal
   - devtools
   - GCPBayes
   - genetics.binaRies
-  - ggplot2
   - ggpubr
   - gridExtra
   - gwasrapidd
@@ -159,7 +158,6 @@ For using the whole functionality of the GCPBayes pipeline, a user should instal
   - shiny
   - splitstackshape
   - tictoc
-  - tidyr
   - tidyverse
   - vroom
 - Python Packages
