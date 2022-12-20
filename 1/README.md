@@ -22,7 +22,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br><br>
 We developed a Bash file for running the GCPBayes pipeline from **Section C** to **Section E**, by calling for different *R scripts* in a simple and automated way. 
 <br>
-This bash file uses the scripts in the "Bash" folder. In order to run it, the input GWAS summary statistics data **MUST** have the following coulumns with **the same header names**:
+This bash file uses the scripts in the "Bash" folder. In order to run it, the input GWAS summary statistics data **MUST** have the following columns with **the same header names**:
 | snp	| chr	| bp_hg19	| Effect_A | Baseline_A | beta | se | pval | info | EAF | MAF |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
