@@ -7,7 +7,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 
 ## Some NOTES
-**IMPORTANT NOTE 1:** All scripts all available in the [**"Codes folder"**](../0_Codes)
+**IMPORTANT NOTE 1:** All scripts all available in the [**"Codes folder"**](../0_Codes/Source_Codes)
 <br><br>
 **IMPORTANT NOTE 2:** In order to follow all procedure easier, we considered all paths in the same directory (for inputs and outputs) throughout the pipeline (in our example: “~/BCAC_OCAC/”)
 <br><br>
