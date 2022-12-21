@@ -1,0 +1,3 @@
+path filename shortname
+/PATH/ BCAC_chr5.txt BCAC
+/PATH/ OCAC_chr5.txt OCAC
