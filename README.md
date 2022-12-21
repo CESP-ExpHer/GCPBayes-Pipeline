@@ -27,7 +27,6 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 
 ## An Overview of the Pipeline
 
-This file includes **THREE** major sections:
 - [**Description of Bash File**](1) which is a plain text file that contain a series of commands for running the whole procedure automatically with a user-defined parameters.<br>
 **IMPORTANT NOTE:** The Bash file was tested on a Unix-based server with CentOS 7.
 
