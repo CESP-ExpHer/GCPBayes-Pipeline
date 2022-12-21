@@ -41,8 +41,6 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
   * [Section D](#section-d-2)
   * [Section E](#section-e-2)
 - [References](#references)
-- [Acknowledgements](#acknowledgements)
-- [How to Cite](#how-to-cite)
 
 
 ## Summary
@@ -662,36 +660,3 @@ There is also a script called “code_analysis_E_gcpbayes_output_table_overview.
 - Phelan,C.M. et al. (2017) Identification of 12 new susceptibility loci for different histotypes of epithelial ovarian cancer. Nat. Genet., 49, 680–691.
 - Zhang,H. et al. (2020) Genome-wide association study identifies 32 novel breast cancer susceptibility loci from overall and subtype-specific analyses. Nat. Genet. 2020 526, 52, 572–581.
 
-## Acknowledgements 
-We gratefully acknowledge the following packages/softwares which we used throughout our pipeline:
-```
-vroom
-dplyr
-data.table
-devtools
-MASS
-tidyr
-PLACO
-genetics.binaRies
-tidyverse
-tictoc
-GCPBayes
-BhGLM
-splitstackshape
-PLINK
-ieugwasr
-gwasrapidd
-CheckSumStats
-ggplot2
-plotly
-patchwork
-biomaRt
-regioneR
-karyoploteR
-readxl
-defaultdict
-stats
-datetime
-```
-## How to Cite
-Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x):x, doi: xxx[Paper_link](https://..../)
