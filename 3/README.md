@@ -7,7 +7,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 
 ## NOTES
-**IMPORTANT NOTE 1:** All scripts all available in the [**"Codes folder"**](../0_Codes)
+**IMPORTANT NOTE 1:** All scripts all available in the [**"Codes folder"**](../0_Codes/Source_Codes)
 <br>
 **IMPORTANT NOTE 2:** All files used in the *GCPBayes pipeline* are available in the [**folder containing files**](../0_Files)
 
