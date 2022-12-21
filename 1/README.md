@@ -6,8 +6,13 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
 
-
-**IMPORTANT NOTE:** The Bash file was tested on a Unix-based server with CentOS 7.
+**NOTE 1:** It is easier to put Bash file, parameter file, input files, and all scripts in the same folder. 
+<br>
+**NOTE 2:** GWAS files used as inputs for a Bash file should be standardized first. If you need to know how to standardize GWAS data, see [**Standardization Section**](2).
+<br>
+**NOTE 3:** A user can use annotated files we already prepared (see [**Annotation Section**](2)) or use its own annotation files.
+<br>
+**NOTE 4:** The Bash file was tested on a Unix-based server with CentOS 7.
 <br>
 <br>
 
@@ -25,7 +30,7 @@ This bash file uses the scripts in the "Bash" folder. In order to run it, the in
 **NOTE:** **chr** column should be in a **numeric** format.
 <br><br>
 
-### Different steps run by the bash file
+### Different steps which run by a bash file
 **Bash file Name:** "00_Global_run_GCPBayes.sh” will run the different steps of the pipeline by using corresponding scripts. 
 <br><br>
 In summary, these steps are presented below:
