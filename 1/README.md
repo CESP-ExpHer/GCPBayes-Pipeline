@@ -14,9 +14,6 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
 
-## Table of Contents
-
-
 ## Bash file - General
 **Bash file Name:** [00_Global_run_GCPBayes.sh](../0_Codes/Bash)
 <br><br>
@@ -58,49 +55,8 @@ We also developed a Bash file which could run GCPBayes for more than one genes a
 <br><br>
 Then, to run, simply type in the terminal:
 ~~~
-$ ./00_Global_run_GCPBayes_Parallel.sh parameters.ini readinputs.txt
+$ ./00_Global_run_GCPBayes_Parallel.sh parameters_parallel.ini readinputs.txt
 ~~~
 
 **NOTE:** Using more CPUs also needs more RAMs for running the GCPBayes.
 
-## Bash file for running on Breast and Ovarian Cancer data
-For running the *GCPBayes pipeline* on Breast (BCAC) and Ovarian (OCAC) GWAS summary statistics data (appeared in our manuscript), all a user needs is to use the **"parameters_Strategy_bcac_ocac_manuscript.ini"** file.
-<br><br>
-In summary, it runs *GCPBayes package* **without ld clumping step** for genes with **less than 700 SNPs**, then runs *GCPBayes package* **with ld clumping step** for genes with **more than 700 SNPs**.
-<br><br>
-To run it, simply type in the terminal:
-~~~
-$ ./00_Global_run_GCPBayes.sh parameters_Strategy_bcac_ocac_manuscript.ini
-~~~
-
-## Acknowledgements 
-We gratefully acknowledge the following packages/softwares which we used throughout our pipeline:
-```
-BiocManager
-vroom
-data.table
-devtools
-MASS
-PLACO
-genetics.binaRies
-tidyverse
-tictoc
-GCPBayes
-BhGLM
-splitstackshape
-PLINK
-ieugwasr
-gwasrapidd
-CheckSumStats
-plotly
-patchwork
-biomaRt
-regioneR
-karyoploteR
-readxl
-defaultdict
-stats
-datetime
-```
-## How to Cite
-Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x):x, doi: xxx[Paper_link](https://..../)
