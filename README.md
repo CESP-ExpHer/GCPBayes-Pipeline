@@ -17,14 +17,29 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 
 ## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
 - [An Overview of the Pipeline](#an-overview-of-the-pipeline)
+- [Installation](#installation)
 - [Test Dataset](#test-dataset)
 - [Visualization](#visualization)
 - [Required Packages or Software](#required-packages-or-software)
 - [How to Cite](#how-to-cite)
 
+
+## An Overview of the Pipeline
+
+This file includes **THREE** major sections:
+- [**Description of Bash File**](1) which is a plain text file that contain a series of commands for running the whole procedure automatically with a user-defined parameters.<br>
+**IMPORTANT NOTE:** The Bash file was tested on a Unix-based server with CentOS 7.
+
+- [**A Step-by-Step Tutorial**](2) to reproduce the results of our manuscript using GWAS summary statistics data of Breast (BCAC) and Ovarian (OCAC) cancers by running the GCPBayes Pipeline.<br>
+**IMPORTANT NOTE:** This tutorial could be run on all Operating Systems (OS) including Windows, Linux, and Mac.
+
+- [**GCPBayes Pipeline Wiki**](3) includes description for each scripts in more detail. This is useful for developers who want to modify/add any part of the pipeline.<br>
+
+A schematic overview of the main sections of the GCPBayes pipeline are as follow:
+<br></br>
+<kbd> <img src="0_Images/Fig1_v3.jpg"/> </kbd>
+<br></br>
 
 
 ## Installation
@@ -41,22 +56,6 @@ $ chmod 777 00_Global_run_GCPBayes.sh
 ~~~
 5. For running each section individually, use the source codes on the *"Source_Codes"* folder [(Link)](0_Codes/Source_Codes) and follow the tutorial provided in the [**"Tutorial"** section](2) or the [**"Wiki"** section](3)
 6. You could run the [**"Test Dataset"**](#Test-Dataset) for running a small example file to test the pipeline.
-## Usage
-This file includes **THREE** major sections:
-- [**Description of Bash Files**](1) (plain text files that contain a series of commands) for running the whole procedure with a series of options.<br>
-**IMPORTANT NOTE:** The Bash file was tested on a Unix-based server with CentOS 7.
-
-- [**A Step-by-Step Tutorial**](2) for how to use the GCPBayes pipeline to explore genes with potential pleiotropic effects on Breast and Ovarian cancers using GWAS summary statistics data of Breast (BCAC) and Ovarian (OCAC) cancers (which their results were presented in the manuscript).<br>
-**IMPORTANT NOTE:** This tutorial could be run on all Operating Systems (OS) including Windows, Linux, and Mac.
-
-- [**GCPBayes Pipeline Wiki**](3) for All Scripts which includes detailed information for all scripts used in the pipeline.<br>
-**IMPORTANT NOTE:** This part includes all concepts and information for each scripts used in the GCPBayes pipeline in order to provide an option to modify/add/remove any part by a user based on its strategy.
-
-## An Overview of the Pipeline
-A general overview of the main sections of the GCPBayes pipeline are as follow:
-<br></br>
-<kbd> <img src="0_Images/Fig1_v3.jpg"/> </kbd>
-<br></br>
 
 ## Test Dataset
 Here, we provide a small dataset for testing the Pipeline. The data are GWAS summary statistics for The Breast Cancer Association Consortium (BCAC) and The Ovarian Cancer Association Consortium (OCAC) chromosome #5 and we want to run the Pipeline (without LD clumping method) and GCPBayes at a gene-level for 300 coding-genes. 
