@@ -17,8 +17,6 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 
 ## Bash file - General
-**Bash file Name:** [00_Global_run_GCPBayes.sh](../0_Codes/Bash)
-<br><br>
 We developed a Bash file for running the GCPBayes pipeline from **Section C** to **Section E**, by calling for different *R scripts* in a simple and automated way. 
 <br>
 This bash file uses the scripts in the "Bash" folder. In order to run it, the input GWAS summary statistics data **MUST** have the following columns with **the same header names**:
@@ -30,10 +28,10 @@ This bash file uses the scripts in the "Bash" folder. In order to run it, the in
 **NOTE:** **chr** column should be in a **numeric** format.
 <br><br>
 
-For running the Bash file, put all scripts (in this folder) and input GWAS data in a folder, then you need to make changes in two files (**parameters.ini** and **readinputs.txt**). Define the parameters and file paths in the **parameters.ini** file and also define the input files and their paths in the **readinputs.txt** file.
+For running the Bash file, first, put [**all scripts**](../0_Codes/Bash) and input GWAS data in a same folder. Then, you need to make changes in two files (**parameters.ini** and **readinputs.txt**) as explained below. 
 <br><br>
 
-### Parameter file (parameter.ini)
+### Parameter file ([parameter.ini](../0_Codes/Bash))
 All parameters for running the pipeline are written in this file. So, a user just needs to change some parts of the **“USER SPECIFICATIONS”** section. 
 - You need to replace **“/PATH/”** with the path where you put all data and scripts (you need to change these three parts: working directory, output directory, and directory for scripts). 
 - It is not needed to change **“Input files - datasets”** section. Because in the **“readinputs.txt”** file, you define paths and file names for GWAS input files.
@@ -48,11 +46,11 @@ All parameters for running the pipeline are written in this file. So, a user jus
   - Different parameters used for LD Clumping (r2, kb, and p)
 **NOTE:** You do NOT need to change the **“HARD CODED”** part.
 
-### Input file (readinputs.txt)
+### Input file ([readinputs.txt](../0_Codes/Bash))
 In this file, a user should define paths and names of GWAS data used in the pipeline. It is also needed to define a short name for each GWAS data which would be used for creation of outputs file names during the pipeline. So, in **“readinputs.txt”** file, first row is header of the file and a user needs to change other rows while each row belongs to one GWAS dataset.
 
-### Main Bash file (00_Global_run_GCPBayes.sh)
-A user does not need to change any part of the Bash file. To run the Bash file, a user just needs to run the following command in the terminal:
+### Main Bash file ([00_Global_run_GCPBayes.sh](../0_Codes/Bash))
+To run the Bash file, a user just needs to run the following command in the terminal:
 
 ~~~
 $ ./00_Global_run_GCPBayes.sh parameters.ini readinputs.txt
