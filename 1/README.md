@@ -72,7 +72,7 @@ $ chmod 777 00_Global_run_GCPBayes.sh
 <br><br>
 
 ## Bash file - Parallel
-We also developed a Bash file which could run GCPBayes for more than one genes at the same time using different CPU cores. 
+We also developed a Bash file ([**00_Global_run_GCPBayes_Parallel.sh**](../0_Codes/Bash_Parallel)) which could run GCPBayes for more than one genes at the same time using different CPU cores. 
 <br>
 A user needs to define the **number of CPUs** in the [**parameters_parallel.ini**](../0_Codes/Bash_Parallel) file. All other options are the same as the **General Bash** file (explained above).
 <br><br>
