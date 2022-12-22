@@ -9,6 +9,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 ## Description
 Here we have provided all concepts and information  for **DEVELOPERS** who want to **modify/add** any part of the **GCPBayes pipeline**. 
 <br>
+<br>
 [**GCPBayes Pipeline Wiki File**](0_Files/GCPBayes_Pipeline_Wiki_v3.pdf)
 
 ## NOTES
