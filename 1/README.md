@@ -30,24 +30,48 @@ This bash file uses the scripts in the "Bash" folder. In order to run it, the in
 **NOTE:** **chr** column should be in a **numeric** format.
 <br><br>
 
-### Different steps which run by a bash file
-**Bash file Name:** "00_Global_run_GCPBayes.sh” will run the different steps of the pipeline by using corresponding scripts. 
-<br><br>
-In summary, these steps are presented below:
-- **Step 1:** To extract common SNPs between dataset by using “C1_code_find_common_snps_one_pair.R”
-- **Step 2:** To run PLACO on each dataset by using “C2_code_run_PLACO_decor_one_pair.R”. This step is run only if Clumping=”TRUE”. Also, this step will not be performed if a corresponding output already exist in the working directory.
-- **Step 3:** To perform LD Clumping (locally) by using “C3_code_ldclumping_local.R”. This step is run only if Clumping=”TRUE”.
-- **Step 4:** To prepare the GCPBayes inputs in the right format by using Rscript “D1_code_pipeline_annot_coding_withoutldclumping_extra_info.R” and Rscript “D2_code_pipeline_annot_coding_ldclumping_extra_info.R”. The second code will be run only if Clumping=”TRUE”.
-- **Step 5:** To get correct list of groups for further analysis according to wanted threshold (length of groups) by using “D3_code_separate_groups_length_threshold.R”
-- **Step 6:** To run GCPBayes (DS Method) by using “E1_code_gcpbayes_less_extra_info.R”. If Clumping=”TRUE”, this step will be done separately in two different lists of groups (according to the lengths of the groups).
-<br><br>
-
 For running the Bash file, put all scripts (in this folder) and input GWAS data in a folder, then you need to make changes in two files (**parameters.ini** and **readinputs.txt**). Define the parameters and file paths in the **parameters.ini** file and also define the input files and their paths in the **readinputs.txt** file.
 <br><br>
-Then, to run, simply type in the terminal:
+
+### Parameter file (parameter.ini)
+All parameters for running the pipeline are written in this file. So, a user just needs to change some parts of the **“USER SPECIFICATIONS”** section. 
+- You need to replace **“/PATH/”** with the path where you put all data and scripts (you need to change these three parts: working directory, output directory, and directory for scripts). 
+- It is not needed to change **“Input files - datasets”** section. Because in the **“readinputs.txt”** file, you define paths and file names for GWAS input files.
+- Then, you need to change path and name of the **“Input files - annotation”** part based on the annotation files you are going to use in the analyses.
+- If a LD clumping step is used, you need to determine a directory path for the reference GWAS data (*bfiles*) in the **“Input files - reference data”** part.
+- In **“QC parameters”** and **“parameters”** parts, a user could change different parameters used during running the pipeline.
+  - Quality control parameters: thresholds for quality of imputation (=0.9) and MAF (=0.05) to consider SNPs in the analysis
+  - Threshold for theta values to consider further exploration with HS (=0.1), or to consider pleiotropy (=0.5)
+  - Threshold for group length to consider LD clumping (=1500), or to not consider for running GCPBayes (=1500)
+  - Threshold for p-value in PLACO (=0.05)
+  - Boolean value to consider LD Clumping or not (default value=false)
+  - Different parameters used for LD Clumping (r2, kb, and p)
+**NOTE:** You do NOT need to change the **“HARD CODED”** part.
+
+### Input file (readinputs.txt)
+In this file, a user should define paths and names of GWAS data used in the pipeline. It is also needed to define a short name for each GWAS data which would be used for creation of outputs file names during the pipeline. So, in **“readinputs.txt”** file, first row is header of the file and a user needs to change other rows while each row belongs to one GWAS dataset.
+
+### Main Bash file (00_Global_run_GCPBayes.sh)
+A user does not need to change any part of the Bash file. To run the Bash file, a user just needs to run the following command in the terminal:
+
 ~~~
 $ ./00_Global_run_GCPBayes.sh parameters.ini readinputs.txt
 ~~~
+
+**NOTE:** It might need to change the permission of the Bash file in order to be executed.
+~~~
+$ chmod 777 00_Global_run_GCPBayes.sh
+~~~
+
+**Bash file Name** *"00_Global_run_GCPBayes.sh”* will run 6 steps in the case of running all sections available in the script. Here, we provide all steps in summary: 
+<br>
+- **Step 1:** Extracting common SNPs between GWAS dataset. 
+- **Step 2:** Running PLACO on each GWAS dataset.
+- **Step 3:** Performing LD Clumping (locally).
+- **Step 4:** Preparation GCPBayes inputs in the right format.
+- **Step 5:** Separation of list of groups for GCPBayes analysis according to a selected threshold.
+- **Step 6:** Running GCPBayes (DS Method).
+<br><br>
 
 ## Bash file - Parallel
 **Bash file Name:** [00_Global_run_GCPBayes_Parallel.sh](../0_Codes/Bash_Parallel)
