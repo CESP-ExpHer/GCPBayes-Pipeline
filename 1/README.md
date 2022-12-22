@@ -87,5 +87,5 @@ $ chmod 777 00_Global_run_GCPBayes_Parallel.sh
 ~~~
 
 
-**NOTE:** Using more CPUs also needs more RAMs for running the GCPBayes.
+**NOTE:** Using **more CPUs** also needs **more RAMs** for running the GCPBayes. So, a user MUST consider this before setting number of CPUs to a large number.
 
