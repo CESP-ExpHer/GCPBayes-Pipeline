@@ -68,8 +68,9 @@ $ chmod 777 00_Global_run_GCPBayes.sh
 6. You could run the [**"Test Dataset"**](#Test-Dataset) for running a small example file to test the pipeline.
 
 ## Test Dataset
-Here, we provide a small dataset for testing the Pipeline. The data are GWAS summary statistics for The Breast Cancer Association Consortium (BCAC) and The Ovarian Cancer Association Consortium (OCAC) chromosome #5 and we want to run the Pipeline (without LD clumping method) and GCPBayes at a gene-level for 300 coding-genes. You could use one of the following options (R or Bash) to run a small example file to test the GCPBayes Pipeline: 
+Here, we provide a small dataset for testing the Pipeline. The data are GWAS summary statistics for The Breast Cancer Association Consortium (BCAC) and The Ovarian Cancer Association Consortium (OCAC) chromosome #5 and we want to run the Pipeline (without LD clumping method) and GCPBayes at a gene-level for 300 coding-genes. 
 <br>
+You could use one of the following options (R or Bash) to run a small example file to test the GCPBayes Pipeline: 
 <br>
 
 ### R 
