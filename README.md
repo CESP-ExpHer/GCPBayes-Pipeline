@@ -42,6 +42,10 @@ A schematic overview of the main sections of the GCPBayes pipeline are as follow
 
 
 ## Installation
+
+### R 
+
+### Bash 
 1. Make sure all required packages/software have been installed on your system [(Link)](#Required-Packages-or-Software)
 2. Change the parameters on the *"parameters.ini"* file. [(Link)](../0_Codes/Bash)
 3. Change the file names inputs and paths on the *"readinputs.txt"* file. [(Link)](../0_Codes/Bash)
@@ -57,6 +61,10 @@ $ chmod 777 00_Global_run_GCPBayes.sh
 6. You could run the [**"Test Dataset"**](#Test-Dataset) for running a small example file to test the pipeline.
 
 ## Test Dataset
+
+### R 
+
+### Bash 
 Here, we provide a small dataset for testing the Pipeline. The data are GWAS summary statistics for The Breast Cancer Association Consortium (BCAC) and The Ovarian Cancer Association Consortium (OCAC) chromosome #5 and we want to run the Pipeline (without LD clumping method) and GCPBayes at a gene-level for 300 coding-genes. 
 <br>
 <br>
