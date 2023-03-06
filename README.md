@@ -47,7 +47,7 @@ Two options are available to run the GCPBayes Pipeline: 1) Using **R Script** an
 **NOTE:** Put all files and codes/scripts in the same folder.
 1. First, run the *"GCPBayes_pipeline_check_packages.R"* [(Link)](../0_Codes/R) R script to check a list of required packages and install them if they are not available in your system. It is also print a warning message if any of the packages could not be installed.  
 2. Change the parameters on the *"GCPBayes_pipeline_parameters.R"* file. [(Link)](../0_Codes/R)
-3. Run the *"GCPBayes_pipeline.R"* [(Link)](../0_Codes/R) R script file. 
+3. Run the *"GCPBayes_pipeline.R"* [(Link)](../0_Codes/R) R script. 
 4. For running each section individually, use the source codes on the *"Source_Codes"* folder [(Link)](0_Codes/Source_Codes) and follow the tutorial provided in the [**"Tutorial"** section](2) or the [**"Wiki"** section](3)
 5. You could run the [**"Test Dataset"**](#Test-Dataset) for running a small example file to test the pipeline.
 
@@ -68,17 +68,26 @@ $ chmod 777 00_Global_run_GCPBayes.sh
 6. You could run the [**"Test Dataset"**](#Test-Dataset) for running a small example file to test the pipeline.
 
 ## Test Dataset
+Here, we provide a small dataset for testing the Pipeline. The data are GWAS summary statistics for The Breast Cancer Association Consortium (BCAC) and The Ovarian Cancer Association Consortium (OCAC) chromosome #5 and we want to run the Pipeline (without LD clumping method) and GCPBayes at a gene-level for 300 coding-genes. You could use one of the following options (R or Bash) to run a small example file to test the GCPBayes Pipeline: 
+<br>
+<br>
 
 ### R 
+- Download and run the *"GCPBayes_pipeline_check_packages_test.R"* [(Link)](0_test_dataset) R script to check a list of required packages and install them if they are not available in your system. It is also print a warning message if any of the packages could not be installed.
+- Download INPUT files [(Download)](http://marge11.vjf.inserm.fr/ExpHer_shared/)
+  - BCAC and OCAC GWAS data on chromosome #5 (*gwas_BCAC_chr5.txt*, *gwas_OCAC_chr5.txt*)
+  - An annotation file including all coding genes (*annot_gencode_v38lift37_modified_gene_class.txt*)
+  - BCAC GWAS file with a gene column (*Annot_BCAC_2020_onco_ALL_reformatted_coding.txt*)
+- Download the scripts and put them in the same folder as input data [(Download)](0_test_dataset)
+  - *C1_code_find_common_snps_one_pair_test.R*
+  - *D1_code_pipeline_annot_coding_withoutldclumping_extra_info_test.R*
+  - *E1_code_gcpbayes_less_extra_info_test.R*
+- Download the parameter file (*GCPBayes_pipeline_parameters_test.R*) [(Download)](0_test_dataset)
+  - You **JUST** need to replace **/PATH/** regarding *"working directory"* with the path where you put all downloaded data and scripts. 
+- Now, all you need is to run *"GCPBayes_pipeline_test.R"* R script [(Download)](0_test_dataset)
 
 ### Bash 
-Here, we provide a small dataset for testing the Pipeline. The data are GWAS summary statistics for The Breast Cancer Association Consortium (BCAC) and The Ovarian Cancer Association Consortium (OCAC) chromosome #5 and we want to run the Pipeline (without LD clumping method) and GCPBayes at a gene-level for 300 coding-genes. 
-<br>
-<br>
-**NOTE:** You need to install the following R packages before running the pipeline for this test dataset: (*vroom, tidyverse, data.table, optparse, tidyr, tidyverse, tictoc, GCPBayes, devtools,* and *BhGLM*).
-<br>
-<br>
-For running the pipeline in the test set, please perform the following steps:
+- Download and run the *"GCPBayes_pipeline_check_packages_test.R"* [(Link)](0_test_dataset) R script to check a list of required packages and install them if they are not available in your system. It is also print a warning message if any of the packages could not be installed.
 - Download INPUT files [(Download)](http://marge11.vjf.inserm.fr/ExpHer_shared/)
   - BCAC and OCAC GWAS data on chromosome #5 (*gwas_BCAC_chr5.txt*, *gwas_OCAC_chr5.txt*)
   - An annotation file including all coding genes (*annot_gencode_v38lift37_modified_gene_class.txt*)
@@ -103,7 +112,9 @@ $ ./run_test_set.sh parameters_Strategy_bcac_ocac_test_set.ini readinputs.txt
 ~~~
 $ chmod 777 run_test_set.sh
 ~~~
-- OUTPUT files
+
+
+### OUTPUT files
   - *step1_output_BCAC.txt*
   - *step1_output_OCAC.txt*
   - *D1_output_pipeline_BCAC_common2all_2_studies_coding_wo_clumping.txt*
