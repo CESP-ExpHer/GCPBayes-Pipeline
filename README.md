@@ -131,9 +131,7 @@ For example, you could use this file as an example [(Download)](0_Files) (filena
 ## Required Packages or Software
 For using the whole functionality of the GCPBayes pipeline, a user should install the following packages/software on the system. We gratefully acknowledge the following packages/softwares which we used throughout our pipeline:
 - R Packages
-  - BhGLM, BioCircos, BiocManager, biomaRt, CheckSumStats, data.table, datasets, devtools, GCPBayes, genetics.binaRies,
-  - ggpubr, gridExtra, gwasrapidd, ieugwasr, karyoploteR, MASS, optparse, patchwork, PLACO, plotly, readxl,
-  - regioneR, shiny, splitstackshape, tictoc, tidyverse, vroom
+  - BhGLM, BioCircos, BiocManager, biomaRt, CheckSumStats, data.table, datasets, devtools, GCPBayes, genetics.binaRies, ggpubr, gridExtra, gwasrapidd, ieugwasr, karyoploteR, MASS, optparse, patchwork, PLACO, plotly, readxl, regioneR, shiny, splitstackshape, tictoc, tidyverse, vroom
 - Python Packages
   - defaultdict, datetime, stats
 - PLINK
