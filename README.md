@@ -1,7 +1,7 @@
 # GCPBayes Pipeline
 Created by: Yazdan Asgari<br>
 Creation date: 14 Jan 2022<br>
-Update: Dec 2022<br>
+Update: Mar 2023<br>
 https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
@@ -131,37 +131,11 @@ For example, you could use this file as an example [(Download)](0_Files) (filena
 ## Required Packages or Software
 For using the whole functionality of the GCPBayes pipeline, a user should install the following packages/software on the system. We gratefully acknowledge the following packages/softwares which we used throughout our pipeline:
 - R Packages
-  - BhGLM
-  - BioCircos
-  - BiocManager
-  - biomaRt
-  - CheckSumStats
-  - data.table
-  - datasets
-  - devtools
-  - GCPBayes
-  - genetics.binaRies
-  - ggpubr
-  - gridExtra
-  - gwasrapidd
-  - ieugwasr
-  - karyoploteR
-  - MASS
-  - optparse
-  - patchwork
-  - PLACO
-  - plotly
-  - readxl
-  - regioneR
-  - shiny
-  - splitstackshape
-  - tictoc
-  - tidyverse
-  - vroom
+  - BhGLM, BioCircos, BiocManager, biomaRt, CheckSumStats, data.table, datasets, devtools, GCPBayes, genetics.binaRies,
+  - ggpubr, gridExtra, gwasrapidd, ieugwasr, karyoploteR, MASS, optparse, patchwork, PLACO, plotly, readxl,
+  - regioneR, shiny, splitstackshape, tictoc, tidyverse, vroom
 - Python Packages
-  - defaultdict
-  - datetime
-  - stats
+  - defaultdict, datetime, stats
 - PLINK
 ## How to Cite
 Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x), doi:xxx [(Link)](https://..../)
