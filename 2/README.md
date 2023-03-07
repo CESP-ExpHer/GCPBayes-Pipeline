@@ -11,6 +11,11 @@ We have provided a step-by-step tutorial for how to reobtain the results of our 
 <br>
 - Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x), doi:xxx [(Link)](https://..../)
 
+We have also provided all concepts and information  for **DEVELOPERS** who want to **modify/add** any part of the **GCPBayes pipeline**. 
+<br>
+<br>
+[**GCPBayes Pipeline Wiki File**](0_Files/GCPBayes_Pipeline_Wiki_v4.pdf)
+
 ## Some NOTES
 **IMPORTANT NOTE 1:** All scripts all available in the [**"Codes folder"**](../0_Codes/Source_Codes)
 <br><br>
