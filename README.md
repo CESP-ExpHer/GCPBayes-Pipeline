@@ -27,13 +27,14 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 
 ## An Overview of the Pipeline
 
-- [**Bash File**](1) which is a plain text file that contains a series of commands for running the whole procedure automatically with a user-defined parameters.<br>
+- [**Running the Pipeline using R Script**](4) which is a R script that contains a series of commands for running the whole procedure automatically with a user-defined parameters.<br>
+**IMPORTANT NOTE:** The R Script was tested on a Windows OS and Unix-based server with CentOS 7.
+
+- [**Running the Pipeline using Bash File**](1) which is a plain text file that contains a series of commands for running the whole procedure automatically with a user-defined parameters.<br>
 **IMPORTANT NOTE:** The Bash file was tested on a Unix-based server with CentOS 7.
 
-- [**A Step-by-Step Tutorial**](2) to reproduce the results of our manuscript [(Link)](https://..../) using GWAS summary statistics data of Breast (BCAC) and Ovarian (OCAC) cancers by running the GCPBayes Pipeline.<br>
-**IMPORTANT NOTE:** This tutorial could be run on all Operating Systems (OS) including Windows, Linux, and Mac.
-
-- [**GCPBayes Pipeline Wiki**](3) includes description for each scripts in more detail. This is useful for developers who want to modify/add any part of the pipeline.<br>
+- [**Tutorial - Wiki**](2) which includes description for each scripts in more detail. This is useful for developers who want to modify/add any part of the pipeline
+<br>
 
 A schematic overview of the main sections of the GCPBayes pipeline are as follow:
 <br></br>
