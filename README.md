@@ -6,7 +6,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
 
-### Here we have provided detailed information about how to work with the *GCPBayes pipeline* including tips and suggestions. 
+### Here we have provided detailed information about how to work with *GCPBayes pipeline* including tips and suggestions. 
 <br>
 
 ## NOTES
@@ -36,14 +36,14 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 - [**Tutorial - Wiki**](2) which includes description for each scripts in more detail. This is useful for developers who want to modify/add any part of the pipeline
 <br>
 
-A schematic overview of the main sections of the GCPBayes pipeline are as follow:
+A schematic overview of the main sections of GCPBayes pipeline are as follow:
 <br></br>
 <kbd> <img src="0_Images/Fig1_v3.jpg"/> </kbd>
 <br></br>
 
 
 ## Installation
-Two options are available to run the GCPBayes Pipeline: 1) Using **R Script** and 2) Using **Bash file**.
+Two options are available to run GCPBayes Pipeline: 1) Using **R Script** and 2) Using **Bash file**.
 ### R 
 **NOTE:** Put all files and codes/scripts in the same folder.
 1. First, run the *"GCPBayes_pipeline_check_packages.R"* [(Link)](../0_Codes/R) R script to check a list of required packages and install them if they are not available in your system. It is also print a warning message if any of the packages could not be installed.  
@@ -71,7 +71,7 @@ $ chmod 777 00_Global_run_GCPBayes.sh
 ## Test Dataset
 Here, we provide a small dataset for testing the Pipeline. The data are GWAS summary statistics for The Breast Cancer Association Consortium (BCAC) and The Ovarian Cancer Association Consortium (OCAC) chromosome #5 and we want to run the Pipeline (without LD clumping method) and GCPBayes at a gene-level for 300 coding-genes. 
 <br>
-You could use one of the following options (R or Bash) to run a small example file to test the GCPBayes Pipeline: 
+You could use one of the following options (R or Bash) to run a small example file to test GCPBayes Pipeline: 
 <br>
 
 ### R 
@@ -157,7 +157,7 @@ For example, you could use this file as an example [(Download)](0_Files) (filena
 **NOTE:** You need to install the following packages before running the shiny App: *shiny, datasets, ggplot2, gridExtra, tidyverse, BioCircos, plotly, ggpubr, biomaRt, regioneR,* and *karyoploteR*.
 
 ## Required Packages or Software
-For using the whole functionality of the GCPBayes pipeline, a user should install the following packages/software on the system. We gratefully acknowledge the following packages/softwares which we used throughout our pipeline:
+For using the whole functionality of GCPBayes pipeline, a user should install the following packages/software on the system. We gratefully acknowledge the following packages/softwares which we used throughout our pipeline:
 - R Packages
   - BhGLM, BioCircos, BiocManager, biomaRt, CheckSumStats, data.table, datasets, devtools, GCPBayes, genetics.binaRies, ggpubr, gridExtra, gwasrapidd, ieugwasr, karyoploteR, MASS, optparse, patchwork, PLACO, plotly, readxl, regioneR, shiny, splitstackshape, tictoc, tidyverse, vroom
 - Python Packages
