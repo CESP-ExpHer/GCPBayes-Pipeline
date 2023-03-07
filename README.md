@@ -49,7 +49,7 @@ Two options are available to run the GCPBayes Pipeline: 1) Using **R Script** an
 1. First, run the *"GCPBayes_pipeline_check_packages.R"* [(Link)](../0_Codes/R) R script to check a list of required packages and install them if they are not available in your system. It is also print a warning message if any of the packages could not be installed.  
 2. Change the parameters on the *"GCPBayes_pipeline_parameters.R"* file. [(Link)](../0_Codes/R)
 3. Run the *"GCPBayes_pipeline.R"* [(Link)](../0_Codes/R) R script. 
-4. For running each section individually, use the source codes on the *"Source_Codes"* folder [(Link)](0_Codes/Source_Codes) and follow the tutorial provided in the [**"Tutorial"** section](2) or the [**"Wiki"** section](3)
+4. For running each section individually, use the source codes on the *"Source_Codes"* folder [(Link)](0_Codes/Source_Codes) and follow the tutorial provided in the [**"Tutorial - Wiki"** section](2)
 5. You could run the [**"Test Dataset"**](#Test-Dataset) for running a small example file to test the pipeline.
 
 ### Bash 
@@ -65,7 +65,7 @@ $ ./00_Global_run_GCPBayes.sh parameters.ini readinputs.txt
 ~~~
 $ chmod 777 00_Global_run_GCPBayes.sh
 ~~~
-5. For running each section individually, use the source codes on the *"Source_Codes"* folder [(Link)](0_Codes/Source_Codes) and follow the tutorial provided in the [**"Tutorial"** section](2) or the [**"Wiki"** section](3)
+5. For running each section individually, use the source codes on the *"Source_Codes"* folder [(Link)](0_Codes/Source_Codes) and follow the tutorial provided in the [**"Tutorial - Wiki"** section](2)
 6. You could run the [**"Test Dataset"**](#Test-Dataset) for running a small example file to test the pipeline.
 
 ## Test Dataset
