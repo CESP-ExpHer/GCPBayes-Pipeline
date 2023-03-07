@@ -27,7 +27,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 
 ## An Overview of the Pipeline
 
-- [**Running the Pipeline using R Script**](4) which is a R script that contains a series of commands for running the whole procedure automatically with a user-defined parameters.<br>
+- [**Running the Pipeline using R Script**](3) which is a R script that contains a series of commands for running the whole procedure automatically with a user-defined parameters.<br>
 **IMPORTANT NOTE:** The R Script was tested on a Windows OS and Unix-based server with CentOS 7.
 
 - [**Running the Pipeline using Bash File**](1) which is a plain text file that contains a series of commands for running the whole procedure automatically with a user-defined parameters.<br>
