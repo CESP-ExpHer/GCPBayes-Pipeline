@@ -46,18 +46,18 @@ A schematic overview of the main sections of GCPBayes pipeline are as follow:
 Two options are available to run GCPBayes Pipeline: 1) Using **R Script** and 2) Using **Bash file**.
 ### R 
 **NOTE:** Put all files and codes/scripts in the same folder.
-1. First, run the *"GCPBayes_pipeline_check_packages.R"* [(Link)](../0_Codes/R) R script to check a list of required packages and install them if they are not available in your system. It is also print a warning message if any of the packages could not be installed.  
-2. Change the parameters on the *"GCPBayes_pipeline_parameters.R"* file. [(Link)](../0_Codes/R)
-3. Run the *"GCPBayes_pipeline.R"* [(Link)](../0_Codes/R) R script. 
+1. First, run the *"GCPBayes_pipeline_check_packages.R"* [(Link)](0_Codes/R) R script to check a list of required packages and install them if they are not available in your system. It is also print a warning message if any of the packages could not be installed.  
+2. Change the parameters on the *"GCPBayes_pipeline_parameters.R"* file. [(Link)](0_Codes/R)
+3. Run the *"GCPBayes_pipeline.R"* [(Link)](0_Codes/R) R script. 
 4. For running each section individually, use the source codes on the *"Source_Codes"* folder [(Link)](0_Codes/Source_Codes) and follow the tutorial provided in the [**"Tutorial - Wiki"** section](2)
 5. You could run the [**"Test Dataset"**](#Test-Dataset) for running a small example file to test the pipeline.
 
 ### Bash 
 **NOTE:** Put all files and codes/scripts in the same folder.
 1. Make sure all required packages/software have been installed on your system [(Link)](#Required-Packages-or-Software)
-2. Change the parameters on the *"parameters.ini"* file. [(Link)](../0_Codes/Bash)
-3. Change the file names inputs and paths on the *"readinputs.txt"* file. [(Link)](../0_Codes/Bash)
-4. Run the *"00_Global_run_GCPBayes.sh"* [(Link)](../0_Codes/Bash) Bash file using the following command:
+2. Change the parameters on the *"parameters.ini"* file. [(Link)](0_Codes/Bash)
+3. Change the file names inputs and paths on the *"readinputs.txt"* file. [(Link)](0_Codes/Bash)
+4. Run the *"00_Global_run_GCPBayes.sh"* [(Link)](0_Codes/Bash) Bash file using the following command:
 ~~~
 $ ./00_Global_run_GCPBayes.sh parameters.ini readinputs.txt
 ~~~
