@@ -11,17 +11,17 @@
 ##       PATH SPECIFICATIONS       ##
 # ===================================
 # working directory
-work_dir <- "C:/Users/Yazdan/Downloads/r_all_in_one/"
+work_dir <- "/PATH/"
 
 # ===================================
 ##    INPUT GWAS FILES NAMES       ##
 # ===================================
 # files names for GWAS input files
 # NOTE: All names MUST be in quotation and devided by comma
-input <- c("gwas_BCAC_chr5_names.txt", "gwas_OCAC_chr5_names.txt")
+input <- c("gwas_BCAC_chr5.txt", "gwas_OCAC_chr5.txt")
 # A short name for each GWAS input file
 # NOTE: All names MUST be in quotation and devided by comma
-input_shortname <- c("BCAC_N", "OCAC_N")
+input_shortname <- c("BCAC", "OCAC")
 
 # ===================================
 ##    GWAS HEADERS NAMES         ##
@@ -86,7 +86,7 @@ toclump <- FALSE
 # NOTE: If toclump==TRUE, these parameters will be used
 # =====================================================
 # directory path for the reference GWAS bfiles
-ref_path_b_files <- "C:/Users/Yazdan/Downloads/r_all_in_one/files/"
+ref_path_b_files <- "/PATH/"
 # GWAS Reference Files Name (
 # NOTE: All three "bed/bim/fam" files MUST have the same name
 ref_b_files <- "EUR"
