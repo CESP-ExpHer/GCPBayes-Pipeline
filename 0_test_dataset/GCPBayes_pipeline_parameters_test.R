@@ -11,7 +11,7 @@
 ##       PATH SPECIFICATIONS       ##
 # ===================================
 # working directory
-work_dir <- "C:/CESP/AMLAP/4_Manuscripts/GCPBayes-Pipeline/0_code_r_all_in_one/test_dataset/"
+work_dir <- "/PATH/"
 
 # ===================================
 ##    INPUT GWAS FILES NAMES       ##
