@@ -24,7 +24,6 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 - [Required Packages or Software](#required-packages-or-software)
 - [How to Cite](#how-to-cite)
 
-
 ## An Overview of the Pipeline
 
 - [**Running the Pipeline using R Script**](3) which is a R script that contains a series of commands for running the whole procedure automatically with a user-defined parameters.<br>
@@ -81,9 +80,10 @@ You could use one of the following options (R or Bash) to run a small example fi
   - An annotation file including all coding genes (*annot_gencode_v38lift37_modified_gene_class.txt*)
   - BCAC GWAS file with a gene column (*Annot_BCAC_2020_onco_ALL_reformatted_coding.txt*)
 - Download the scripts and put them in the same folder as input data [(Download)](0_test_dataset)
-  - *C1_code_find_common_snps_one_pair_test.R*
-  - *D1_code_pipeline_annot_coding_withoutldclumping_extra_info_test.R*
-  - *E1_code_gcpbayes_less_extra_info_test.R*
+  - *R_C1_code_find_common_snps_one_pair_test.R*
+  - *R_D1_code_pipeline_annot_coding_withoutldclumping_extra_info_test.R*
+  - *R_D3_code_separate_groups_length_threshold_noclump_test.R*
+  - *R_E1_code_gcpbayes_less_extra_info_test.R*
 - Download the parameter file (*GCPBayes_pipeline_parameters_test.R*) [(Download)](0_test_dataset)
   - You **JUST** need to replace **/PATH/** regarding *"working directory"* with the path where you put all downloaded data and scripts. 
 - Now, all you need is to run *"GCPBayes_pipeline_test.R"* R script [(Download)](0_test_dataset)
