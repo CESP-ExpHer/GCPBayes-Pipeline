@@ -80,7 +80,7 @@ theta_exploration <- 0.5
 ##   Decision for running LD Clumping Step       ##
 # =================================================
 # If LD_Clumping should be run or Not (TRUE or FALSE)
-toclump <- TRUE
+toclump <- FALSE
 
 # =====================================================
 # NOTE: If toclump==TRUE, these parameters will be used
