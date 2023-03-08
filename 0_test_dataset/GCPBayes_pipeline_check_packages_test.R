@@ -11,11 +11,7 @@
 # ================================================================================
 
 # Define the list of packages to check and install
-packages <- c("vroom", "tidyverse", "data.table", "optparse",
-              "devtools", "MASS", "dplyr", "tidyr",
-              "tictoc", "GCPBayes",
-              "shiny", "datasets", "ggplot2", "gridExtra", "BioCircos", "plotly",
-              "genetics.binaRies")
+packages <- c("vroom", "tidyverse", "data.table", "tictoc", "GCPBayes")
 
 # Create an empty vector to store the names of any packages that could not be installed
 missing_packages <- c()
