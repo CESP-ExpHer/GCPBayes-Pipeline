@@ -102,7 +102,7 @@ j <- 1
 jj <- 1
 
 # Start running GCPBayes for each Gene (one by one)
-for(i in 1:ngenes){
+for(i in 1:300){
   tic()
   
   mg <- length(Genes_with_SNP_number_less_than_threshold[[i]]$Betah[[1]])
