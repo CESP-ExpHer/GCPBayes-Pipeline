@@ -87,3 +87,5 @@ $ chmod 777 00_Global_run_GCPBayes_Parallel.sh
 
 **IMPORTNAT NOTE:** Using **more CPUs** also needs **more RAMs** for running the GCPBayes. So, a user MUST consider this before setting number of CPUs to a large number.
 
+## Visualization of the GCPBayes Results
+After running the Pipeline, you could use one of the visualization tools (online or local shiny App) that we developed in order to create different plots from the output of the GCPBayes method. More information is available on the [**Visualization Part**](../README.md#visualization)
