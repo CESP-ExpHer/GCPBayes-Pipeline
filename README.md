@@ -6,22 +6,13 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
 
-### Here we have provided detailed information about how to work with *GCPBayes pipeline* including tips and suggestions. 
-<br>
-
-## NOTES
-**IMPORTANT NOTE 1:** All SNPs and genes positions in the GWAS and annotation data are based on GRCh37 (hg19) Human Genome Assembly.
+**NOTE:** All SNPs and genes positions in the GWAS and annotation data used in the examples are based on GRCh37 (hg19) Human Genome Assembly.
 <br><br>
-**IMPORTANT NOTE 2:** The Section names that are mentioned in this page are correspondence to Figure provided in [An Overview of the Pipeline](#An-Overview-of-the-Pipeline) section in the current page.
-<br>
-<br>
 
 ## Table of Contents
 - [An Overview of the Pipeline](#an-overview-of-the-pipeline)
-- [Installation](#installation)
 - [Test Dataset](#test-dataset)
 - [Visualization](#visualization)
-- [Required Packages or Software](#required-packages-or-software)
 - [How to Cite](#how-to-cite)
 
 ## An Overview of the Pipeline
@@ -40,32 +31,6 @@ A schematic overview of the main sections of GCPBayes pipeline are as follow:
 <kbd> <img src="0_Images/Fig1_v3.jpg"/> </kbd>
 <br></br>
 
-
-## Installation
-Two options are available to run GCPBayes Pipeline: 1) Using **R Script** and 2) Using **Bash file**.
-### R 
-**NOTE:** Put all files and codes/scripts in the same folder.
-1. First, run the *"GCPBayes_pipeline_check_packages.R"* [(Link)](0_Codes/R) R script to check a list of required packages and install them if they are not available in your system. It is also print a warning message if any of the packages could not be installed.  
-2. Change the parameters on the *"GCPBayes_pipeline_parameters.R"* file. [(Link)](0_Codes/R)
-3. Run the *"GCPBayes_pipeline.R"* [(Link)](0_Codes/R) R script. 
-4. For running each section individually, use the source codes on the *"Source_Codes"* folder [(Link)](0_Codes/Source_Codes) and follow the tutorial provided in the [**"Tutorial - Wiki"** section](2)
-5. You could run the [**"Test Dataset"**](#Test-Dataset) for running a small example file to test the pipeline.
-
-### Bash 
-**NOTE:** Put all files and codes/scripts in the same folder.
-1. Make sure all required packages/software have been installed on your system [(Link)](#Required-Packages-or-Software)
-2. Change the parameters on the *"parameters.ini"* file. [(Link)](0_Codes/Bash)
-3. Change the file names inputs and paths on the *"readinputs.txt"* file. [(Link)](0_Codes/Bash)
-4. Run the *"00_Global_run_GCPBayes.sh"* [(Link)](0_Codes/Bash) Bash file using the following command:
-~~~
-$ ./00_Global_run_GCPBayes.sh parameters.ini readinputs.txt
-~~~
-**NOTE:** You might need to change the permission of the Bash file in order to be executed.
-~~~
-$ chmod 777 00_Global_run_GCPBayes.sh
-~~~
-5. For running each section individually, use the source codes on the *"Source_Codes"* folder [(Link)](0_Codes/Source_Codes) and follow the tutorial provided in the [**"Tutorial - Wiki"** section](2)
-6. You could run the [**"Test Dataset"**](#Test-Dataset) for running a small example file to test the pipeline.
 
 ## Test Dataset
 Here, we provide a small dataset for testing the Pipeline. The data are GWAS summary statistics for The Breast Cancer Association Consortium (BCAC) and The Ovarian Cancer Association Consortium (OCAC) chromosome #5 and we want to run the Pipeline (without LD clumping method) and GCPBayes at a gene-level for 300 coding-genes. 
@@ -156,13 +121,6 @@ For example, you could use this file as an example [(Download)](0_Files) (filena
 - **Shiny App with Karyotype - Local:** For a newer version of the shiny App, we added a new graph (Karyotype) which demonstrate the position of candidate pleiotropic genes in the chromosomes. This type of graph is not available in the online version, but you could use it by running the shiny script in your computer. You could download the script from [**here**](0_Codes/Source_Codes) (filename: *shiny_gcpbayes_output_with_karyotype.R*).
 **NOTE:** You need to install the following packages before running the shiny App: *shiny, datasets, ggplot2, gridExtra, tidyverse, BioCircos, plotly, ggpubr, biomaRt, regioneR,* and *karyoploteR*.
 
-## Required Packages or Software
-For using the whole functionality of GCPBayes pipeline, a user should install the following packages/software on the system. We gratefully acknowledge the following packages/softwares which we used throughout our pipeline:
-- R Packages
-  - BhGLM, BioCircos, BiocManager, biomaRt, CheckSumStats, data.table, datasets, devtools, GCPBayes, genetics.binaRies, ggpubr, gridExtra, gwasrapidd, ieugwasr, karyoploteR, MASS, optparse, patchwork, PLACO, plotly, readxl, regioneR, shiny, splitstackshape, tictoc, tidyverse, vroom
-- Python Packages
-  - defaultdict, datetime, stats
-- PLINK
 ## How to Cite
 Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x), doi:xxx [(Link)](https://..../)
 <br>
