@@ -1,4 +1,4 @@
-# Description of R Script (a file that contains a series of commands) for running GCPBayes Pipeline
+# How to use R script to run GCPBayes Pipeline
 Created by: Yazdan Asgari<br>
 Creation date: 07 Mar 2023<br>
 Update: Mar 2023<br>
@@ -6,13 +6,11 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
 
-**NOTE 1:** It is easier to put Bash file, parameter file, input files, and all scripts in the same folder. 
+**NOTE 1:** It is needed to put all files and scripts in the same folder. 
 <br><br>
-**NOTE 2:** GWAS files used as inputs for a Bash file should be standardized first. If you need to know how to standardize GWAS data, see [**Standardization Section**](../2).
+**NOTE 2:** GWAS input files should be standardized (or harmonized) first. If you need to know how to standardize GWAS data, see [**Standardization Part**](../2) in the **"Tutorial - Wiki"** file.
 <br><br>
-**NOTE 3:** A user can use annotated files we already prepared (see [**Annotation Section**](../2)) or use its own annotation files.
-<br><br>
-**NOTE 4:** The Bash file was tested on a Unix-based server with CentOS 7.
+**NOTE 3:** R script was tested on a Windows OS and Unix-based server with CentOS 7.
 <br>
 <br>
 
@@ -71,21 +69,5 @@ $ chmod 777 00_Global_run_GCPBayes.sh
 - **Step 6:** Running GCPBayes (DS Method).
 <br><br>
 
-## Bash file - Parallel
-We also developed a Bash file ([**00_Global_run_GCPBayes_Parallel.sh**](../0_Codes/Bash_Parallel)) which could run GCPBayes for more than one genes at the same time using different CPU cores. 
-<br>
-A user needs to define the **number of CPUs** in the [**parameters_parallel.ini**](../0_Codes/Bash_Parallel) file. All other options are the same as the **General Bash** file (explained above).
-<br><br>
-Then, to run, simply type in the terminal:
-~~~
-$ ./00_Global_run_GCPBayes_Parallel.sh parameters_parallel.ini readinputs.txt
-~~~
 
-**NOTE:** It might need to change the permission of the Bash file in order to be executed.
-~~~
-$ chmod 777 00_Global_run_GCPBayes_Parallel.sh
-~~~
-
-
-**IMPORTNAT NOTE:** Using **more CPUs** also needs **more RAMs** for running the GCPBayes. So, a user MUST consider this before setting number of CPUs to a large number.
 
