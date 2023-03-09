@@ -42,5 +42,6 @@ $ Rscript GCPBayes_pipeline.R
 - **Step 6:** Running GCPBayes (DS Method).
 <br><br>
 
-
+## 4- Visualization of the GCPBayes Results
+After running the Pipeline, you could use one of the visualization tools (online or local shiny App) that we developed in order to create different plots from the output of the GCPBayes method. More information is available on the [**Visualization Part**](../README.md##visualization)
 
