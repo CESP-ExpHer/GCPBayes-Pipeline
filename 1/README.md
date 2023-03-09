@@ -1,18 +1,16 @@
-# Description of Bash file (a plain text file that contains a series of commands) for running the whole procedure with a series of options
+# How to use Bash file to run GCPBayes Pipeline
 Created by: Pierre-Emmanuel Sugier, Yazdan Asgari<br>
 Creation date: 14 Jan 2022<br>
-Update: Dec 2022<br>
+Update: Mar 2023<br>
 https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
 
 **NOTE 1:** It is easier to put Bash file, parameter file, input files, and all scripts in the same folder. 
 <br><br>
-**NOTE 2:** GWAS files used as inputs for a Bash file should be standardized first. If you need to know how to standardize GWAS data, see [**Standardization Section**](../2).
+**NOTE 2:** GWAS input files should be standardized (or harmonized) first. If you need to know how to standardize GWAS data, see [**Standardization Part**](../2) in the **"Tutorial - Wiki"** file.
 <br><br>
-**NOTE 3:** A user can use annotated files we already prepared (see [**Annotation Section**](../2)) or use its own annotation files.
-<br><br>
-**NOTE 4:** The Bash file was tested on a Unix-based server with CentOS 7.
+**NOTE 3:** The Bash file was tested on a Unix-based server with CentOS 7.
 <br>
 <br>
 
