@@ -6,7 +6,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
 
-**NOTE 1:** It is easier to put Bash file, parameter file, input files, and all scripts in the same folder. 
+**NOTE 1:** It is recommended to put Bash file, parameter file, input files, and all scripts in the same folder. 
 <br><br>
 **NOTE 2:** GWAS input files should be standardized (or harmonized) first. If you need to know how to standardize GWAS data, see [**Standardization Part**](../2) in the **"Tutorial - Wiki"** file.
 <br><br>
@@ -61,10 +61,10 @@ $ chmod 777 00_Global_run_GCPBayes.sh
 
 **Bash file Name** *"00_Global_run_GCPBayes.sh”* will run 6 steps in the case of running all sections available in the script. Here, we provide all steps in summary: 
 <br>
-- **Step 1:** Extracting common SNPs between GWAS dataset. 
-- **Step 2:** Running PLACO on each GWAS dataset.
+- **Step 1:** Extracting common SNPs between two GWAS datasets. 
+- **Step 2:** Running PLACO on both GWAS datasets.
 - **Step 3:** Performing LD Clumping (locally).
-- **Step 4:** Preparation GCPBayes inputs in the right format.
+- **Step 4:** Switch from SNP-level into Gene-level for GWAS data and preparation of GCPBayes inputs.
 - **Step 5:** Separation of list of groups for GCPBayes analysis according to a selected threshold.
 - **Step 6:** Running GCPBayes (DS Method).
 <br><br>
