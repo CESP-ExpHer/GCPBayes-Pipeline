@@ -14,57 +14,30 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
 
-## Bash file - General
-We developed a Bash file for running GCPBayes pipeline from **Section C** to **Section E**, by calling for different *R scripts* in a simple and automated way. 
+## 1- Checking required packages
+First, you need to run the *"GCPBayes_pipeline_check_packages.R"* [(Link)](../0_Codes/R) R script to check a list of required packages and install them if they are not available in your system. It will also print a warning message if any of the packages could not be installed.  
+
+
+## 2- Definition of parameters
+Second, you need to change the parameters on the *"GCPBayes_pipeline_parameters.R"* [(Link)](../0_Codes/R) file. You just easily open this file in RStudio or a text editor and chenge the required parameters. Here are some recommendations:
+- In the **"PATH SPECIFICATIONS"** section, replace **/PATH/** regarding *"working directory"* with the path where you put all downloaded data and scripts in your system.
+- In the **"INPUT GWAS FILES NAMES"** section, replace *input* and *input_shortname* with the file names of your GWAS data. Put all names in a quotation and devide them by comma.
+- In the **"GWAS HEADERS NAMES"** section, you need to specify the headers of your GWAS file and the GCPBayes Pipeline will use them during the running. So, you do not need to make any change to your GWAS input data any more.
+- In the **"Decision for running LD Clumping Step"** section, determine whether you want to perform LD Clumping step or not (TRUE or FALSE).
+- You could change all other parameters based on the definitions in their comments part. 
+
+## 3- Running GCPBayes Pipeline
+Finally, all you need is to run the *"GCPBayes_pipeline.R"* [(Link)](../0_Codes/R) R script. The script read all parameters from the *"GCPBayes_pipeline_parameters.R"* file and run every steps of the Pipeline. You could run this script using RStudio. If you are using a Unix-based OS, you could run the script using the following command:
+~~~
+$ Rscript GCPBayes_pipeline.R
+~~~
+
+**GCPBayes Pipeline Steps in a summary** (considering LD Clumping step as well): 
 <br>
-This bash file uses the scripts in the "Bash" folder. In order to run it, the input GWAS summary statistics data **MUST** have the following columns with **the same header names**:
-| snp	| chr	| bp_hg19	| Effect_A | Baseline_A | beta | se | pval | info | EAF | MAF |
-| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-
-**snp** = SNP rs id, **chr** = chromosome, **bp_hg19** = base pair position in hg19 assembly, **Effect_A** = Effect Allele, **Baseline_A** = Baseline Allele, **beta** = beta value, **se** = standard error, **pval** = P-value, **EAF** = Effect Allele Frequency, **MAF** = Minor Allele Frequency
-<br><br>
-**NOTE:** **chr** column should be in a **numeric** format.
-<br><br>
-
-For running the Bash file, first, put [**all scripts**](../0_Codes/Bash) and input GWAS data in a same folder. Then, you need to make changes in two files (**parameters.ini** and **readinputs.txt**) as explained below. 
-<br><br>
-
-### Parameter file ([parameter.ini](../0_Codes/Bash))
-All parameters for running the pipeline are written in this file. So, a user just needs to change some parts of the **“USER SPECIFICATIONS”** section. 
-- You need to replace **“/PATH/”** with the path where you put all data and scripts (you need to change these three parts: working directory, output directory, and directory for scripts). 
-- It is not needed to change **“Input files - datasets”** section. Because in the **“readinputs.txt”** file, you define paths and file names for GWAS input files.
-- Then, you need to change path and name of the **“Input files - annotation”** part based on the annotation files you are going to use in the analyses.
-- If a LD clumping step is used, you need to determine a directory path for the reference GWAS data (*bfiles*) in the **“Input files - reference data”** part.
-- In **“QC parameters”** and **“parameters”** parts, a user could change different parameters used during running the pipeline.
-  - Quality control parameters: thresholds for quality of imputation (=0.9) and MAF (=0.05) to consider SNPs in the analysis
-  - Threshold for theta values to consider further exploration with HS (=0.1), or to consider pleiotropy (=0.5)
-  - Threshold for group length to consider LD clumping (=1500), or to not consider for running GCPBayes (=1500)
-  - Threshold for p-value in PLACO (=0.05)
-  - Boolean value to consider LD Clumping or not (default value=false)
-  - Different parameters used for LD Clumping (r2, kb, and p)
-**NOTE:** You do NOT need to change the **“HARD CODED”** part.
-
-### Input file ([readinputs.txt](../0_Codes/Bash))
-In this file, a user should define paths and names of GWAS data used in the pipeline. It is also needed to define a short name for each GWAS data which would be used for creation of outputs file names during the pipeline. So, in **“readinputs.txt”** file, first row is header of the file and a user needs to change other rows while each row belongs to one GWAS dataset.
-
-### Main Bash file ([00_Global_run_GCPBayes.sh](../0_Codes/Bash))
-To run the Bash file, a user just needs to run the following command in the terminal:
-
-~~~
-$ ./00_Global_run_GCPBayes.sh parameters.ini readinputs.txt
-~~~
-
-**NOTE:** It might need to change the permission of the Bash file in order to be executed.
-~~~
-$ chmod 777 00_Global_run_GCPBayes.sh
-~~~
-
-**Bash file Name** *"00_Global_run_GCPBayes.sh”* will run 6 steps in the case of running all sections available in the script. Here, we provide all steps in summary: 
-<br>
-- **Step 1:** Extracting common SNPs between GWAS dataset. 
-- **Step 2:** Running PLACO on each GWAS dataset.
+- **Step 1:** Extracting common SNPs between two GWAS datasets. 
+- **Step 2:** Running PLACO on both GWAS datasets.
 - **Step 3:** Performing LD Clumping (locally).
-- **Step 4:** Preparation GCPBayes inputs in the right format.
+- **Step 4:** Switch from SNP-level into Gene-level for GWAS data and preparation of GCPBayes inputs.
 - **Step 5:** Separation of list of groups for GCPBayes analysis according to a selected threshold.
 - **Step 6:** Running GCPBayes (DS Method).
 <br><br>
