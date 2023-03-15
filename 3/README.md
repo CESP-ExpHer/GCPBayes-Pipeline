@@ -27,7 +27,7 @@ Second, you need to change the parameters on the ([*"GCPBayes_pipeline_parameter
 - You could change all other parameters based on the definitions in their comments part. 
 
 ## 3- Running GCPBayes Pipeline
-Finally, all you need is to run the ([*"GCPBayes_pipeline.R"*](../0_Codes/R)) R script. The script read all parameters from the *"GCPBayes_pipeline_parameters.R"* file and run every steps of the Pipeline. You could run this script using RStudio. If you are using a Unix-based OS, you could run the script using the following command:
+Finally, all you need is to run the ([*"GCPBayes_pipeline.R"*](../0_Codes/R)) R script. The script read all parameters from the *"GCPBayes_pipeline_parameters.R"* file and run every step of the Pipeline. You could run this script using RStudio. If you are using a Unix-based OS, you could run the script using the following command:
 ~~~
 $ Rscript GCPBayes_pipeline.R
 ~~~
