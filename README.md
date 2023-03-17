@@ -10,18 +10,18 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br><br>
 
 ## Table of Contents
-- [An Overview of the Pipeline](#an-overview-of-the-pipeline)
+- [Running of the Pipeline](#running-of-the-pipeline)
 - [Test Dataset](#test-dataset)
 - [Visualization](#visualization)
 - [How to Cite](#how-to-cite)
 
-## An Overview of the Pipeline
+## Running of the Pipeline
 
-- [**Running the Pipeline using R Script**](3) which is a R script that contains a series of commands for running the whole procedure automatically with a user-defined parameters.<br>
-**IMPORTANT NOTE:** The R Script was tested on a Windows OS and Unix-based server with CentOS 7.
+- [**Running the Pipeline using Shiny App**](3) which is a R Shiny App that a user could easily open a Shiny App and change any desired parameters and run the whole procedure automatically by some simple clicks.<br>
+**IMPORTANT NOTE:** The Shiny App was tested on a Windows OS and Unix-based server with CentOS 7.
 
-- [**Running the Pipeline using Bash File**](1) which is a plain text file that contains a series of commands for running the whole procedure automatically with a user-defined parameters.<br>
-**IMPORTANT NOTE:** The Bash file was tested on a Unix-based server with CentOS 7.
+- [**Running the Pipeline using Bash File or R script**](1) which is a plain text file that contains a series of commands for running the whole procedure automatically with a user-defined parameters.<br>
+**IMPORTANT NOTE:** The Bash file was tested on a Unix-based server with CentOS 7 while the R Script was tested on a Windows OS and Unix-based server with CentOS 7.
 
 - [**Tutorial - Wiki**](2) which includes description for each scripts in more detail. This is useful for developers who want to modify/add any part of the pipeline
 <br>
