@@ -5,7 +5,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
 
-# . How to use R script to run GCPBayes Pipeline
+# - How to use R script to run GCPBayes Pipeline
 **NOTE 1:** It is needed to put all files and scripts in the same folder. 
 <br><br>
 **NOTE 2:** GWAS input files should be standardized (or harmonized) first. If you need to know how to standardize GWAS data, see [**Standardization Part**](../2) in the **"Tutorial - Wiki"** file.
@@ -46,10 +46,7 @@ $ Rscript GCPBayes_pipeline.R
 After running the Pipeline, you could use one of the visualization tools (online or local shiny App) that we developed in order to create different plots from the output of the GCPBayes method. More information is available on the [**Visualization Part**](../README.md#visualization)
 
 
-# How to use Bash file to run GCPBayes Pipeline
-<br>
-<br>
-
+# - How to use Bash file to run GCPBayes Pipeline
 **NOTE 1:** It is recommended to put Bash file, parameter file, input files, and all scripts in the same folder. 
 <br><br>
 **NOTE 2:** GWAS input files should be standardized (or harmonized) first. If you need to know how to standardize GWAS data, see [**Standardization Part**](../2) in the **"Tutorial - Wiki"** file.
