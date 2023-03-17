@@ -17,15 +17,13 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 ## 1- Opening Shiny App file
 For non-computer scientists, we have designed a Shiny App. First, a user needs to download all files from the ([**"Shiny folder"**](../0_Codes/Shiny)). Then, put all these files, GWAS input files, and annotation files at the same folder. After that, open ([*"GCPBayes_pipeline_shiny_v1.2.R"*](../0_Codes/Shiny)) file using RStudio.
 
-open it and 
+## 2- Checking required packages
+By clicking on the **"Check Required Packages"** button, the App checks a list of required packages for the pipeline. Missed packages will be installed automatically and it also print a warning message if any of the packages could not be installed. 
 
-## 1- Checking required packages
-By clicking on the **"Check Required Packages"** button, the App checks a list of required packages for the pipeline. Missed packages will be installed au-tomatically and it also print a warning message if any of the packages could not be installed. 
-
-## 2- Definition of parameters
+## 3- Definition of parameters
 A user could change any parameter (such as working directory path, GWAS columns names, threshold values, etc.) and update the Parameter file just by clicking on **"Update Parameters File"** button.
 
-## 3- Running GCPBayes Pipeline
+## 4- Running GCPBayes Pipeline
 By clicking on the **"Run GCPBayes Pipeline"** button, the App reads all parameters from the *"GCPBayes_pipeline_parameters.R"* file and run every step of the Pipeline.
 
 **GCPBayes Pipeline Steps in a summary** (considering LD Clumping step as well): 
@@ -38,7 +36,7 @@ By clicking on the **"Run GCPBayes Pipeline"** button, the App reads all paramet
 - **Step 6:** Running GCPBayes (DS Method).
 <br><br>
 
-## 4- Visualization of the GCPBayes Results
+## 5- Visualization of the GCPBayes Results
 After running the Pipeline, a user could use one of the visualization tools (online or local shiny App) that we developed in order to create different plots from the output of the GCPBayes method. More information is available on the [**Visualization Part**](../README.md#visualization)
 
 
