@@ -21,7 +21,7 @@ First, you need to run the ([*"GCPBayes_pipeline_check_packages.R"*](../0_Codes/
 ## 2- Definition of parameters
 Second, you need to change the parameters on the ([*"GCPBayes_pipeline_parameters.R"*](../0_Codes/R)) file. You just easily open this file in RStudio or a text editor and change the required parameters. Here are some recommendations:
 - In the **"PATH SPECIFICATIONS"** section, replace **/PATH/** regarding *"working directory"* with the path where you put all downloaded data and scripts in your system.
-- In the **"INPUT GWAS FILES NAMES"** section, replace *input* and *input_shortname* with the file names of your GWAS data. Put all names in a quotation and devide them by comma.
+- In the **"INPUT GWAS FILES NAMES"** section, replace *input* and *input_shortname* with the file names of your GWAS data. Put all names in a quotation and divide them by comma.
 - In the **"GWAS HEADERS NAMES"** section, you need to specify the headers of your GWAS file and the GCPBayes Pipeline will use them during the running. So, you do not need to make any change to your GWAS input data any more.
 - In the **"Decision for running LD Clumping Step"** section, determine whether you want to perform LD Clumping step or not (TRUE or FALSE).
 - You could change all other parameters based on the definitions in their comments part. 
