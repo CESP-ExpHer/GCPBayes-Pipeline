@@ -10,8 +10,6 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 - We have provided a step-by-step tutorial for how to reobtain the results of our manuscript using GWAS summary statistics data of Breast (BCAC) and Ovarian (OCAC) cancers by running GCPBayes Pipeline. All the procedure is explained in the **"Supplementary File S1"** in the following paper:
   - Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x), doi:xxx [(Link)](https://..../)
 
-- We have also provided all concepts and information  for **DEVELOPERS** who want to **modify/add** any part of **GCPBayes pipeline**. 
-  - [**GCPBayes Pipeline Wiki File**](0_Files/GCPBayes_Pipeline_Wiki_v4.pdf)
 
 ## Some NOTES
 **IMPORTANT NOTE 1:** All scripts all available in the [**"Codes folder"**](../0_Codes/Source_Codes)
