@@ -20,6 +20,7 @@ For non-computer scientists, we have designed a Shiny App. All you need to do is
 ## 2-	Running “GCPBayes_pipeline_shiny_v1.2.R” file
 In the **"shiny_files_GitHub"** folder, open **"GCPBayes_pipeline_shiny_v1.2.R"** file using RStudio.
 <br>
+<br>
 **NOTE:** When you run the **"GCPBayes_pipeline_shiny_v1.2.R"** file, it uses the path that the **"shiny_files_GitHub"** folder exists as the default path of the analysis. 
 
 ## 3- Checking required packages
