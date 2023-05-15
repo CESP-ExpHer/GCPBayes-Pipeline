@@ -14,17 +14,22 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
 
-## 1- Opening Shiny App file
-For non-computer scientists, we have designed a Shiny App. All you need to do is download a folder called [**"Shiny_zipped"**](../0_Codes/Shiny_zipped). To download, click on the **"shiny_files_GitHub.zip"** file and then, click on **"View raw"** or click on the **"Raw"** button at the top-right of the page. After extraction of the folder, put your GWAS input and annotation files at the same folder. After that, open **"GCPBayes_pipeline_shiny_v1.2.R"** file using RStudio.
+## 1- Downloading and extraction of the pipeline
+For non-computer scientists, we have designed a Shiny App. All you need to do is download a folder called [**"Shiny_zipped"**](../0_Codes/Shiny_zipped). To download, click on the **"shiny_files_GitHub.zip"** file and then, click on **"View raw"** or click on the **"Raw"** button at the top-right of the page. After extraction of the folder, put your GWAS input and annotation files at the same folder. 
 
-## 2- Checking required packages
+## 2-	Running “GCPBayes_pipeline_shiny_v1.2.R” file
+In the **"shiny_files_GitHub"** folder, open **"GCPBayes_pipeline_shiny_v1.2.R"** file using RStudio.
+<br>
+**NOTE:** When you run the **"GCPBayes_pipeline_shiny_v1.2.R"** file, it uses the path that the **"shiny_files_GitHub"** folder exists as the default path of the analysis. 
+
+## 3- Checking required packages
 By clicking on the **"Check Required Packages"** button, the App checks a list of required packages for the pipeline. Missed packages will be installed automatically and it also print a warning message if any of the packages could not be installed. 
 
-## 3- Definition of parameters
-A user could change any parameter (such as working directory path, GWAS columns names, threshold values, etc.) and update the Parameter file just by clicking on **"Update Parameters File"** button.
+## 4- Definition of parameters
+You could easily change any parameter (such as working directory path, GWAS columns names, threshold values, etc.) by seeing its current value in a GUI (Graphical user interface). And just needs to click **“Update Parameters File”** button to apply all changes 
 
-## 4- Running GCPBayes Pipeline
-By clicking on the **"Run GCPBayes Pipeline"** button, the App reads all parameters from the *"GCPBayes_pipeline_parameters.R"* file and run every step of the Pipeline.
+## 5- Running GCPBayes Pipeline
+By clicking on the **"Run GCPBayes Pipeline"** button, the App reads all parameters from the **"GCPBayes_pipeline_parameters.R"** file and run every step of the Pipeline.
 
 **GCPBayes Pipeline Steps in a summary** (considering LD Clumping step as well): 
 <br>
@@ -36,7 +41,7 @@ By clicking on the **"Run GCPBayes Pipeline"** button, the App reads all paramet
 - **Step 6:** Running GCPBayes (DS Method).
 <br><br>
 
-## 5- Visualization of the GCPBayes Results
+## 6- Visualization of the GCPBayes Results
 After running the Pipeline, a user could use one of the visualization tools (online or local shiny App) that we developed in order to create different plots from the output of the GCPBayes method. More information is available on the [**Visualization Part**](../README.md#visualization)
 
 
