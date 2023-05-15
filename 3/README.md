@@ -21,7 +21,7 @@ For non-computer scientists, we have designed a Shiny App. All you need to do is
 In the **"shiny_files_GitHub"** folder, open **"GCPBayes_pipeline_shiny_v1.2.R"** file using RStudio.
 <br>
 <br>
-**NOTE:** When you run the **"GCPBayes_pipeline_shiny_v1.2.R"** file, it uses the path that the **"shiny_files_GitHub"** folder exists as the default path of the analysis. 
+**NOTE:** When you run the **"GCPBayes_pipeline_shiny_v1.2.R"** file, it uses the path that the **"shiny_files_GitHub"** folder exists as a default path of the analysis. 
 
 ## 3- Checking required packages
 By clicking on the **"Check Required Packages"** button, the App checks a list of required packages for the pipeline. Missed packages will be installed automatically and it also print a warning message if any of the packages could not be installed. 
