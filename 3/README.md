@@ -15,7 +15,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 
 ## 1- Opening Shiny App file
-For non-computer scientists, we have designed a Shiny App. All you need to do is download a folder called [**"Shiny_zipped"**](../0_Codes/Shiny/Shiny_zipped). To download, click on the **"shiny_files_GitHub.zip"** file and then, click on **"View raw"** or click on the **"Download raw file"** button at the top-right of the page. After extraction of the folder, put your GWAS input and annotation files at the same folder. After that, open **"GCPBayes_pipeline_shiny_v1.2.R"** file using RStudio.
+For non-computer scientists, we have designed a Shiny App. All you need to do is download a folder called [**"Shiny_zipped"**](../0_Codes/Shiny_zipped). To download, click on the **"shiny_files_GitHub.zip"** file and then, click on **"View raw"** or click on the **"Download raw file"** button at the top-right of the page. After extraction of the folder, put your GWAS input and annotation files at the same folder. After that, open **"GCPBayes_pipeline_shiny_v1.2.R"** file using RStudio.
 
 ## 2- Checking required packages
 By clicking on the **"Check Required Packages"** button, the App checks a list of required packages for the pipeline. Missed packages will be installed automatically and it also print a warning message if any of the packages could not be installed. 
