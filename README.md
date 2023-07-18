@@ -122,6 +122,6 @@ For example, you could use this file as an example [(Download)](0_Files) (filena
 **NOTE:** You need to install the following packages before running the shiny App: *shiny, datasets, ggplot2, gridExtra, tidyverse, BioCircos, plotly, ggpubr, biomaRt, regioneR,* and *karyoploteR*.
 
 ## How to Cite
-Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", xxxx. xxx x;x(x), doi:xxx [(Link)](https://..../)
+Asgari et al., "GCPBayes Pipeline: a tool for exploring pleiotropy at gene-level", *NAR Genomics and Bioinformatics*, 5(3), lqad065, 2023, doi:10.1093/nargab/lqad065 [(Link)](https://academic.oup.com/nargab/article/5/3/lqad065/7219410?searchresult=1)
 <br>
 <br>
