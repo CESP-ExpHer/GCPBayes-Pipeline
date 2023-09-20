@@ -314,14 +314,14 @@ data_res_all$qvalue <- W*length(W)/seq(1,length(W))
 data_res_all <- data_res_all[order(data_res_all$gene_index,decreasing=FALSE),]
 write.table(data_res_all, file=paste0(path_data_write,output_names[2], ".txt"),
                   append=T, col.names = F, row.names = F, quote = F)
-# in pleiotropic results file
-data_temp <- data.frame(data_res_all)
-info <- select(data_temp,c("gene_index","qvalue")) %>% rename("gene" = "GeneIndex")
+# # in pleiotropic results file
+# data_temp <- data.frame(data_res_all)
+# info <- select(data_temp,c("gene_index","qvalue")) %>% rename("GeneIndex"="gene_index")
 
-data_pleio <- read.table(paste0(path_data_write,output_names[3], ".txt"), header=TRUE) %>% data.frame
-data_pleio_info <- left_join(data_pleio,info,by="GeneIndex")
-write.table(data_pleio_info, file=paste0(path_data_write,output_names[3], ".txt"),
-                  append=T, col.names = F, row.names = F, quote = F)
+# data_pleio <- read.table(paste0(path_data_write,output_names[3], ".txt"), header=TRUE) %>% data.frame
+# data_pleio_info <- left_join(data_pleio,info,by="GeneIndex")
+# write.table(data_pleio_info, file=paste0(path_data_write,output_names[3], ".txt"),
+                  # append=T, col.names = F, row.names = F, quote = F)
 
 
 # ================================================================================
