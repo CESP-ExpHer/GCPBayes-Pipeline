@@ -68,6 +68,7 @@ theta_threshold <- opt$t_theta
 library(tictoc)
 library(GCPBayes)
 library(BhGLM)
+library(tidyverse)
 
 # ================================================================================
 # 						RUNNING SECTION
@@ -301,6 +302,27 @@ for(i in 1:ngenes){
   # printing the index of the gene in the command line output
   print(i)
 }
+
+# Adding FDR on theta values
+####################################
+
+# in global results file
+data_res_all <- read.table(paste0(path_data_write,output_names[2], ".txt"), header=TRUE)
+data_res_all <- data_res_all[order(data_res_all$theta,decreasing=TRUE),]
+W <- 1 - data_res_all$theta
+data_res_all$qvalue <- W*length(W)/seq(1,length(W))
+data_res_all <- data_res_all[order(data_res_all$gene_index,decreasing=FALSE),]
+write.table(data_res_all, file=paste0(path_data_write,output_names[2], ".txt"),
+                  append=T, col.names = F, row.names = F, quote = F)
+# in pleiotropic results file
+data_temp <- data.frame(data_res_all)
+info <- select(data_temp,c("gene_index","qvalue")) %>% rename("gene" = "GeneIndex")
+
+data_pleio <- read.table(paste0(path_data_write,output_names[3], ".txt"), header=TRUE) %>% data.frame
+data_pleio_info <- left_join(data_pleio,info,by="GeneIndex")
+write.table(data_pleio_info, file=paste0(path_data_write,output_names[3], ".txt"),
+                  append=T, col.names = F, row.names = F, quote = F)
+
 
 # ================================================================================
 # write the details information of the computer and softwares related to this code 
