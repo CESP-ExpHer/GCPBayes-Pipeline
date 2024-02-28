@@ -94,7 +94,7 @@ $ chmod 777 run_test_set.sh
   - *output_output_GCPBayes_wo_clump_less_threshold_700_results.txt*
   - *output_output_GCPBayes_wo_clump_less_threshold_700_pleiotropy.txt*
 
-**Running Time:** It took about **3 minutes** to run the *pipeline before GCPBayes* (in a system with Intel Core i7 11th Gen 2.8 GHz with 16 GB RAM). For the *GCPBayes*, we just use the first 300 genes from the data and it took **3 minutes** to run.
+**Running Time:** It took about **3 minutes** to run the *pipeline before GCPBayes* (in a system with Intel Core i7 11th Gen 2.8 GHz with 16 GB RAM). For the *GCPBayes*, we just used the first 300 genes from the data and it took **3 minutes** to run.
 
 **Note:** While running GCPBayes, a user could check these two files to see the results:
 - *output_output_GCPBayes_wo_clump_less_threshold_700_results.txt*
